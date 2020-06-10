@@ -14,13 +14,21 @@
 #ifndef MOSTRARITINERARIO_H
 #define MOSTRARITINERARIO_H
 
-class MostrarItinerario {
+#include <gtkmm-3.0/gtkmm/grid.h>
+#include <gtkmm-3.0/gtkmm/window.h>
+#include <gtkmm-3.0/gtkmm/fixed.h>
+#include <gtkmm-3.0/gtkmm/label.h>
+
+using namespace std;
+class MostrarItinerario: public Gtk::Window{
 public:
     MostrarItinerario();
-    MostrarItinerario(const MostrarItinerario& orig);
     virtual ~MostrarItinerario();
+    void initComponents();
 private:
-
+    Gtk::Grid tabla;
+    Gtk::Fixed fixed;
+    Gtk::Label label,label2;
 };
 
 #endif /* MOSTRARITINERARIO_H */
