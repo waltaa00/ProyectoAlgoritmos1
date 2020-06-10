@@ -21,6 +21,9 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
+    
+    cout<<"Cambio Walter"<<endl;
+    
     Glib::RefPtr<Gtk::Application> app =
             Gtk::Application::create(argc, argv, "titulo");
     MainWindows window;
