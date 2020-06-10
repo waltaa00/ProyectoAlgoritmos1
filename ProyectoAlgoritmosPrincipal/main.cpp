@@ -14,6 +14,9 @@
 #include <cstdlib>
 #include "MainWindows.h"
 #include "ListaAerolineas.h"
+#include "time.h"
+#include <ctime>
+#include <iostream>
 
 using namespace std;
 
@@ -23,6 +26,15 @@ using namespace std;
 int main(int argc, char** argv) {
     
     cout<<"Cambio Walter"<<endl;
+    
+    //prueba tiempo
+    time_t t = time(0);
+    tm* now = localtime(&t);
+    int hora = now->tm_hour;
+    int minutos = now->tm_min;
+    int segundos = now->tm_sec;
+    cout << " tiempo en horas: "<<hora<<"\n tiempo en minutos: "<<
+            minutos<<"\n tiempo en segundos: "<<segundos<<endl;
     
     Glib::RefPtr<Gtk::Application> app =
             Gtk::Application::create(argc, argv, "titulo");
