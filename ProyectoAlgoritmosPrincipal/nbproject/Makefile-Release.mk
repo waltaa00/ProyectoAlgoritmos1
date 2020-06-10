@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Aerolinea_2.o \
 	${OBJECTDIR}/Avion_2.o \
+	${OBJECTDIR}/ColaAviones.o \
 	${OBJECTDIR}/InicioSesion.o \
 	${OBJECTDIR}/Itinerario_2.o \
 	${OBJECTDIR}/MainWindows.o \
@@ -81,6 +82,11 @@ ${OBJECTDIR}/Avion_2.o: Avion_2.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Avion_2.o Avion_2.cpp
+
+${OBJECTDIR}/ColaAviones.o: ColaAviones.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ColaAviones.o ColaAviones.cpp
 
 ${OBJECTDIR}/InicioSesion.o: InicioSesion.cpp 
 	${MKDIR} -p ${OBJECTDIR}

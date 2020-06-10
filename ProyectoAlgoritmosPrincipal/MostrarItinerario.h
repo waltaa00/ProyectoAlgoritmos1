@@ -14,13 +14,47 @@
 #ifndef MOSTRARITINERARIO_H
 #define MOSTRARITINERARIO_H
 
-class MostrarItinerario {
+#include <gtkmm-3.0/gtkmm/grid.h>
+#include <gtkmm-3.0/gtkmm/window.h>
+#include <gtkmm-3.0/gtkmm/fixed.h>
+#include <gtkmm-3.0/gtkmm/label.h>
+#include <gtkmm-3.0/gtkmm/treemodel.h>
+#include <gtkmm-3.0/gtkmm/treeview.h>
+#include <gtkmm-3.0/gtkmm/liststore.h>
+#include <gtkmm-3.0/gtkmm/scrolledwindow.h>
+#include <queue>
+#include "ColaAviones.h"
+
+using namespace std;
+
+class MostrarItinerario : public Gtk::Window {
 public:
     MostrarItinerario();
-    MostrarItinerario(const MostrarItinerario& orig);
     virtual ~MostrarItinerario();
+    void initComponents();
 private:
+    
+    //Tree model columns:
+  class ModelColumns : public Gtk::TreeModel::ColumnRecord
+  {
+  public:
 
+    ModelColumns()
+    { add(tmcHorasalida); add(tmcHorallegada); add(tmcNombreAerolinea);}
+
+
+    Gtk::TreeModelColumn<Glib::ustring>  tmcHorallegada, tmcHorasalida, tmcNombreAerolinea;;
+
+  };
+
+  ModelColumns columRecord;
+    
+    priority_queue <string> colaItinerario;
+    ColaAviones cA;
+    Gtk::Fixed fixed;
+    Gtk::TreeView m_TreeView;
+    Glib::RefPtr<Gtk::ListStore> m_refTreeModel;
+    Gtk::ScrolledWindow m_ScrolledWindow;
 };
 
 #endif /* MOSTRARITINERARIO_H */
