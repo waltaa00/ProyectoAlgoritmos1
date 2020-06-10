@@ -22,16 +22,17 @@ MostrarItinerario::MostrarItinerario() {
 }
 
 void MostrarItinerario::initComponents() {
-    //this->tabla.insert_row(1);
-    //this->tabla.insert_row(2);
-    //this->tabla.insert_column(1);
-    //this->tabla.insert_column(2);
-    this->label.set_text("Hola");
-    this->label2.set_text("Mundo");
-    this->tabla.attach(this->label,1,1,1,1);
-    this->tabla.attach(this->label2,2,3,1,1);
-    this->tabla.set_visible(true);
-    this->fixed.put(this->tabla,10,10);
+    m_ScrolledWindow.add(m_TreeView);
+
+    //Only show the scrollbars when they are necessary:
+    m_ScrolledWindow.set_policy(Gtk::POLICY_AUTOMATIC, Gtk::POLICY_AUTOMATIC);
+    m_refTreeModel = Gtk::ListStore::create(columRecord);
+    m_TreeView.set_model(m_refTreeModel);
+    m_TreeView.append_column("Hora Salida", columRecord.tmcHorasalida);
+    m_TreeView.append_column("Hora Llegada", columRecord.tmcHorallegada);
+    m_TreeView.append_column("Aerolinea", columRecord.tmcNombreAerolinea);
+    m_ScrolledWindow.set_size_request(300,300);
+    this->fixed.put(this->m_ScrolledWindow,10,10);
     add(this->fixed);
 }
 

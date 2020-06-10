@@ -18,17 +18,39 @@
 #include <gtkmm-3.0/gtkmm/window.h>
 #include <gtkmm-3.0/gtkmm/fixed.h>
 #include <gtkmm-3.0/gtkmm/label.h>
+#include <gtkmm-3.0/gtkmm/treemodel.h>
+#include <gtkmm-3.0/gtkmm/treeview.h>
+#include <gtkmm-3.0/gtkmm/liststore.h>
+#include <gtkmm-3.0/gtkmm/scrolledwindow.h>
 
 using namespace std;
-class MostrarItinerario: public Gtk::Window{
+
+class MostrarItinerario : public Gtk::Window {
 public:
     MostrarItinerario();
     virtual ~MostrarItinerario();
     void initComponents();
 private:
-    Gtk::Grid tabla;
+    
+    //Tree model columns:
+  class ModelColumns : public Gtk::TreeModel::ColumnRecord
+  {
+  public:
+
+    ModelColumns()
+    { add(tmcHorasalida); add(tmcHorallegada); add(tmcNombreAerolinea);}
+
+
+    Gtk::TreeModelColumn<Glib::ustring>  tmcHorallegada, tmcHorasalida, tmcNombreAerolinea;;
+
+  };
+
+  ModelColumns columRecord;
+    
     Gtk::Fixed fixed;
-    Gtk::Label label,label2;
+    Gtk::TreeView m_TreeView;
+    Glib::RefPtr<Gtk::ListStore> m_refTreeModel;
+    Gtk::ScrolledWindow m_ScrolledWindow;
 };
 
 #endif /* MOSTRARITINERARIO_H */
