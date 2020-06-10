@@ -7,6 +7,7 @@
       <logicalFolder name="f1" displayName="Domain" projectFiles="true">
         <itemPath>Aerolinea_2.h</itemPath>
         <itemPath>Avion_2.h</itemPath>
+        <itemPath>ColaAviones.h</itemPath>
         <itemPath>Itinerario_2.h</itemPath>
         <itemPath>Usuario_2.h</itemPath>
         <itemPath>Vuelo_2.h</itemPath>
@@ -29,6 +30,7 @@
       <logicalFolder name="f1" displayName="Domain" projectFiles="true">
         <itemPath>Aerolinea_2.cpp</itemPath>
         <itemPath>Avion_2.cpp</itemPath>
+        <itemPath>ColaAviones.cpp</itemPath>
         <itemPath>Itinerario_2.cpp</itemPath>
         <itemPath>Usuario_2.cpp</itemPath>
         <itemPath>Vuelo_2.cpp</itemPath>
@@ -77,6 +79,10 @@
       <item path="Avion_2.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Avion_2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ColaAviones.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ColaAviones.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="InicioSesion.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -140,6 +146,10 @@
       <item path="Avion_2.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Avion_2.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ColaAviones.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ColaAviones.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="InicioSesion.cpp" ex="false" tool="1" flavor2="0">
       </item>

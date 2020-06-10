@@ -17,7 +17,8 @@
 #include "iostream"
 #include "RegistrarUsuario.h"
 #include "InicioSesion.h"
-#include "MostrarAerolineas.h" 
+#include "MostrarAerolineas.h"
+#include "MostrarItinerario.h" 
 #include <gtkmm/window.h>
 #include <gtkmm/box.h>
 #include <gtkmm-3.0/gtkmm/menubar.h>
@@ -46,6 +47,8 @@ private:
     void abrirInicioSesion();
 
     void abrirAerolineas();
+    
+    void abrirItinerarios();
 
     void aboutWinClose(); //aboutWinClose
 
@@ -59,6 +62,7 @@ private:
     RegistrarUsuario *registrarUsuario;
     InicioSesion *inicioSesion;
     MostrarAerolineas *mostrarAerolineas;
+    MostrarItinerario *mostrarItinerarios;
 };
 
 #endif /* MAINWINDOWS_H */

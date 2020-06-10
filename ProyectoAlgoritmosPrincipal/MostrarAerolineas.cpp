@@ -42,6 +42,8 @@ bool MostrarAerolineas::on_key_press_event(GdkEventKey* event) {
             cout<<aeroList.front()<<endl;
             this->lblAerolinea.set_label(aeroList.front());
             
+        } else if(event->keyval == GDK_KEY_space){
+            cout<<"Soy el ENTER necio"<<endl;
         }
 }
 
