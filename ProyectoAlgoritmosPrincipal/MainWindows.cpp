@@ -3,7 +3,7 @@
 #include "MainWindows.h"
 
 MainWindows::MainWindows() {
-    this->set_title("Bazinga");
+    this->set_title("AeroTurri");
     initComponents();
 }
 
