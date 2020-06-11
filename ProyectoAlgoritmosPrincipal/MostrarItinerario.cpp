@@ -15,12 +15,18 @@
 
 MostrarItinerario::MostrarItinerario() {
     this->set_title("Itinerarios");
-    this->set_size_request(400, 400);
+    this->set_size_request(850, 400);
     initComponents();
     this->show_all_children();
 }
 
 void MostrarItinerario::initComponents() {
+    
+    this->btnFiltrar.signal_clicked().connect(sigc::mem_fun(*this,
+                &MostrarItinerario::onButtonClickedFiltrarTabla));
+    this->btnFiltrar.set_label("Filtrar");
+    this->lblOrigen.set_text("Origen");
+    this->lblDestino.set_text("Destino");
     
     colaItinerario = cA.getCola();
     
@@ -32,9 +38,13 @@ void MostrarItinerario::initComponents() {
     Gtk::TreeModel::Row row = *(m_refTreeModel->append());
     Gtk::TreeModel::Row row2 = *(m_refTreeModel->append());
     m_TreeView.set_model(m_refTreeModel);
+    m_TreeView.append_column("Aerolinea", columRecord.tmcNombreAerolinea);
+    m_TreeView.append_column("Origen", columRecord.tmcOrigen);
+    m_TreeView.append_column("Destino", columRecord.tmcDestino);
     m_TreeView.append_column("Hora Salida", columRecord.tmcHorasalida);
     m_TreeView.append_column("Hora Llegada", columRecord.tmcHorallegada);
-    m_TreeView.append_column("Aerolinea", columRecord.tmcNombreAerolinea);
+    m_TreeView.append_column("Avion", columRecord.tmcAvion);
+    m_TreeView.append_column("Capacidad Pasajeros", columRecord.tmcCapacidad);
     
     
     row[columRecord.tmcHorasalida] = colaItinerario.top();
@@ -45,11 +55,29 @@ void MostrarItinerario::initComponents() {
     colaItinerario.pop();
     row[columRecord.tmcNombreAerolinea] = colaItinerario.top();
     row2[columRecord.tmcNombreAerolinea] = "Emirates";
-    
-    m_ScrolledWindow.set_size_request(300,300);
+    completaTabla();
+    m_ScrolledWindow.set_size_request(550,300);
     this->fixed.put(this->m_ScrolledWindow,10,10);
+    this->fixed.put(this->lblOrigen,600,10);
+    this->fixed.put(this->lblDestino,600,50);
+    this->fixed.put(this->etOrigen,650,10);
+    this->fixed.put(this->etDestino,650,50);
+    this->fixed.put(this->btnFiltrar,600,100);
     add(this->fixed);
 }
+
+void MostrarItinerario::completaTabla() {
+   Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
+    row3[columRecord.tmcHorasalida] = "10:34";
+    row3[columRecord.tmcHorallegada] = "12:46";
+    row3[columRecord.tmcNombreAerolinea] = "Alzin";
+    row3[columRecord.tmcHorasalida] = "10:34";
+}
+
+void MostrarItinerario::onButtonClickedFiltrarTabla() {
+
+}
+
 
 MostrarItinerario::~MostrarItinerario() {
 }
