@@ -37,8 +37,8 @@ private:
     //Gtk
     Gtk::Fixed fixed;
     Gtk::Button btnGuardar;
-    Gtk::Entry etNombre, etContrasena,etNacionalidad;
-    Gtk::Label lblNombre, lblContrasena,lblNacionalidad;
+    Gtk::Entry etNombre, etContrasena,etNacionalidad, etEdad, etPasaporte, etGenero;
+    Gtk::Label lblNombre, lblContrasena,lblNacionalidad, lblEdad, lblPasaporte, lblGenero;
 };
 
 #endif /* REGISTRARUSUARIO_H */
