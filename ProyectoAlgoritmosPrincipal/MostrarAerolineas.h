@@ -19,6 +19,7 @@
 #include <gtkmm-3.0/gtkmm/fixed.h>
 #include <list>
 #include "ListaAerolineas.h"
+#include "MostrarItinerario.h"
 
 
 using namespace std;
@@ -41,6 +42,8 @@ private:
     ListaAerolineas lA;
     Gtk::Fixed fixed;
     Gtk::Label lblAerolinea;
+    MostrarItinerario *mostrarItinerarios;
+       void aboutWinClose(); //aboutWinClose
 };
 
 #endif /* MOSTRARAEROLINEAS_H */
