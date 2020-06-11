@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 #include "MainWindows.h"
 
@@ -26,7 +22,7 @@ void MainWindows::initComponents() {
     this->menuIniciaSesion.add_pixlabel("assets/user.png", "Iniciar Sesion");
     this->menuAerolineas.add_pixlabel("assets/plane.png", "Aerolineas");
     this->menuDestinos.add_pixlabel("assets/hiking.png", "Destinos");
-    this->menuItinerario.add_pixlabel("assets/itinerary.png", "Itinerario");
+
 
     this->menuIniciaSesion.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirInicioSesion));
     this->subMenuArchivo.append(this->menuIniciaSesion);
@@ -37,14 +33,13 @@ void MainWindows::initComponents() {
     this->menuAerolineas.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirAerolineas));
     this->subMenuArchivo.append(this->menuAerolineas);
     this->subMenuArchivo.append(this->menuDestinos);
-    this->menuItinerario.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirItinerarios));
-    this->subMenuArchivo.append(this->menuItinerario);
+ 
 
 
     this->registrarUsuario = 0;
     this->inicioSesion = 0;
     this->mostrarAerolineas = 0;
-    this->mostrarItinerarios = 0;
+
     this->add(fixed);
     this->show_all_children();
 }
@@ -76,18 +71,10 @@ void MainWindows::abrirRegistrarUsuario() {
     this->registrarUsuario->show_all();
 }
 
-void MainWindows::abrirItinerarios(){
-    if (this->mostrarItinerarios != 0)
-        return;
-
-    this->mostrarItinerarios = new MostrarItinerario();
-    this->mostrarItinerarios->signal_hide().connect(sigc::mem_fun(*this, &MainWindows::aboutWinClose));
-    this->mostrarItinerarios->show_all();
-}
 
 void MainWindows::aboutWinClose() {
     this->registrarUsuario = 0;
     this->inicioSesion = 0;
     this->mostrarAerolineas = 0;
-    this->mostrarItinerarios = 0;
+
 }
