@@ -22,10 +22,10 @@ public:
     ColaAviones();
     ColaAviones(const ColaAviones& orig);
     virtual ~ColaAviones();
-    priority_queue <string> getCola();
+    priority_queue <Avion*> getCola();
     
 private:
-    priority_queue <string> cola; //declaracion cola de priorida
+    priority_queue <Avion*> cola; //declaracion cola de prioridad
 };
 
 #endif /* COLAAVIONES_H */

@@ -73,62 +73,62 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyectoalgoritmosprincipal: ${OBJECT
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyectoalgoritmosprincipal ${OBJECTFILES} ${LDLIBSOPTIONS} `pkg-config gtkmm-3.0 --libs`
 
-${OBJECTDIR}/Aerolinea_2.o: Aerolinea_2.cpp
+${OBJECTDIR}/Aerolinea_2.o: Aerolinea_2.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Aerolinea_2.o Aerolinea_2.cpp
 
-${OBJECTDIR}/Avion_2.o: Avion_2.cpp
+${OBJECTDIR}/Avion_2.o: Avion_2.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Avion_2.o Avion_2.cpp
 
-${OBJECTDIR}/ColaAviones.o: ColaAviones.cpp
+${OBJECTDIR}/ColaAviones.o: ColaAviones.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ColaAviones.o ColaAviones.cpp
 
-${OBJECTDIR}/InicioSesion.o: InicioSesion.cpp
+${OBJECTDIR}/InicioSesion.o: InicioSesion.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/InicioSesion.o InicioSesion.cpp
 
-${OBJECTDIR}/Itinerario_2.o: Itinerario_2.cpp
+${OBJECTDIR}/Itinerario_2.o: Itinerario_2.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Itinerario_2.o Itinerario_2.cpp
 
-${OBJECTDIR}/MainWindows.o: MainWindows.cpp
+${OBJECTDIR}/MainWindows.o: MainWindows.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MainWindows.o MainWindows.cpp
 
-${OBJECTDIR}/MostrarAerolineas.o: MostrarAerolineas.cpp
+${OBJECTDIR}/MostrarAerolineas.o: MostrarAerolineas.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MostrarAerolineas.o MostrarAerolineas.cpp
 
-${OBJECTDIR}/MostrarItinerario.o: MostrarItinerario.cpp
+${OBJECTDIR}/MostrarItinerario.o: MostrarItinerario.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MostrarItinerario.o MostrarItinerario.cpp
 
-${OBJECTDIR}/RegistrarUsuario.o: RegistrarUsuario.cpp
+${OBJECTDIR}/RegistrarUsuario.o: RegistrarUsuario.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/RegistrarUsuario.o RegistrarUsuario.cpp
 
-${OBJECTDIR}/Usuario_2.o: Usuario_2.cpp
+${OBJECTDIR}/Usuario_2.o: Usuario_2.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Usuario_2.o Usuario_2.cpp
 
-${OBJECTDIR}/Vuelo_2.o: Vuelo_2.cpp
+${OBJECTDIR}/Vuelo_2.o: Vuelo_2.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Vuelo_2.o Vuelo_2.cpp
 
-${OBJECTDIR}/main.o: main.cpp
+${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
@@ -139,6 +139,7 @@ ${OBJECTDIR}/main.o: main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyectoalgoritmosprincipal
 
 # Subprojects
 .clean-subprojects:
