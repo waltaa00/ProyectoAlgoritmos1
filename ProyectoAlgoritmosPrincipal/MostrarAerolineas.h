@@ -40,6 +40,7 @@ private:
 
     list <string> aeroList;
     ListaAerolineas lA;
+    Gtk::Button btn;
     Gtk::Fixed fixed;
     Gtk::Label lblAerolinea;
     MostrarItinerario *mostrarItinerarios;

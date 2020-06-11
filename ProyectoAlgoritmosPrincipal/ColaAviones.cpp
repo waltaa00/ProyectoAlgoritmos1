@@ -14,9 +14,12 @@
 #include "ColaAviones.h"
 
 ColaAviones::ColaAviones() {
-    cola.push("Hora salida");
-    cola.push("Hora llegada");
-    cola.push("Aerolinea");
+    //Avion(string nombre, string cantidad,string destino, string origen, string horaSalida, string horaLlegada);
+    cola.push(new Avion("Boing757", "350 pasajeros", "Bangladesh", "Costa Rica", "8:40", "15:25"));
+    cola.push(new Avion("Boing567", "220 pasajeros", "USA", "Panama", "13:11", "9:10"));
+    cola.push(new Avion("AirForce1", "420 pasajeros", "Jamaica", "Colombia", "23:00", "4:20"));
+    //cola.push("Hora llegada");
+    //cola.push("Aerolinea");
 }
 
 ColaAviones::ColaAviones(const ColaAviones& orig) {
@@ -25,7 +28,7 @@ ColaAviones::ColaAviones(const ColaAviones& orig) {
 ColaAviones::~ColaAviones() {
 }
 
-priority_queue <string> ColaAviones::getCola() {
+priority_queue <Avion*> ColaAviones::getCola() {
     return cola;
 }
 

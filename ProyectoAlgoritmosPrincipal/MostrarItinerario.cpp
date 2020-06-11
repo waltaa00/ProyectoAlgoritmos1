@@ -35,10 +35,10 @@ void MostrarItinerario::initComponents() {
     //Only show the scrollbars when they are necessary:
     m_ScrolledWindow.set_policy(Gtk::POLICY_AUTOMATIC, Gtk::POLICY_AUTOMATIC);
     m_refTreeModel = Gtk::ListStore::create(columRecord);
-    Gtk::TreeModel::Row row = *(m_refTreeModel->append());
-    Gtk::TreeModel::Row row2 = *(m_refTreeModel->append());
+    //Gtk::TreeModel::Row row = *(m_refTreeModel->append());
+    //Gtk::TreeModel::Row row2 = *(m_refTreeModel->append());
     m_TreeView.set_model(m_refTreeModel);
-    m_TreeView.append_column("Aerolinea", columRecord.tmcNombreAerolinea);
+    //m_TreeView.append_column("Aerolinea", columRecord.tmcNombreAerolinea);
     m_TreeView.append_column("Origen", columRecord.tmcOrigen);
     m_TreeView.append_column("Destino", columRecord.tmcDestino);
     m_TreeView.append_column("Hora Salida", columRecord.tmcHorasalida);
@@ -47,14 +47,14 @@ void MostrarItinerario::initComponents() {
     m_TreeView.append_column("Capacidad Pasajeros", columRecord.tmcCapacidad);
 
 
-    row[columRecord.tmcHorasalida] = colaItinerario.top();
-    row2[columRecord.tmcHorasalida] = "10:34";
-    colaItinerario.pop();
-    row[columRecord.tmcHorallegada] = colaItinerario.top();
-    row2[columRecord.tmcHorallegada] = "12:46";
-    colaItinerario.pop();
-    row[columRecord.tmcNombreAerolinea] = colaItinerario.top();
-    row2[columRecord.tmcNombreAerolinea] = "Emirates";
+//    row[columRecord.tmcHorasalida] = colaItinerario.top();
+//    row2[columRecord.tmcHorasalida] = "10:34";
+//    colaItinerario.pop();
+//    row[columRecord.tmcHorallegada] = colaItinerario.top();
+//    row2[columRecord.tmcHorallegada] = "12:46";
+//    colaItinerario.pop();
+//    row[columRecord.tmcNombreAerolinea] = colaItinerario.top();
+//    row2[columRecord.tmcNombreAerolinea] = "Emirates";
     completaTabla();
     m_ScrolledWindow.set_size_request(550, 300);
     this->fixed.put(this->m_ScrolledWindow, 10, 10);
@@ -68,12 +68,18 @@ void MostrarItinerario::initComponents() {
 
 void MostrarItinerario::completaTabla() {
     //se pueden agregar varias filas mediante un for
-    for (int i = 0; i < 3; i++) {
+    int tamano = colaItinerario.size();
+    for (int i = 0; i <tamano ; i++) {
         Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
-        row3[columRecord.tmcHorasalida] = "10:34";
-        row3[columRecord.tmcHorallegada] = "12:46";
-        row3[columRecord.tmcNombreAerolinea] = "Alzin";
-        row3[columRecord.tmcHorasalida] = "10:34";
+        row3[columRecord.tmcHorasalida] = colaItinerario.top()->getHoraSalida();
+        row3[columRecord.tmcHorallegada] = colaItinerario.top()->getHoraLlegada();
+        row3[columRecord.tmcOrigen] = colaItinerario.top()->getOrigen();
+        row3[columRecord.tmcDestino] = colaItinerario.top()->getDestino();
+        row3[columRecord.tmcCapacidad] = colaItinerario.top()->getCantidad();
+        row3[columRecord.tmcAvion] = colaItinerario.top()->getNombre();
+        colaItinerario.pop();
+//        row3[columRecord.tmcNombreAerolinea] = "Alzin";
+//        row3[columRecord.tmcHorasalida] = "10:34";
     }
 }
 

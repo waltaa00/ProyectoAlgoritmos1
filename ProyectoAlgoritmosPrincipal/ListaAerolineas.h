@@ -12,8 +12,9 @@ public:
     ListaAerolineas(){
         //lista = new list<>();
         lista.push_front("Avianca");
+        lista.push_front("Jet Blue");
+        lista.push_front("Volaris");
         lista.push_front("Copa Airlines");
-        lista.push_front("Turri Viajes");
         lista.push_front("Emirates");
     }
     

@@ -23,27 +23,33 @@ void MostrarAerolineas::initComponents() {
     aeroList = lA.getLista();
 
     //aeroList.push_front("Trivago");
-    this->lblAerolinea.set_label(aeroList.front());
-    this->fixed.put(this->lblAerolinea, 40, 40);
+    this->lblAerolinea.set_label("Presione una flecha");
+    this->fixed.put(this->lblAerolinea, 150, 35);
+    
+    this->btn.add_pixlabel("assets/Aerolineas1.png", "");
+    this->btn.set_size_request(200, 200);
+    this->fixed.put(this->btn, 100, 75);
+    
     this->add(fixed);
 }
 
 bool MostrarAerolineas::on_key_press_event(GdkEventKey* event) {
-    if (event->keyval == GDK_KEY_Up) {
-        string temp = aeroList.back();
-        aeroList.pop_back();
-        aeroList.push_front(temp);
-        cout << aeroList.front() << endl;
-        this->lblAerolinea.set_label(aeroList.front());
-
-    } else if (event->keyval == GDK_KEY_Down) {
+    
+     if (event->keyval == GDK_KEY_Up) {
         string temp2 = aeroList.front();
         aeroList.pop_front();
         aeroList.push_back(temp2);
         cout << aeroList.front() << endl;
         this->lblAerolinea.set_label(aeroList.front());
 
-    } else if (event->keyval == GDK_KEY_space) {
+    } else if (event->keyval == GDK_KEY_Down) {
+        string temp = aeroList.back();
+        aeroList.pop_back();
+        aeroList.push_front(temp);
+        cout << aeroList.front() << endl;
+        this->lblAerolinea.set_label(aeroList.front());
+
+    }else if (event->keyval == GDK_KEY_space) {
 //        if (this->mostrarItinerarios != 0)
 //            return;
 

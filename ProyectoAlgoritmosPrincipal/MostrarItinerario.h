@@ -53,7 +53,7 @@ private:
   void onButtonClickedFiltrarTabla();
   ModelColumns columRecord;
     
-    priority_queue <string> colaItinerario;
+    priority_queue <Avion*> colaItinerario;
     ColaAviones cA;
     Gtk::Fixed fixed;
     Gtk::TreeView m_TreeView;
