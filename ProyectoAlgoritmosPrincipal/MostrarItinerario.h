@@ -40,13 +40,17 @@ private:
   public:
 
     ModelColumns()
-    { add(tmcHorasalida); add(tmcHorallegada); add(tmcNombreAerolinea);}
+    {add(tmcNombreAerolinea);add(tmcOrigen);add(tmcDestino); add(tmcHorasalida);
+    add(tmcHorallegada);add(tmcAvion);add(tmcCapacidad);}
 
 
-    Gtk::TreeModelColumn<Glib::ustring>  tmcHorallegada, tmcHorasalida, tmcNombreAerolinea;;
+    Gtk::TreeModelColumn<Glib::ustring>  tmcHorallegada, tmcHorasalida, tmcNombreAerolinea,tmcOrigen
+    ,tmcDestino,tmcAvion,tmcCapacidad;
 
   };
 
+  void completaTabla();
+  void onButtonClickedFiltrarTabla();
   ModelColumns columRecord;
     
     priority_queue <string> colaItinerario;
@@ -55,6 +59,9 @@ private:
     Gtk::TreeView m_TreeView;
     Glib::RefPtr<Gtk::ListStore> m_refTreeModel;
     Gtk::ScrolledWindow m_ScrolledWindow;
+    Gtk::Entry etOrigen,etDestino;
+    Gtk::Label lblOrigen,lblDestino;
+    Gtk::Button btnFiltrar;
 };
 
 #endif /* MOSTRARITINERARIO_H */
