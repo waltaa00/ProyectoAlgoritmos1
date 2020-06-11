@@ -67,7 +67,7 @@ void MostrarItinerario::initComponents() {
 }
 
 void MostrarItinerario::completaTabla() {
-    Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
+    //Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
     //    row3[columRecord.tmcHorasalida] = "10:34";
     //    row3[columRecord.tmcHorallegada] = "12:46";
     //    row3[columRecord.tmcNombreAerolinea] = "Alzin";
