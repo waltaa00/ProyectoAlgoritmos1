@@ -44,6 +44,7 @@ private:
     Gtk::Fixed fixed;
     Gtk::Label lblAerolinea;
     MostrarItinerario *mostrarItinerarios;
+    
        void aboutWinClose(); //aboutWinClose
 };
 

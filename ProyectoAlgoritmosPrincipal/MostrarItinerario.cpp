@@ -13,7 +13,8 @@
 
 #include "MostrarItinerario.h"
 
-MostrarItinerario::MostrarItinerario() {
+MostrarItinerario::MostrarItinerario(string filtro) {
+    this->filtro = filtro;
     this->set_title("Itinerarios");
     this->set_size_request(850, 400);
     initComponents();
@@ -28,7 +29,13 @@ void MostrarItinerario::initComponents() {
     this->lblOrigen.set_text("Origen");
     this->lblDestino.set_text("Destino");
 
-    colaItinerario = cA.getCola();
+    this->colaEmirates = cA.getColaEmirates();
+    this->colaAvianca = cA.getColaAvianca();
+    this->colaJetblue = cA.getColaJetblue();
+    this->colaCopa = cA.getColaCopa();
+    this->colaVolaris = cA.getColaVolaris();
+    this->aeroList = lA.getLista();
+    
 
     m_ScrolledWindow.add(m_TreeView);
 
@@ -68,19 +75,69 @@ void MostrarItinerario::initComponents() {
 
 void MostrarItinerario::completaTabla() {
     //se pueden agregar varias filas mediante un for
-    int tamano = colaItinerario.size();
-    for (int i = 0; i <tamano ; i++) {
+    int tamanoEmirates = colaEmirates.size();
+    int tamanoAvianca = colaAvianca.size();
+    int tamanoCopa = colaCopa.size();
+    int tamanoVolaris = colaVolaris.size();
+    int tamanoJetblue = colaJetblue.size();
+    
+    if(this->filtro == "Emirates"){
+    for (int i = 0; i <tamanoEmirates ; i++) {
         Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
-        row3[columRecord.tmcHorasalida] = colaItinerario.top()->getHoraSalida();
-        row3[columRecord.tmcHorallegada] = colaItinerario.top()->getHoraLlegada();
-        row3[columRecord.tmcOrigen] = colaItinerario.top()->getOrigen();
-        row3[columRecord.tmcDestino] = colaItinerario.top()->getDestino();
-        row3[columRecord.tmcCapacidad] = colaItinerario.top()->getCantidad();
-        row3[columRecord.tmcAvion] = colaItinerario.top()->getNombre();
-        colaItinerario.pop();
-//        row3[columRecord.tmcNombreAerolinea] = "Alzin";
-//        row3[columRecord.tmcHorasalida] = "10:34";
+        row3[columRecord.tmcHorasalida] = colaEmirates.top()->getHoraSalida();
+        row3[columRecord.tmcHorallegada] = colaEmirates.top()->getHoraLlegada();
+        row3[columRecord.tmcOrigen] = colaEmirates.top()->getOrigen();
+        row3[columRecord.tmcDestino] = colaEmirates.top()->getDestino();
+        row3[columRecord.tmcCapacidad] = colaEmirates.top()->getCantidad();
+        row3[columRecord.tmcAvion] = colaEmirates.top()->getNombre();
+        colaEmirates.pop();
+      }
+    }else if(this->filtro == "Jet Blue"){
+    for (int i = 0; i <tamanoJetblue ; i++) {
+        Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
+        row3[columRecord.tmcHorasalida] = colaJetblue.top()->getHoraSalida();
+        row3[columRecord.tmcHorallegada] = colaJetblue.top()->getHoraLlegada();
+        row3[columRecord.tmcOrigen] = colaJetblue.top()->getOrigen();
+        row3[columRecord.tmcDestino] = colaJetblue.top()->getDestino();
+        row3[columRecord.tmcCapacidad] = colaJetblue.top()->getCantidad();
+        row3[columRecord.tmcAvion] = colaJetblue.top()->getNombre();
+        colaJetblue.pop();
+      }
+    } else if(this->filtro == "Avianca"){
+    for (int i = 0; i <tamanoAvianca ; i++) {
+        Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
+        row3[columRecord.tmcHorasalida] = colaAvianca.top()->getHoraSalida();
+        row3[columRecord.tmcHorallegada] = colaAvianca.top()->getHoraLlegada();
+        row3[columRecord.tmcOrigen] = colaAvianca.top()->getOrigen();
+        row3[columRecord.tmcDestino] = colaAvianca.top()->getDestino();
+        row3[columRecord.tmcCapacidad] = colaAvianca.top()->getCantidad();
+        row3[columRecord.tmcAvion] = colaAvianca.top()->getNombre();
+        colaAvianca.pop();
+      }
+    } else if(this->filtro == "Copa Airlines"){
+    for (int i = 0; i <tamanoCopa ; i++) {
+        Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
+        row3[columRecord.tmcHorasalida] = colaCopa.top()->getHoraSalida();
+        row3[columRecord.tmcHorallegada] = colaCopa.top()->getHoraLlegada();
+        row3[columRecord.tmcOrigen] = colaCopa.top()->getOrigen();
+        row3[columRecord.tmcDestino] = colaCopa.top()->getDestino();
+        row3[columRecord.tmcCapacidad] = colaCopa.top()->getCantidad();
+        row3[columRecord.tmcAvion] = colaCopa.top()->getNombre();
+        colaCopa.pop();
+      }
+    } else if(this->filtro == "Volaris"){
+    for (int i = 0; i <tamanoVolaris ; i++) {
+        Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
+        row3[columRecord.tmcHorasalida] = colaVolaris.top()->getHoraSalida();
+        row3[columRecord.tmcHorallegada] = colaVolaris.top()->getHoraLlegada();
+        row3[columRecord.tmcOrigen] = colaVolaris.top()->getOrigen();
+        row3[columRecord.tmcDestino] = colaVolaris.top()->getDestino();
+        row3[columRecord.tmcCapacidad] = colaVolaris.top()->getCantidad();
+        row3[columRecord.tmcAvion] = colaVolaris.top()->getNombre();
+        colaVolaris.pop();
+      }
     }
+    
 }
 
 void MostrarItinerario::onButtonClickedFiltrarTabla() {
