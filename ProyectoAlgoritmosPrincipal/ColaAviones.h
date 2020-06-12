@@ -22,10 +22,18 @@ public:
     ColaAviones();
     ColaAviones(const ColaAviones& orig);
     virtual ~ColaAviones();
-    priority_queue <Avion*> getCola();
+    priority_queue <Avion*> getColaEmirates();
+    priority_queue <Avion*> getColaCopa();
+    priority_queue <Avion*> getColaAvianca();
+    priority_queue <Avion*> getColaVolaris();
+    priority_queue <Avion*> getColaJetblue();
     
 private:
-    priority_queue <Avion*> cola; //declaracion cola de prioridad
+    priority_queue <Avion*> colaEmirates; //declaracion cola de prioridad
+    priority_queue <Avion*> colaCopa;
+    priority_queue <Avion*> colaAvianca;
+    priority_queue <Avion*> colaVolaris;
+    priority_queue <Avion*> colaJetblue;
 };
 
 #endif /* COLAAVIONES_H */

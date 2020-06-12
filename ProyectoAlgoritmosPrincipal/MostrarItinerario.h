@@ -24,12 +24,14 @@
 #include <gtkmm-3.0/gtkmm/scrolledwindow.h>
 #include <queue>
 #include "ColaAviones.h"
+#include <list>
+#include "ListaAerolineas.h"
 
 using namespace std;
 
 class MostrarItinerario : public Gtk::Window {
 public:
-    MostrarItinerario();
+    MostrarItinerario(string filtro);
     virtual ~MostrarItinerario();
     void initComponents();
 private:
@@ -53,8 +55,18 @@ private:
   void onButtonClickedFiltrarTabla();
   ModelColumns columRecord;
     
-    priority_queue <Avion*> colaItinerario;
+    priority_queue <Avion*> colaEmirates; //declaracion colas de prioridad
+    priority_queue <Avion*> colaCopa;
+    priority_queue <Avion*> colaAvianca;
+    priority_queue <Avion*> colaVolaris;
+    priority_queue <Avion*> colaJetblue;
     ColaAviones cA;
+    
+    list <string> aeroList;
+    ListaAerolineas lA;
+    
+    string filtro;
+    
     Gtk::Fixed fixed;
     Gtk::TreeView m_TreeView;
     Glib::RefPtr<Gtk::ListStore> m_refTreeModel;

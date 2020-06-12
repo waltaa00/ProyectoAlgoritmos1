@@ -53,7 +53,9 @@ bool MostrarAerolineas::on_key_press_event(GdkEventKey* event) {
 //        if (this->mostrarItinerarios != 0)
 //            return;
 
-        this->mostrarItinerarios = new MostrarItinerario();
+        string filtro = lblAerolinea.get_text();
+        
+        this->mostrarItinerarios = new MostrarItinerario(filtro);
         this->mostrarItinerarios->signal_hide().connect(sigc::mem_fun(*this, &MostrarAerolineas::aboutWinClose));
         this->mostrarItinerarios->show_all();
     }
