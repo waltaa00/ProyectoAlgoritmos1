@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Aerolinea_2.o \
 	${OBJECTDIR}/Avion_2.o \
 	${OBJECTDIR}/ColaAviones.o \
+	${OBJECTDIR}/GrafoViajes.o \
 	${OBJECTDIR}/InicioSesion.o \
 	${OBJECTDIR}/Itinerario_2.o \
 	${OBJECTDIR}/MainWindows.o \
@@ -87,6 +88,11 @@ ${OBJECTDIR}/ColaAviones.o: ColaAviones.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ColaAviones.o ColaAviones.cpp
+
+${OBJECTDIR}/GrafoViajes.o: GrafoViajes.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/GrafoViajes.o GrafoViajes.cpp
 
 ${OBJECTDIR}/InicioSesion.o: InicioSesion.cpp 
 	${MKDIR} -p ${OBJECTDIR}

@@ -31,6 +31,8 @@
         <itemPath>Aerolinea_2.cpp</itemPath>
         <itemPath>Avion_2.cpp</itemPath>
         <itemPath>ColaAviones.cpp</itemPath>
+        <itemPath>GrafoViajes.cpp</itemPath>
+        <itemPath>GrafoViajes.h</itemPath>
         <itemPath>Itinerario_2.cpp</itemPath>
         <itemPath>Usuario_2.cpp</itemPath>
         <itemPath>Vuelo_2.cpp</itemPath>
@@ -83,6 +85,10 @@
       <item path="ColaAviones.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ColaAviones.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GrafoViajes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GrafoViajes.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="InicioSesion.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -150,6 +156,10 @@
       <item path="ColaAviones.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ColaAviones.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GrafoViajes.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="GrafoViajes.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="InicioSesion.cpp" ex="false" tool="1" flavor2="0">
       </item>

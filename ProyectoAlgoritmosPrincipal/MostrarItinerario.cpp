@@ -54,14 +54,6 @@ void MostrarItinerario::initComponents() {
     m_TreeView.append_column("Capacidad Pasajeros", columRecord.tmcCapacidad);
 
 
-//    row[columRecord.tmcHorasalida] = colaItinerario.top();
-//    row2[columRecord.tmcHorasalida] = "10:34";
-//    colaItinerario.pop();
-//    row[columRecord.tmcHorallegada] = colaItinerario.top();
-//    row2[columRecord.tmcHorallegada] = "12:46";
-//    colaItinerario.pop();
-//    row[columRecord.tmcNombreAerolinea] = colaItinerario.top();
-//    row2[columRecord.tmcNombreAerolinea] = "Emirates";
     completaTabla();
     m_ScrolledWindow.set_size_request(550, 300);
     this->fixed.put(this->m_ScrolledWindow, 10, 10);
