@@ -32,6 +32,7 @@ void MainWindows::initComponents() {
 
     this->menuAerolineas.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirAerolineas));
     this->subMenuArchivo.append(this->menuAerolineas);
+    this->menuDestinos.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirDestinos));
     this->subMenuArchivo.append(this->menuDestinos);
  
 
@@ -39,6 +40,7 @@ void MainWindows::initComponents() {
     this->registrarUsuario = 0;
     this->inicioSesion = 0;
     this->mostrarAerolineas = 0;
+    this->mostrarDestinos = 0;
 
     this->add(fixed);
     this->show_all_children();
@@ -71,10 +73,20 @@ void MainWindows::abrirRegistrarUsuario() {
     this->registrarUsuario->show_all();
 }
 
+void MainWindows::abrirDestinos() {
+    if (this->mostrarDestinos != 0)
+        return;
+
+    this->mostrarDestinos = new MuestraDestinos();
+    this->mostrarDestinos->signal_hide().connect(sigc::mem_fun(*this, &MainWindows::aboutWinClose));
+    this->mostrarDestinos->show_all();
+}
+
 
 void MainWindows::aboutWinClose() {
     this->registrarUsuario = 0;
     this->inicioSesion = 0;
     this->mostrarAerolineas = 0;
+    this->mostrarDestinos = 0;
 
 }
