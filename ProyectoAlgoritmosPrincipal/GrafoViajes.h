@@ -14,12 +14,50 @@
 #ifndef GRAFOVIAJES_H
 #define GRAFOVIAJES_H
 
+const int MAX_NODOS = 3;
+
+typedef ValorNodo;
+typedef ValorArco;
+typedef struct Arco * punteroArco;
+
+struct Arco{
+    ValorArco info;
+    bool Existe;
+    int Origen;
+    int Destino;
+    punteroArco sigArcoSalida;
+    punteroArco sigArcoEntrada;
+    
+};
+
+struct Nodo{
+    ValorNodo info;
+    bool Existe;
+    punteroArco listaArcosSalida;
+    punteroArco listaArcosEntrada;
+};
+
+using namespace std;
+
 class GrafoViajes {
 public:
     GrafoViajes();
     GrafoViajes(const GrafoViajes& orig);
     virtual ~GrafoViajes();
+    
+    bool isEmpty (void);
+    bool Grafo_Lleno (void);
+    int NumeroNodos (void);
+    int NumeroArcos (void);
+    bool ObtenerValorArco (Arco, ValorArco &);
+    void AnadirNodo (ValorNodo);
+    void AnadirArco (ValorNodo, ValorNodo, ValorArco);
+    bool EliminarNodo (ValorNodo);
+    bool EliminarArco (ValorNodo, ValorNodo);
+    
 private:
+    Nodo Nodos[MAX_NODOS];
+    Arco Arcos[];
 
 };
 
