@@ -1,15 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/* 
- * File:   MostrarItinerario.cpp
- * Author: yareth
- * 
- * Created on 8 de junio de 2020, 06:25 PM
- */
 
 #include "MostrarItinerario.h"
 
@@ -73,6 +62,13 @@ void MostrarItinerario::initComponents() {
     add(this->fixed);
 }
 
+
+    time_t t = time(0);
+    tm* now = localtime(&t);
+    int hora = now->tm_hour;
+    int minutos = now->tm_min;
+    int segundos = now->tm_sec;
+
 void MostrarItinerario::completaTabla() {
     //se pueden agregar varias filas mediante un for
     int tamanoEmirates = colaEmirates.size();
@@ -83,6 +79,8 @@ void MostrarItinerario::completaTabla() {
     
     if(this->filtro == "Emirates"){
     for (int i = 0; i <tamanoEmirates ; i++) {
+         cout<< "hora salida" << colaEmirates.top()->getHoraSalida() << " hora real " << hora<<endl;
+         if(stoi(colaEmirates.top()->getHoraSalida())>hora){
         Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
         row3[columRecord.tmcHorasalida] = colaEmirates.top()->getHoraSalida();
         row3[columRecord.tmcHorallegada] = colaEmirates.top()->getHoraLlegada();
@@ -92,8 +90,10 @@ void MostrarItinerario::completaTabla() {
         row3[columRecord.tmcAvion] = colaEmirates.top()->getNombre();
         colaEmirates.pop();
       }
+    }
     }else if(this->filtro == "Jet Blue"){
     for (int i = 0; i <tamanoJetblue ; i++) {
+         if(stoi(colaJetblue.top()->getHoraSalida())>hora){
         Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
         row3[columRecord.tmcHorasalida] = colaJetblue.top()->getHoraSalida();
         row3[columRecord.tmcHorallegada] = colaJetblue.top()->getHoraLlegada();
@@ -103,8 +103,11 @@ void MostrarItinerario::completaTabla() {
         row3[columRecord.tmcAvion] = colaJetblue.top()->getNombre();
         colaJetblue.pop();
       }
+    }
     } else if(this->filtro == "Avianca"){
     for (int i = 0; i <tamanoAvianca ; i++) {
+        cout<< "hora salida" << colaAvianca.top()->getHoraSalida() << "hora real " << hora<<endl;
+        if(stoi(colaAvianca.top()->getHoraSalida())>hora){
         Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
         row3[columRecord.tmcHorasalida] = colaAvianca.top()->getHoraSalida();
         row3[columRecord.tmcHorallegada] = colaAvianca.top()->getHoraLlegada();
@@ -113,9 +116,11 @@ void MostrarItinerario::completaTabla() {
         row3[columRecord.tmcCapacidad] = colaAvianca.top()->getCantidad();
         row3[columRecord.tmcAvion] = colaAvianca.top()->getNombre();
         colaAvianca.pop();
+        }
       }
     } else if(this->filtro == "Copa Airlines"){
     for (int i = 0; i <tamanoCopa ; i++) {
+         if(stoi(colaCopa.top()->getHoraSalida())>hora){
         Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
         row3[columRecord.tmcHorasalida] = colaCopa.top()->getHoraSalida();
         row3[columRecord.tmcHorallegada] = colaCopa.top()->getHoraLlegada();
@@ -125,8 +130,10 @@ void MostrarItinerario::completaTabla() {
         row3[columRecord.tmcAvion] = colaCopa.top()->getNombre();
         colaCopa.pop();
       }
+    }
     } else if(this->filtro == "Volaris"){
     for (int i = 0; i <tamanoVolaris ; i++) {
+         if(stoi(colaVolaris.top()->getHoraSalida())>hora){
         Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
         row3[columRecord.tmcHorasalida] = colaVolaris.top()->getHoraSalida();
         row3[columRecord.tmcHorallegada] = colaVolaris.top()->getHoraLlegada();
@@ -136,6 +143,7 @@ void MostrarItinerario::completaTabla() {
         row3[columRecord.tmcAvion] = colaVolaris.top()->getNombre();
         colaVolaris.pop();
       }
+    }
     }
     
 }
