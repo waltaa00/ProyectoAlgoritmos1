@@ -38,11 +38,13 @@ OBJECTFILES= \
 	${OBJECTDIR}/Aerolinea_2.o \
 	${OBJECTDIR}/Avion_2.o \
 	${OBJECTDIR}/ColaAviones.o \
+	${OBJECTDIR}/Drawing.o \
 	${OBJECTDIR}/InicioSesion.o \
 	${OBJECTDIR}/Itinerario_2.o \
 	${OBJECTDIR}/MainWindows.o \
 	${OBJECTDIR}/MostrarAerolineas.o \
 	${OBJECTDIR}/MostrarItinerario.o \
+	${OBJECTDIR}/MuestraDestinos.o \
 	${OBJECTDIR}/RegistrarUsuario.o \
 	${OBJECTDIR}/Usuario_2.o \
 	${OBJECTDIR}/Vuelo_2.o \
@@ -88,6 +90,11 @@ ${OBJECTDIR}/ColaAviones.o: ColaAviones.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ColaAviones.o ColaAviones.cpp
 
+${OBJECTDIR}/Drawing.o: Drawing.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Drawing.o Drawing.cpp
+
 ${OBJECTDIR}/InicioSesion.o: InicioSesion.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -112,6 +119,11 @@ ${OBJECTDIR}/MostrarItinerario.o: MostrarItinerario.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MostrarItinerario.o MostrarItinerario.cpp
+
+${OBJECTDIR}/MuestraDestinos.o: MuestraDestinos.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MuestraDestinos.o MuestraDestinos.cpp
 
 ${OBJECTDIR}/RegistrarUsuario.o: RegistrarUsuario.cpp
 	${MKDIR} -p ${OBJECTDIR}
