@@ -7,7 +7,7 @@
 
 Drawing::Drawing() {
     try {
-        fondo = Gdk::Pixbuf::create_from_file("assets/mapa.jpg");
+        fondo = Gdk::Pixbuf::create_from_file("assets/mapa1.png");
     } catch (const Gio::ResourceError& ex) {
         std::cerr << "ResourceError: " << ex.what() << std::endl;
     } catch (const Gdk::PixbufError& ex) {

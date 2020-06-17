@@ -101,6 +101,7 @@ void MostrarItinerario::completaTabla() {
         row3[columRecord.tmcCapacidad] = colaEmirates.top()->getCantidad();
         row3[columRecord.tmcAvion] = colaEmirates.top()->getNombre();
         colaEmirates.pop();
+        
       }
     }
     }else if(this->filtro == "Jet Blue"){
@@ -113,6 +114,10 @@ void MostrarItinerario::completaTabla() {
         row3[columRecord.tmcDestino] = colaJetblue.top()->getDestino();
         row3[columRecord.tmcCapacidad] = colaJetblue.top()->getCantidad();
         row3[columRecord.tmcAvion] = colaJetblue.top()->getNombre();
+        
+        grafo.AnadirNodo(colaJetblue.top()->getOrigen());
+        grafo.AnadirNodo(colaJetblue.top()->getDestino());
+        
         colaJetblue.pop();
       }
     }
@@ -127,6 +132,11 @@ void MostrarItinerario::completaTabla() {
         row3[columRecord.tmcDestino] = colaAvianca.top()->getDestino();
         row3[columRecord.tmcCapacidad] = colaAvianca.top()->getCantidad();
         row3[columRecord.tmcAvion] = colaAvianca.top()->getNombre();
+        
+        grafo.AnadirNodo(colaAvianca.top()->getOrigen());
+        cout<<"\nAhora con destino"<<endl;
+        grafo.AnadirNodo(colaAvianca.top()->getDestino());
+        
         colaAvianca.pop();
         }
       }

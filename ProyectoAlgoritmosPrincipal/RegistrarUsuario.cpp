@@ -1,6 +1,7 @@
 
 
 #include "RegistrarUsuario.h"
+#include "Usuario_2.h"
 
 RegistrarUsuario::RegistrarUsuario() {
     this->set_title("Registrar Usuario");
@@ -54,6 +55,11 @@ void RegistrarUsuario::onButtonClickedGuardar() {
     nombre = etNombre.get_text().c_str();
     string contrasena;
     contrasena = etContrasena.get_text().c_str();
+    
+    //Usuario(string nombre, string edad, string pasaporte, string genero,  string nacionalidad);
+    //Usuario usuario = new Usuario(etNombre, etEdad, etPasaporte, etGenero, etNacionalidad);
+    //usuarios[1] = usuario;
+    
     string imagen;
     if (nombre == "" || contrasena == "") {
         Gtk::MessageDialog dialogo(

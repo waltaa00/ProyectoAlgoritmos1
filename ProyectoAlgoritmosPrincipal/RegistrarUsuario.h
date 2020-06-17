@@ -21,6 +21,8 @@
 #include <gtkmm-3.0/gtkmm/radiobutton.h>
 #include <gtkmm-3.0/gtkmm/messagedialog.h>
 
+#include "Usuario_2.h"
+
 using namespace std;
 
 class RegistrarUsuario : public Gtk::Window {
@@ -39,6 +41,8 @@ private:
     Gtk::Button btnGuardar;
     Gtk::Entry etNombre, etContrasena,etNacionalidad, etEdad, etPasaporte, etGenero;
     Gtk::Label lblNombre, lblContrasena,lblNacionalidad, lblEdad, lblPasaporte, lblGenero;
+    
+    Usuario usuarios[];
 };
 
 #endif /* REGISTRARUSUARIO_H */

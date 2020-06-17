@@ -13,7 +13,7 @@ ColaAviones::ColaAviones() {
     
     
     colaAvianca.push(new Avion("Marc12", "120 pasajeros", "Nicarague", "Paraguay", "13:00", "14:20"));
-    colaAvianca.push(new Avion("Balenciaga1", "212 pasajeros", "Costa Rica", "Venezuela", "11:00", "14:50"));
+    colaAvianca.push(new Avion("Balenciaga1", "212 pasajeros", "Costa Rica", "Venezuela", "21:00", "1:50"));
      colaAvianca.push(new Avion("GucciTwo", "189 pasajeros", "Grecia", "Francia", "22:10", "23:55"));
    
     colaVolaris.push(new Avion("Boeing707", "305 pasajeros", "USA", "Canada", "9:18", "11:43"));

@@ -26,6 +26,7 @@
 #include "ColaAviones.h"
 #include <list>
 #include "ListaAerolineas.h"
+#include "GrafoViajes.h"
 #include <stdio.h>      /* printf, fgets */
 #include <stdlib.h> 
 #include <stdlib.h> 
@@ -67,6 +68,7 @@ private:
     
     list <string> aeroList;
     ListaAerolineas lA;
+    GrafoViajes grafo;
     
     string filtro;
     
