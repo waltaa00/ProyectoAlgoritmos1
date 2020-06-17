@@ -17,10 +17,10 @@
 #include "Avion_2.h"
 
 
-const int MAX_NODOS = 3;
+const int MAX_NODOS = 15;
 
-typedef int ValorNodo;
-typedef int ValorArco;
+typedef string ValorNodo;
+typedef string ValorArco;
 typedef struct Arco * punteroArco;
 
 struct Arco{
@@ -54,7 +54,7 @@ public:
     int NumeroArcos (void);
     bool ObtenerValorArco (Arco, ValorArco &);
     void AnadirNodo (ValorNodo);
-    void AnadirArco (ValorNodo, ValorNodo, ValorArco);
+    void AnadirArco (ValorNodo, ValorNodo);
     bool EliminarNodo (ValorNodo);
     bool EliminarArco (ValorNodo, ValorNodo);
     
