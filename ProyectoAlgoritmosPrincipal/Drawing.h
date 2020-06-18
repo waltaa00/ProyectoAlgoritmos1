@@ -42,7 +42,7 @@ protected:
 private:
     Vuelo* vuelo;
     MostrarItinerario* mostrarItinerario;
-    ColaAviones* cola;
+    //ColaAviones* cola;
     string texto;
 
 };
