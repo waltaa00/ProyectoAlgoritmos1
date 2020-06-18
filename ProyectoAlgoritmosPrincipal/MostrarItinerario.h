@@ -38,7 +38,7 @@ public:
     MostrarItinerario(string filtro);
     virtual ~MostrarItinerario();
     void initComponents();
-    string getPaisesVuelo();
+    //string getPaisesVuelo();
 private:
     
     //Tree model columns:
@@ -73,14 +73,16 @@ private:
     
     list <string> aeroList;
     ListaAerolineas lA;
-    GrafoViajes grafo;
+    //GrafoViajes grafo;
     
     string filtro;
-    string paisesVuelo;
+    //string paisesVuelo;
     
     Gtk::Fixed fixed;
     Gtk::TreeView m_TreeView;
     Glib::RefPtr<Gtk::ListStore> m_refTreeModel;
+    Glib::RefPtr<Gtk::TreeSelection> refTreeSelection;
+    Gtk::TreeModel::iterator iter;
     Gtk::ScrolledWindow m_ScrolledWindow;
     Gtk::Entry etOrigen,etDestino;
     Gtk::Label lblOrigen,lblDestino;
