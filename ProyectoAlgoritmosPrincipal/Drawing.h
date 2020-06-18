@@ -16,6 +16,8 @@
 
 #include <gtkmm.h>
 #include "iostream"
+#include "Vuelo_2.h"
+#include "MostrarItinerario.h"
 
 using namespace std;
 
@@ -31,10 +33,17 @@ public:
 
 protected:
 
-    bool on_draw(const Cairo::RefPtr<Cairo::Context>& cr); // on_draw
-
     Glib::RefPtr<Gdk::Pixbuf> fondo;
+    bool on_draw(const Cairo::RefPtr<Cairo::Context>& cr); // on_draw
+    void draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int posX, int posY, string text);
+    Gtk::Label lblOrigen,lblDestino;
+    Gtk::Fixed fixed;
+    
 private:
+    Vuelo* vuelo;
+    MostrarItinerario* mostrarItinerario;
+    ColaAviones* cola;
+    string texto;
 
 };
 

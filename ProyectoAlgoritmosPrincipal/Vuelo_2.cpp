@@ -1,70 +1,107 @@
 
 
-#include "Vuelo.h"
+#include "Vuelo_2.h"
+#include "ColaAviones.h"
 
-Vuelo::Vuelo(string destino, string origen, string horaSalida, string horaLlegada) {
-    this->destino= destino;
-    this->origen= origen;
-    this->horaLlegada= horaLlegada;
-    this->horaSalida= horaSalida;
-}
+Vuelo::Vuelo(int posX, int posY, ColaAviones colaAviones) {
+    this->posX = posX;
+    this->posY = posY;
+    this->colaAviones = colaAviones;
+    this->image=Gdk::Pixbuf::create_from_file("assets/plane(1).png");
+}//Contructor sobrecargado
 
+Vuelo::Vuelo(int posX, int posY) {
+    this->posX = posX;
+    this->posY = posY;
+    this->image=Gdk::Pixbuf::create_from_file("assets/plane(1).png");
+}//Contructor sobrecargado
 
+Vuelo::Vuelo() {
+    this->image=Gdk::Pixbuf::create_from_file("assets/plane(1).png");
+    spawn();
+}//Contructor sobrecargado
+
+void Vuelo::spawn() {
+        srand(time(0));
+        this->posX=(rand() % (15 - 0) * this->image->get_width());
+        this->posY=(rand() % (10 - 0) * this->image->get_height());
+    }//fin spawn,es para aparecer en un sitio aleatorio
 
 Vuelo::~Vuelo() {
 }
 
-std:: string Vuelo::getDestino(){
-    return destino;
+int Vuelo::getPosX(){
+    return this->posX;
     
 }
 
-void Vuelo::setDestino(string destino){
-    destino= destino;
+void Vuelo::setPosX(int posX){
+    this->posX = this->posX;
 
 }
 
-std:: string Vuelo::getOrigen(){
-    return origen;
+int Vuelo::getPosY(){
+    return this->posY;
     
 }
 
-void Vuelo::setOrigen(string origen){
-    origen= origen;
+void Vuelo::setPosY(int posY){
+    this->posY = this->posY;
 
 }
 
-std:: string Vuelo::getHoraLlegada(){
-    return horaLlegada;
+void Vuelo::draw(const Cairo::RefPtr<Cairo::Context>& cr){
+
+       Gdk::Cairo::set_source_pixbuf(cr, this->image, this->posX, this->posY);
+       cr->rectangle(this->posX, this->posY, this->image->get_width(), this->image->get_height());
+       cr->fill();
+        
+} // draw
+
+void Vuelo::start(){
+        pthread_create(&vueloThread, 0, run, this);
+    }
     
-}
+    void Vuelo::wait(){
+        (void)pthread_join(vueloThread, NULL);
+    }
 
-void Vuelo::setHoraLlegada(string horaLlegada){
-    horaLlegada= horaLlegada;
+void Vuelo::posicionRandom(){
 
-}
+        int i = ((int)(rand()%30) * 40);
+        int j = ((int)(rand()%20) * 40);
+        this->setPosX(i);
+        this->setPosY(j);
+        
+    }
 
+ void* Vuelo::run(void* arg){   
+        Vuelo* vT=reinterpret_cast<Vuelo*>(arg);
+         vT->animate();
+        return 0;    
+    } // run 
 
-std:: string Vuelo::getHoraSalida(){
-    return horaSalida;
-    
-}
+void Vuelo::animate(){
+        
+        while(true){
+            
+            usleep(500000);
+            posicionRandom();
+        
+        }
+        
+    }
 
-void Vuelo::setHoraSalida(string horaSalida){
-    horaSalida= horaSalida;
-
-}
 
 std::string Vuelo::toString(){
     std::string result;
 
-    result = 
-           
-             +"\nNombre del Usuario: "+destino
-             +"\nEdad: "+origen
-             +"\nPasaporte: "+horaSalida
-             +"\nGenero: "+horaLlegada;
-           
+//    result = 
+//           
+//             +"\nPosX: "+this->posX
+//             +"\nPosY: "+this->posY
+//             +"\nAvion en la cola: ";
+//           
     return result;
     
 }
