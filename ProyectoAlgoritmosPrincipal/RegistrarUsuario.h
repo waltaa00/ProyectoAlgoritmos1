@@ -42,7 +42,7 @@ private:
     Gtk::Entry etNombre, etContrasena,etNacionalidad, etEdad, etPasaporte, etGenero;
     Gtk::Label lblNombre, lblContrasena,lblNacionalidad, lblEdad, lblPasaporte, lblGenero;
     
-    Usuario usuarios[];
+//    Usuario usuarios[];
 };
 
 #endif /* REGISTRARUSUARIO_H */
