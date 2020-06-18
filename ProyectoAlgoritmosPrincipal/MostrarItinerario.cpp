@@ -24,6 +24,10 @@ void MostrarItinerario::initComponents() {
     this->btnFiltrar.set_label("Filtrar");
     this->lblOrigen.set_text("Origen");
     this->lblDestino.set_text("Destino");
+    
+    this->btnGuardar.signal_clicked().connect(sigc::mem_fun(*this,
+            &MostrarItinerario::onButtonClickedGuardarVuelo));
+    this->btnGuardar.set_label("Guardar");
 
     this->colaEmirates = cA.getColaEmirates();
     this->colaAvianca = cA.getColaAvianca();
@@ -66,6 +70,7 @@ void MostrarItinerario::initComponents() {
     this->fixed.put(this->etOrigen, 650, 10);
     this->fixed.put(this->etDestino, 650, 50);
     this->fixed.put(this->btnFiltrar, 600, 100);
+    this->fixed.put(this->btnGuardar, 600, 150);
     add(this->fixed);
 }
 
@@ -84,26 +89,30 @@ void MostrarItinerario::completaTabla() {
     int tamanoVolaris = colaVolaris.size();
     int tamanoJetblue = colaJetblue.size();
     
-//    char str[20];
-//    strcpy(str, "23");
-//    int val = atoi(str);
    
     
     if(this->filtro == "Emirates"){
     for (int i = 0; i <tamanoEmirates ; i++) {
          cout<< "hora salida" << colaEmirates.top()->getHoraSalida() << " hora real " << hora<<endl;
-        if(atoi(colaJetblue.top()->getHoraSalida().c_str()) > hora){
+        if(atoi(colaEmirates.top()->getHoraSalida().c_str()) > hora){
         Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
         row3[columRecord.tmcHorasalida] = colaEmirates.top()->getHoraSalida();
         row3[columRecord.tmcHorallegada] = colaEmirates.top()->getHoraLlegada();
         row3[columRecord.tmcOrigen] = colaEmirates.top()->getOrigen();
         row3[columRecord.tmcDestino] = colaEmirates.top()->getDestino();
+        
+//        this->paisesVuelo = colaEmirates.top()->getOrigen()+" - "+colaEmirates.top()->getDestino();
+//        cout<<this->paisesVuelo<<endl;
+        
         row3[columRecord.tmcCapacidad] = colaEmirates.top()->getCantidad();
         row3[columRecord.tmcAvion] = colaEmirates.top()->getNombre();
         colaEmirates.pop();
         
       }
     }
+    this->paisesVuelo = colaEmirates.top()->getOrigen()+" - "+colaEmirates.top()->getDestino();
+        cout<<"info paises"<<this->paisesVuelo<<endl;
+        
     }else if(this->filtro == "Jet Blue"){
     for (int i = 0; i <tamanoJetblue ; i++) {
          if(atoi(colaJetblue.top()->getHoraSalida().c_str())>hora){
@@ -132,6 +141,8 @@ void MostrarItinerario::completaTabla() {
         row3[columRecord.tmcDestino] = colaAvianca.top()->getDestino();
         row3[columRecord.tmcCapacidad] = colaAvianca.top()->getCantidad();
         row3[columRecord.tmcAvion] = colaAvianca.top()->getNombre();
+        
+        //this->paisesVuelo = colaAvianca.top()->getOrigen()+" - "+colaAvianca.top()->getDestino();
         
         grafo.AnadirNodo(colaAvianca.top()->getOrigen());
         cout<<"\nAhora con destino"<<endl;
@@ -170,7 +181,16 @@ void MostrarItinerario::completaTabla() {
     
 }
 
+string MostrarItinerario::getPaisesVuelo(){
+    return this->paisesVuelo;
+}
+
+
 void MostrarItinerario::onButtonClickedFiltrarTabla() {
+
+}
+
+void MostrarItinerario::onButtonClickedGuardarVuelo() {
 
 }
 

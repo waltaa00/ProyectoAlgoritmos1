@@ -38,12 +38,14 @@ public:
     MostrarItinerario(string filtro);
     virtual ~MostrarItinerario();
     void initComponents();
+    string getPaisesVuelo();
 private:
     
     //Tree model columns:
   class ModelColumns : public Gtk::TreeModel::ColumnRecord
   {
   public:
+    
 
     ModelColumns()
     {add(tmcNombreAerolinea);add(tmcOrigen);add(tmcDestino); add(tmcHorasalida);
@@ -55,8 +57,11 @@ private:
 
   };
 
+  
+  
   void completaTabla();
   void onButtonClickedFiltrarTabla();
+  void onButtonClickedGuardarVuelo();
   ModelColumns columRecord;
     
     priority_queue <Avion*> colaEmirates; //declaracion colas de prioridad
@@ -71,6 +76,7 @@ private:
     GrafoViajes grafo;
     
     string filtro;
+    string paisesVuelo;
     
     Gtk::Fixed fixed;
     Gtk::TreeView m_TreeView;
@@ -78,7 +84,7 @@ private:
     Gtk::ScrolledWindow m_ScrolledWindow;
     Gtk::Entry etOrigen,etDestino;
     Gtk::Label lblOrigen,lblDestino;
-    Gtk::Button btnFiltrar;
+    Gtk::Button btnFiltrar, btnGuardar;
 };
 
 #endif /* MOSTRARITINERARIO_H */

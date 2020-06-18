@@ -273,7 +273,7 @@ build/Debug/GNU-Linux/MainWindows.o: MainWindows.cpp MainWindows.h \
  /usr/include/gtkmm-3.0/gtkmm/treestore.h \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
- /usr/include/gtkmm-3.0/gtkmm/volumebutton.h
+ /usr/include/gtkmm-3.0/gtkmm/volumebutton.h Vuelo_2.h Avion.h
 
 MainWindows.h:
 
@@ -846,3 +846,7 @@ Drawing.h:
 /usr/include/gtkmm-3.0/gtkmm/viewport.h:
 
 /usr/include/gtkmm-3.0/gtkmm/volumebutton.h:
+
+Vuelo_2.h:
+
+Avion.h:

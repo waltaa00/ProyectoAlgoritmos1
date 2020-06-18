@@ -1043,7 +1043,9 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtkmm-3.0/gtkmm/treestore.h \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
- /usr/include/gtkmm-3.0/gtkmm/volumebutton.h
+ /usr/include/gtkmm-3.0/gtkmm/volumebutton.h Vuelo_2.h Avion.h \
+ ColaAviones.h Avion_2.h MostrarItinerario.h ListaAerolineas.h \
+ GrafoViajes.h
 
 Drawing.h:
 
@@ -3234,3 +3236,17 @@ Drawing.h:
 /usr/include/gtkmm-3.0/gtkmm/viewport.h:
 
 /usr/include/gtkmm-3.0/gtkmm/volumebutton.h:
+
+Vuelo_2.h:
+
+Avion.h:
+
+ColaAviones.h:
+
+Avion_2.h:
+
+MostrarItinerario.h:
+
+ListaAerolineas.h:
+
+GrafoViajes.h:
