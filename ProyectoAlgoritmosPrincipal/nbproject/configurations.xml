@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="97">
+<configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="f3" displayName="Business" projectFiles="true">
+        <itemPath>OrigenDestinoBusiness.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Data" projectFiles="true">
+        <itemPath>OrigenDestinoDataSingleton.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="f1" displayName="Domain" projectFiles="true">
         <itemPath>Aerolinea_2.h</itemPath>
         <itemPath>Avion_2.h</itemPath>
@@ -30,6 +36,12 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="f3" displayName="Business" projectFiles="true">
+        <itemPath>OrigenDestinoBusiness.cpp</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="Data" projectFiles="true">
+        <itemPath>OrigenDestinoDataSingleton.cpp</itemPath>
+      </logicalFolder>
       <logicalFolder name="f1" displayName="Domain" projectFiles="true">
         <itemPath>Aerolinea_2.cpp</itemPath>
         <itemPath>Avion_2.cpp</itemPath>
@@ -122,6 +134,14 @@
       </item>
       <item path="MuestraDestinos.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="OrigenDestinoBusiness.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OrigenDestinoBusiness.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OrigenDestinoDataSingleton.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OrigenDestinoDataSingleton.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="RegistrarUsuario.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="RegistrarUsuario.h" ex="false" tool="3" flavor2="0">
@@ -200,6 +220,14 @@
       <item path="MuestraDestinos.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="MuestraDestinos.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OrigenDestinoBusiness.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OrigenDestinoBusiness.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OrigenDestinoDataSingleton.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OrigenDestinoDataSingleton.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="RegistrarUsuario.cpp" ex="false" tool="1" flavor2="0">
       </item>
