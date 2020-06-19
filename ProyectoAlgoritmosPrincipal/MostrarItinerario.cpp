@@ -207,6 +207,7 @@ void MostrarItinerario::onButtonClickedGuardarVuelo() {
     Gtk::TreeModel::Row row3 = *iter;
     //Do something with the row.
     cout<<"row 3 seleccionada"<<endl;
+    cout<<row3[columRecord.tmcAvion]<<endl;
     //cout<<row3.get_model_gobject()<<endl;
     }
     
