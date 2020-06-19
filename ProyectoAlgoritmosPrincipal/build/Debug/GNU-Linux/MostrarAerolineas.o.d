@@ -1,6 +1,7 @@
 build/Debug/GNU-Linux/MostrarAerolineas.o: MostrarAerolineas.cpp \
  MostrarAerolineas.h ListaAerolineas.h MostrarItinerario.h ColaAviones.h \
- Avion_2.h GrafoViajes.h
+ Avion_2.h GrafoViajes.h OrigenDestinoBusiness.h \
+ OrigenDestinoDataSingleton.h
 
 MostrarAerolineas.h:
 
@@ -13,3 +14,7 @@ ColaAviones.h:
 Avion_2.h:
 
 GrafoViajes.h:
+
+OrigenDestinoBusiness.h:
+
+OrigenDestinoDataSingleton.h:

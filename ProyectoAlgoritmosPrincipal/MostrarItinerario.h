@@ -27,6 +27,7 @@
 #include <list>
 #include "ListaAerolineas.h"
 #include "GrafoViajes.h"
+#include "OrigenDestinoBusiness.h"
 #include <stdio.h>      /* printf, fgets */
 #include <stdlib.h> 
 #include <stdlib.h> 
@@ -39,6 +40,9 @@ public:
     virtual ~MostrarItinerario();
     void initComponents();
     //string getPaisesVuelo();
+    string origen;
+    string destino;
+    
 private:
     
     //Tree model columns:
@@ -76,7 +80,7 @@ private:
     //GrafoViajes grafo;
     
     string filtro;
-    //string paisesVuelo;
+    
     
     Gtk::Fixed fixed;
     Gtk::TreeView m_TreeView;
@@ -87,6 +91,7 @@ private:
     Gtk::Entry etOrigen,etDestino;
     Gtk::Label lblOrigen,lblDestino;
     Gtk::Button btnFiltrar, btnGuardar;
+    
 };
 
 #endif /* MOSTRARITINERARIO_H */

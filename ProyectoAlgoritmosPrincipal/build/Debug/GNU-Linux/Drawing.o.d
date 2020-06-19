@@ -1143,7 +1143,7 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
  /usr/include/gtkmm-3.0/gtkmm/volumebutton.h Vuelo_2.h Avion.h \
  ColaAviones.h Avion_2.h MostrarItinerario.h ListaAerolineas.h \
- GrafoViajes.h
+ GrafoViajes.h OrigenDestinoBusiness.h OrigenDestinoDataSingleton.h
 
 Drawing.h:
 
@@ -3544,3 +3544,7 @@ MostrarItinerario.h:
 ListaAerolineas.h:
 
 GrafoViajes.h:
+
+OrigenDestinoBusiness.h:
+
+OrigenDestinoDataSingleton.h:
