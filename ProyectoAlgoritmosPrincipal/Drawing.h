@@ -18,7 +18,8 @@
 #include "iostream"
 #include "Vuelo_2.h"
 #include "MostrarItinerario.h"
-
+#include <string>
+#include <vector>
 using namespace std;
 
 class Drawing : public Gtk::DrawingArea {
@@ -35,7 +36,7 @@ protected:
 
     Glib::RefPtr<Gdk::Pixbuf> fondo;
     bool on_draw(const Cairo::RefPtr<Cairo::Context>& cr); // on_draw
-    void draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int posX, int posY, string text);
+    void draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int posX, int posY);
     Gtk::Label lblOrigen,lblDestino;
     Gtk::Fixed fixed;
     
@@ -44,6 +45,8 @@ private:
     MostrarItinerario* mostrarItinerario;
     //ColaAviones* cola;
     string texto;
+    OrigenDestinoBusiness* origenDestino;
+    vector<string> vectorOrigenDestino;
 
 };
 

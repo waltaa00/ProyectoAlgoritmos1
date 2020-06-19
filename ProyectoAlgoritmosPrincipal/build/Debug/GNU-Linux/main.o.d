@@ -1,7 +1,8 @@
 build/Debug/GNU-Linux/main.o: main.cpp MainWindows.h RegistrarUsuario.h \
  Usuario_2.h InicioSesion.h MostrarAerolineas.h ListaAerolineas.h \
  MostrarItinerario.h ColaAviones.h Avion_2.h GrafoViajes.h \
- MuestraDestinos.h Drawing.h /usr/include/gtkmm-3.0/gtkmm.h \
+ OrigenDestinoBusiness.h OrigenDestinoDataSingleton.h MuestraDestinos.h \
+ Drawing.h /usr/include/gtkmm-3.0/gtkmm.h \
  /usr/include/glibmm-2.4/glibmm.h /usr/include/glibmm-2.4/glibmm/thread.h \
  /usr/include/glibmm-2.4/glibmm/threads.h \
  /usr/include/glibmm-2.4/glibmm/balancedtree.h \
@@ -331,6 +332,10 @@ ColaAviones.h:
 Avion_2.h:
 
 GrafoViajes.h:
+
+OrigenDestinoBusiness.h:
+
+OrigenDestinoDataSingleton.h:
 
 MuestraDestinos.h:
 

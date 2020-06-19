@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <gtkmm-3.0/gtkmm/messagedialog.h>
 
 
 
@@ -27,7 +28,7 @@ void MostrarItinerario::initComponents() {
 
     this->btnGuardar.signal_clicked().connect(sigc::mem_fun(*this,
             &MostrarItinerario::onButtonClickedGuardarVuelo));
-    this->btnGuardar.set_label("Guardar");
+    this->btnGuardar.set_label("Seleccionar vuelo");
 
     this->colaEmirates = cA.getColaEmirates();
     this->colaAvianca = cA.getColaAvianca();
@@ -199,19 +200,37 @@ void MostrarItinerario::onButtonClickedFiltrarTabla() {
 }
 
 void MostrarItinerario::onButtonClickedGuardarVuelo() {
-    cout << "Guardar Vuelo arriba" << endl;
+
     this->refTreeSelection = m_TreeView.get_selection();
     this->iter = this->refTreeSelection->get_selected();
-    if(iter) //If anything is selected
+    if (iter) //If anything is selected
     {
-    Gtk::TreeModel::Row row3 = *iter;
-    //Do something with the row.
-    cout<<"row 3 seleccionada"<<endl;
-    cout<<row3[columRecord.tmcAvion]<<endl;
-    //cout<<row3.get_model_gobject()<<endl;
+        Gtk::TreeModel::Row row3 = *iter;
+        Glib::ustring strText = row3[columRecord.tmcOrigen];
+        origen = strText;
+
+        Glib::ustring strText2 = row3[columRecord.tmcDestino];
+        destino = strText2;
+        OrigenDestinoBusiness origenDestino;
+        origenDestino.guardarOrigenDestino(origen, destino);
+
+
+        Gtk::MessageDialog dialogo(
+                *this,
+                "Vuelo seleccionado con exito",
+                false,
+                Gtk::MESSAGE_INFO
+                );
+
+
+        dialogo.run();
+
     }
-    
-    
+
+
+
+
+
 }
 
 MostrarItinerario::~MostrarItinerario() {
