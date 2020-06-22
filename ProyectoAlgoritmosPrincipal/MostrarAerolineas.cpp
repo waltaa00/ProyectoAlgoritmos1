@@ -23,12 +23,14 @@ void MostrarAerolineas::initComponents() {
     aeroList = lA.getLista();
 
     //aeroList.push_front("Trivago");
+    
     this->lblAerolinea.set_label("Presione una flecha");
-    this->fixed.put(this->lblAerolinea, 150, 35);
+    //this->lblAerolinea.set_size_request(100,100);
+    this->fixed.put(this->lblAerolinea, 230, 150);
     
     this->btn.add_pixlabel("assets/Aerolineas1.png", "");
-    this->btn.set_size_request(200, 200);
-    this->fixed.put(this->btn, 100, 75);
+    this->btn.set_size_request(155, 200);
+    this->fixed.put(this->btn, 30, 50);
     
     this->add(fixed);
 }
