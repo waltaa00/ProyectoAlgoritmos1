@@ -7,9 +7,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/diego/NetBeansProjects/ProyectoAlgoritmos/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/MostrarAerolineas.cpp</file>
-            <file>file:/home/diego/NetBeansProjects/ProyectoAlgoritmos/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/MostrarItinerario.cpp</file>
-            <file>file:/home/diego/NetBeansProjects/ProyectoAlgoritmos/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/RegistrarUsuario.cpp</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/MostrarAerolineas.cpp</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/Drawing.h</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/RegistrarUsuario.h</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/main.cpp</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/Drawing.cpp</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/ColaAviones.cpp</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/MostrarItinerario.cpp</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/GrafoViajes.cpp</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/MostrarItinerario.h</file>
         </group>
     </open-files>
 </project-private>
