@@ -49,6 +49,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/OrigenDestinoBusiness.o \
 	${OBJECTDIR}/OrigenDestinoDataSingleton.o \
 	${OBJECTDIR}/RegistrarUsuario.o \
+	${OBJECTDIR}/UsuarioBusiness.o \
+	${OBJECTDIR}/UsuarioData.o \
 	${OBJECTDIR}/Usuario_2.o \
 	${OBJECTDIR}/Vuelo_2.o \
 	${OBJECTDIR}/main.o
@@ -147,6 +149,16 @@ ${OBJECTDIR}/RegistrarUsuario.o: RegistrarUsuario.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/RegistrarUsuario.o RegistrarUsuario.cpp
+
+${OBJECTDIR}/UsuarioBusiness.o: UsuarioBusiness.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/UsuarioBusiness.o UsuarioBusiness.cpp
+
+${OBJECTDIR}/UsuarioData.o: UsuarioData.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/UsuarioData.o UsuarioData.cpp
 
 ${OBJECTDIR}/Usuario_2.o: Usuario_2.cpp
 	${MKDIR} -p ${OBJECTDIR}

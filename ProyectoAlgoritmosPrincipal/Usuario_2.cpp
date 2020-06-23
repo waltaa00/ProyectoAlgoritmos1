@@ -1,13 +1,15 @@
 
 
-#include "Usuario.h"
 
-Usuario::Usuario(string nombre, string edad, string pasaporte, string genero, string nacionalidad) {
+#include "Usuario_2.h"
+
+Usuario::Usuario(string nombre, string edad, string pasaporte, string genero, string nacionalidad, string contrasenia) {
     this->nombre = nombre;
     this->edad = edad;
     this->pasaporte = pasaporte;
     this->genero = genero;
     this->nacionalidad = nacionalidad;
+    this->contrasenia= contrasenia;
 }
 
 Usuario::~Usuario() {
@@ -66,6 +68,17 @@ void Usuario::setNacionalidad(string nacionalidad) {
 
 }
 
+
+std::string Usuario::getContrasenia() {
+    return contrasenia;
+
+}
+
+void Usuario::setContrasenia(string contrasenia) {
+    contrasenia= contrasenia;
+
+}
+
 std::string Usuario::toString() {
     stringstream result;
 
@@ -75,7 +88,8 @@ std::string Usuario::toString() {
             << "\nEdad: " << edad
             << "\nPasaporte: " << pasaporte
             << "\nGenero: " << genero
-            << "\nNaciolidad: " << nacionalidad;
+            << "\nNaciolidad: " << nacionalidad
+            << "\nContraseña: " << contrasenia;
     return result.str();
 
 }

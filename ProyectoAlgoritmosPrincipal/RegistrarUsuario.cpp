@@ -2,11 +2,13 @@
 
 #include "RegistrarUsuario.h"
 #include "Usuario_2.h"
+#include "UsuarioBusiness.h"
 
 RegistrarUsuario::RegistrarUsuario() {
     this->set_title("Registrar Usuario");
     this->set_size_request(400, 400);
     initComponents();
+    uB= new UsuarioBusiness();
     this->show_all_children();
 }
 
@@ -70,6 +72,13 @@ void RegistrarUsuario::onButtonClickedGuardar() {
                 );
         dialogo.run();
     } else {
+        //string nombre, string edad, string pasaporte, string genero, string nacionalidad, string contrasenia
+        
+        Usuario *usuario;
+        usuario = new Usuario(etNombre.get_text(), etEdad.get_text(), etPasaporte.get_text(),
+                etGenero.get_text(), etNacionalidad.get_text(), etContrasena.get_text());
+        
+       // uB->registrarUsuario(new Usuario(usuario));
              Gtk::MessageDialog dialogo(
                 *this,
                 "Usuario Registrado",
