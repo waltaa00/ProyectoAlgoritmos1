@@ -22,6 +22,7 @@
 #include <gtkmm-3.0/gtkmm/messagedialog.h>
 
 #include "Usuario_2.h"
+#include "UsuarioBusiness.h"
 
 using namespace std;
 
@@ -42,8 +43,9 @@ private:
     Gtk::Entry etNombre, etContrasena,etNacionalidad, etEdad, etPasaporte, etGenero;
     Gtk::Label lblNombre, lblContrasena,lblNacionalidad, lblEdad, lblPasaporte, lblGenero;
     
+    UsuarioBusiness *uB;
+    
 //    Usuario usuarios[];
 };
 
 #endif /* REGISTRARUSUARIO_H */
-
