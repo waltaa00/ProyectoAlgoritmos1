@@ -60,7 +60,7 @@ bool Drawing::on_draw(const Cairo::RefPtr<Cairo::Context>& cr) {
     this->vuelo->draw(cr); //se dibuja el avion
 
     cr->set_source_rgb(0, 0, 0); //color del texto
-    this->draw_text(cr, this->vuelo->getPosX() - 10, this->vuelo->getPosY() - 30);
+    this->draw_text(cr, this->vuelo->getPosX() - 30, this->vuelo->getPosY() - 30);
 
 
 
