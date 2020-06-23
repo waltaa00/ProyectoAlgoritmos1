@@ -28,6 +28,7 @@
 #include "ListaAerolineas.h"
 #include "GrafoViajes.h"
 #include "OrigenDestinoBusiness.h"
+//#include "MuestraDestinos.h"
 #include <stdio.h>      /* printf, fgets */
 #include <stdlib.h> 
 #include <stdlib.h> 
@@ -42,6 +43,8 @@ public:
     //string getPaisesVuelo();
     string origen;
     string destino;
+    //MuestraDestinos mD;
+    //void aboutWinClose();
     
 private:
     

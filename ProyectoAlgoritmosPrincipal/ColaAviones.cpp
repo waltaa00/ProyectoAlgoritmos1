@@ -28,8 +28,9 @@ ColaAviones::ColaAviones() {
     colaVolaris.push(new Avion("Boeing311", "155 pasajeros", "USA", "Costa Rica", "13:11", "14:05"));
     colaVolaris.push(new Avion("Boeing303", "170 pasajeros", "USA", "Panama", "15:11", "19:10"));
     colaVolaris.push(new Avion("Boeing007", "205 pasajeros", "Colombia", "Panama", "17:11", "20:30"));
+    colaVolaris.push(new Avion("Tesla", "135 pasajeros", "Suiza", "USA", "18:44", "23:12"));
     colaVolaris.push(new Avion("SpaceX", "190 pasajeros", "USA", "Panama", "21:15", "23:50"));
-    colaVolaris.push(new Avion("Boeing345", "110 pasajeros", "Costa Rica", "Nicarague", "22:02", "23:20"));
+    colaVolaris.push(new Avion("Boeing345", "110 pasajeros", "Costa Rica", "Nicaragua", "22:02", "23:20"));
 
     colaJetblue.push(new Avion("DrakesPlane", "50 pasajeros", "Canada", "Costa Rica", "16:00", "19:03"));
     colaJetblue.push(new Avion("LilYatchy", "195 pasajeros", "India", "USA", "18:00", "22:21"));

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="100">
+<configurationDescriptor version="97">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -48,6 +48,8 @@
         <itemPath>ColaAviones.cpp</itemPath>
         <itemPath>GrafoViajes.cpp</itemPath>
         <itemPath>Itinerario_2.cpp</itemPath>
+        <itemPath>PaisesDelGrafo.cpp</itemPath>
+        <itemPath>PaisesDelGrafo.h</itemPath>
         <itemPath>Usuario_2.cpp</itemPath>
         <itemPath>Vuelo_2.cpp</itemPath>
       </logicalFolder>
@@ -142,6 +144,10 @@
       </item>
       <item path="OrigenDestinoDataSingleton.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="PaisesDelGrafo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PaisesDelGrafo.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="RegistrarUsuario.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="RegistrarUsuario.h" ex="false" tool="3" flavor2="0">
@@ -228,6 +234,10 @@
       <item path="OrigenDestinoDataSingleton.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="OrigenDestinoDataSingleton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PaisesDelGrafo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PaisesDelGrafo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="RegistrarUsuario.cpp" ex="false" tool="1" flavor2="0">
       </item>

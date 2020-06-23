@@ -43,12 +43,8 @@ void MostrarItinerario::initComponents() {
     //Only show the scrollbars when they are necessary:
     m_ScrolledWindow.set_policy(Gtk::POLICY_AUTOMATIC, Gtk::POLICY_AUTOMATIC);
     m_refTreeModel = Gtk::ListStore::create(columRecord);
-    //Gtk::TreeModel::Row row = *(m_refTreeModel->append());
-    //Gtk::TreeModel::Row row2 = *(m_refTreeModel->append());
     m_TreeView.set_model(m_refTreeModel);
-    //m_TreeView.set_reorderable();
 
-    //  m_TreeView.
     //m_TreeView.append_column("Aerolinea", columRecord.tmcNombreAerolinea);
     m_TreeView.append_column("Origen", columRecord.tmcOrigen);
     m_TreeView.append_column("Destino", columRecord.tmcDestino);
@@ -57,15 +53,6 @@ void MostrarItinerario::initComponents() {
     m_TreeView.append_column("Avion", columRecord.tmcAvion);
     m_TreeView.append_column("Capacidad Pasajeros", columRecord.tmcCapacidad);
 
-
-    //    row[columRecord.tmcHorasalida] = colaItinerario.top();
-    //    row2[columRecord.tmcHorasalida] = "10:34";
-    //    colaItinerario.pop();
-    //    row[columRecord.tmcHorallegada] = colaItinerario.top();
-    //    row2[columRecord.tmcHorallegada] = "12:46";
-    //    colaItinerario.pop();
-    //    row[columRecord.tmcNombreAerolinea] = colaItinerario.top();
-    //    row2[columRecord.tmcNombreAerolinea] = "Emirates";
     completaTabla();
     m_ScrolledWindow.set_size_request(550, 300);
     this->fixed.put(this->m_ScrolledWindow, 10, 10);
@@ -78,7 +65,7 @@ void MostrarItinerario::initComponents() {
     add(this->fixed);
 }
 
-
+//Control horario
 time_t t = time(0);
 tm* now = localtime(&t);
 int hora = now->tm_hour;
@@ -93,8 +80,6 @@ void MostrarItinerario::completaTabla() {
     int tamanoVolaris = colaVolaris.size();
     int tamanoJetblue = colaJetblue.size();
 
-
-
     if (this->filtro == "Emirates") {
         for (int i = 0; i < tamanoEmirates; i++) {
             cout << "hora salida" << colaEmirates.top()->getHoraSalida() << " hora real " << hora << endl;
@@ -104,13 +89,8 @@ void MostrarItinerario::completaTabla() {
                 row3[columRecord.tmcHorallegada] = colaEmirates.top()->getHoraLlegada();
                 row3[columRecord.tmcOrigen] = colaEmirates.top()->getOrigen();
                 row3[columRecord.tmcDestino] = colaEmirates.top()->getDestino();
-
-                //        this->paisesVuelo = colaEmirates.top()->getOrigen()+" - "+colaEmirates.top()->getDestino();
-                //        cout<<this->paisesVuelo<<endl;
-
                 row3[columRecord.tmcCapacidad] = colaEmirates.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaEmirates.top()->getNombre();
-
 
             }
             colaEmirates.pop();
@@ -128,10 +108,8 @@ void MostrarItinerario::completaTabla() {
                 row3[columRecord.tmcDestino] = colaJetblue.top()->getDestino();
                 row3[columRecord.tmcCapacidad] = colaJetblue.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaJetblue.top()->getNombre();
-
                 //        grafo.AnadirNodo(colaJetblue.top()->getOrigen());
                 //        grafo.AnadirNodo(colaJetblue.top()->getDestino());
-
 
             }
             colaJetblue.pop();
@@ -147,14 +125,6 @@ void MostrarItinerario::completaTabla() {
                 row3[columRecord.tmcDestino] = colaAvianca.top()->getDestino();
                 row3[columRecord.tmcCapacidad] = colaAvianca.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaAvianca.top()->getNombre();
-
-
-                //this->paisesVuelo = colaAvianca.top()->getOrigen()+" - "+colaAvianca.top()->getDestino();
-
-                //        grafo.AnadirNodo(colaAvianca.top()->getOrigen());
-                //        cout<<"\nAhora con destino"<<endl;
-                //        grafo.AnadirNodo(colaAvianca.top()->getDestino());
-
 
             }
             colaAvianca.pop();
@@ -214,7 +184,7 @@ void MostrarItinerario::onButtonClickedGuardarVuelo() {
         OrigenDestinoBusiness origenDestino;
         origenDestino.guardarOrigenDestino(origen, destino);
 
-
+        
         Gtk::MessageDialog dialogo(
                 *this,
                 "Vuelo seleccionado con exito",
@@ -228,10 +198,17 @@ void MostrarItinerario::onButtonClickedGuardarVuelo() {
     }
 
 
-
+//        this->mD = new MuestraDestinos();
+//        this->mD->signal_hide().connect(sigc::mem_fun(*this, &MostrarItinerario::aboutWinClose)); 
+//        this->mD->show_all();
 
 
 }
+
+
+//void MostrarItinerario::aboutWinClose(){
+//    this->mD = 0;
+//}
 
 MostrarItinerario::~MostrarItinerario() {
 }

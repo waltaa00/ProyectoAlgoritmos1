@@ -60,7 +60,7 @@ bool Drawing::on_draw(const Cairo::RefPtr<Cairo::Context>& cr) {
     this->vuelo->draw(cr); //se dibuja el avion
 
     cr->set_source_rgb(0, 0, 0); //color del texto
-    this->draw_text(cr, this->vuelo->getPosX() - 10, this->vuelo->getPosY() - 30);
+    this->draw_text(cr, this->vuelo->getPosX() - 30, this->vuelo->getPosY() - 30);
 
 
 
@@ -76,7 +76,7 @@ void Drawing::draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int posX, int p
         font.set_family("Mukti Narrow"); //Monospace Mukti Narrow
         font.set_weight(Pango::WEIGHT_BOLD);
         //font.set_style();
-        Glib::RefPtr<Pango::Layout> layout = create_pango_layout(" Origen- Destino");
+        Glib::RefPtr<Pango::Layout> layout = create_pango_layout("Origen - Destino");
         layout->set_font_description(font);
         int text_width;
         int text_height;
