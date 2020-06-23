@@ -22,9 +22,9 @@ Vuelo::Vuelo() {
 }//Contructor sobrecargado
 
 void Vuelo::spawn() {
-        srand(time(0));
-        this->posX=(rand() % (15 - 0) * this->image->get_width());
-        this->posY=(rand() % (10 - 0) * this->image->get_height());
+        //srand(time(NULL));
+        this->posX=(rand() % (20) * this->image->get_width());
+        this->posY=(rand() % (12) * this->image->get_height());
     }//fin spawn,es para aparecer en un sitio aleatorio
 
 Vuelo::~Vuelo() {

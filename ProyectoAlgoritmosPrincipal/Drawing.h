@@ -37,6 +37,7 @@ protected:
     Glib::RefPtr<Gdk::Pixbuf> fondo;
     bool on_draw(const Cairo::RefPtr<Cairo::Context>& cr); // on_draw
     void draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int posX, int posY);
+    void draw_text2(const Cairo::RefPtr<Cairo::Context>& cr, int posX, int posY,int origenz,int destinoz);
     Gtk::Label lblOrigen,lblDestino;
     Gtk::Fixed fixed;
     
@@ -47,7 +48,7 @@ private:
     string texto;
     OrigenDestinoBusiness* origenDestino;
     vector<string> vectorOrigenDestino;
-
+    vector<Vuelo> vuelos;
 };
 
 #endif /* DRAWING_H */

@@ -25,7 +25,7 @@ OrigenDestinoDataSingleton::OrigenDestinoDataSingleton() {
 }
 
 void OrigenDestinoDataSingleton::guardarOrigenDestino(string origen, string destino) {
-    origenDestino.clear();
+    //origenDestino.clear();
     origenDestino.push_back(origen);
     origenDestino.push_back(destino);
 }
