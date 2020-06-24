@@ -276,7 +276,7 @@ build/Debug/GNU-Linux/MainWindows.o: MainWindows.cpp MainWindows.h \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
  /usr/include/gtkmm-3.0/gtkmm/volumebutton.h Vuelo_2.h Avion.h \
- MuestraSalidas.h
+ MuestraSalidas.h ModuloAdministrativo.h
 
 MainWindows.h:
 
@@ -863,3 +863,5 @@ Vuelo_2.h:
 Avion.h:
 
 MuestraSalidas.h:
+
+ModuloAdministrativo.h:
