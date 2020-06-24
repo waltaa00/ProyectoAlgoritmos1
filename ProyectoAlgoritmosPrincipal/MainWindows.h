@@ -19,7 +19,8 @@
 #include "InicioSesion.h"
 #include "MostrarAerolineas.h"
 #include "MostrarItinerario.h"
-#include "MuestraDestinos.h" 
+#include "MuestraDestinos.h"
+#include "MuestraSalidas.h" 
 #include <gtkmm/window.h>
 #include <gtkmm/box.h>
 #include <gtkmm-3.0/gtkmm/menubar.h>
@@ -52,6 +53,7 @@ private:
     void abrirItinerarios();
     
     void abrirDestinos();
+    void abrirSalidas();
 
     void aboutWinClose(); //aboutWinClose
 
@@ -59,7 +61,7 @@ private:
     Gtk::MenuItem menuArchivo;
     Gtk::Menu subMenuArchivo;
     Gtk::ImageMenuItem menuRegistraUsuario, menuIniciaSesion,menuAerolineas,menuItinerario,
-            menuDestinos;
+            menuDestinos,menuSalidas;
     Gtk::Fixed fixed; // contenedor
 
     RegistrarUsuario *registrarUsuario;
@@ -67,6 +69,7 @@ private:
     MostrarAerolineas *mostrarAerolineas;
     MostrarItinerario *mostrarItinerarios;
     MuestraDestinos *mostrarDestinos;
+    MuestraSalidas *muestraSalidas;
 };
 
 #endif /* MAINWINDOWS_H */

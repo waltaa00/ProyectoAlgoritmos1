@@ -22,6 +22,7 @@ void MainWindows::initComponents() {
     this->menuIniciaSesion.add_pixlabel("assets/user.png", "Iniciar Sesion");
     this->menuAerolineas.add_pixlabel("assets/plane.png", "Aerolineas");
     this->menuDestinos.add_pixlabel("assets/hiking.png", "Destinos");
+    this->menuSalidas.add_pixlabel("assets/itinerary.png", "Salidas");
 
 
     this->menuIniciaSesion.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirInicioSesion));
@@ -34,13 +35,16 @@ void MainWindows::initComponents() {
     this->subMenuArchivo.append(this->menuAerolineas);
     this->menuDestinos.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirDestinos));
     this->subMenuArchivo.append(this->menuDestinos);
- 
+    
+    this->menuSalidas.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirSalidas));
+    this->subMenuArchivo.append(this->menuSalidas);
 
 
     this->registrarUsuario = 0;
     this->inicioSesion = 0;
     this->mostrarAerolineas = 0;
     this->mostrarDestinos = 0;
+    this->muestraSalidas = 0;
 
     this->add(fixed);
     this->show_all_children();
@@ -82,11 +86,20 @@ void MainWindows::abrirDestinos() {
     this->mostrarDestinos->show_all();
 }
 
+void MainWindows::abrirSalidas() {
+    if (this->muestraSalidas != 0)
+        return;
+
+    this->muestraSalidas = new MuestraSalidas();
+    this->muestraSalidas->signal_hide().connect(sigc::mem_fun(*this, &MainWindows::aboutWinClose));
+    this->muestraSalidas->show_all();
+}
 
 void MainWindows::aboutWinClose() {
     this->registrarUsuario = 0;
     this->inicioSesion = 0;
     this->mostrarAerolineas = 0;
     this->mostrarDestinos = 0;
+    this->muestraSalidas = 0;
 
 }
