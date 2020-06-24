@@ -24,6 +24,11 @@ Drawing::Drawing() {
     this->origenDestino = new OrigenDestinoBusiness();
     vectorOrigenDestino = this->origenDestino->recuperarOrigenDestino();
 
+    for (int i = 0; i < vectorOrigenDestino.size(); i += 2) {
+        Vuelo vueloz;
+        vueloz.spawn();
+        vuelos.push_back(vueloz);
+    }
     //this->texto = this->cola->getColaAvianca().top()->getOrigen();
     //cout<<"info paises: "<<this->texto<<endl;
 
@@ -57,14 +62,23 @@ bool Drawing::on_draw(const Cairo::RefPtr<Cairo::Context>& cr) {
             (width - fondo->get_width()) / 2, (height - fondo->get_height()) / 2);
     cr->paint(); //se pinta el fondo
 
-    this->vuelo->draw(cr); //se dibuja el avion
-
+    if (this->vectorOrigenDestino.size() == 2 || this->vectorOrigenDestino.size() == 0) {
+        this->vuelo->draw(cr); //se dibuja el avion
+    } else {
+        for (int i = 0; i < vuelos.size(); i++) {
+            this->vuelos.at(i).draw(cr);
+        }
+    }
     cr->set_source_rgb(0, 0, 0); //color del texto
-    this->draw_text(cr, this->vuelo->getPosX() - 30, this->vuelo->getPosY() - 30);
-
-
-
-
+    if (this->vectorOrigenDestino.size() == 2 || this->vectorOrigenDestino.size() == 0) {
+        this->draw_text(cr, this->vuelo->getPosX() - 10, this->vuelo->getPosY() - 30);
+    } else {
+        int v = 0;
+        for (int i = 0; i < vectorOrigenDestino.size(); i += 2) {
+            this->draw_text2(cr, this->vuelos.at(v).getPosX() - 10, this->vuelos.at(v).getPosY() - 30, i, i + 1);
+            v++;
+        }
+    }
     return true;
 
 }
@@ -87,8 +101,8 @@ void Drawing::draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int posX, int p
         layout->show_in_cairo_context(cr);
 
 
-    } else  {
-        string text = vectorOrigenDestino.at(0)+ " - " + vectorOrigenDestino.at(1);
+    } else {
+        string text = vectorOrigenDestino.at(0) + " - " + vectorOrigenDestino.at(1);
         Pango::FontDescription font;
         font.set_size(15 * Pango::SCALE);
         font.set_family("Mukti Narrow"); //Monospace Mukti Narrow
@@ -103,17 +117,27 @@ void Drawing::draw_text(const Cairo::RefPtr<Cairo::Context>& cr, int posX, int p
         // Position the text in the middle
         cr->move_to(posX, posY);
         layout->show_in_cairo_context(cr);
-
-
-
-
-
-
     }
 
-
-
 } // draw_text
+
+void Drawing::draw_text2(const Cairo::RefPtr<Cairo::Context>& cr, int posX, int posY, int origenz, int destinoz) {
+    string text = vectorOrigenDestino.at(origenz) + " - " + vectorOrigenDestino.at(destinoz);
+    Pango::FontDescription font;
+    font.set_size(15 * Pango::SCALE);
+    font.set_family("Mukti Narrow"); //Monospace Mukti Narrow
+    font.set_weight(Pango::WEIGHT_BOLD);
+    //font.set_style();
+    Glib::RefPtr<Pango::Layout> layout = create_pango_layout(text);
+    layout->set_font_description(font);
+    int text_width;
+    int text_height;
+    //get the text dimensions (it updates the variables -- by reference)
+    layout->get_pixel_size(text_width, text_height);
+    // Position the text in the middle
+    cr->move_to(posX, posY);
+    layout->show_in_cairo_context(cr);
+}
 
 Drawing::~Drawing() {
 }
