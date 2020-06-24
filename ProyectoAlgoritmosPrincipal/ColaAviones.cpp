@@ -56,6 +56,10 @@ priority_queue <Avion*> ColaAviones::getColaAvianca() {
     return colaAvianca;
 }
 
+void ColaAviones::pushAvianca(string nombre, string cantidad, string destino, string origen, string horaSalida, string horaLlegada){
+    colaAvianca.push(new Avion(nombre, cantidad, destino, origen, horaSalida, horaLlegada));
+}
+
 priority_queue <Avion*> ColaAviones::getColaVolaris() {
     return colaVolaris;
 }

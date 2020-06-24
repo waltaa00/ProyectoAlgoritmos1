@@ -28,6 +28,9 @@ public:
     priority_queue <Avion*> getColaVolaris();
     priority_queue <Avion*> getColaJetblue();
     
+    //Avion(string nombre, string cantidad,string destino, string origen, string horaSalida, string horaLlegada);
+    void pushAvianca(string nombre, string cantidad,string destino, string origen, string horaSalida, string horaLlegada);
+    
 private:
     priority_queue <Avion*> colaEmirates; //declaracion cola de prioridad
     priority_queue <Avion*> colaCopa;

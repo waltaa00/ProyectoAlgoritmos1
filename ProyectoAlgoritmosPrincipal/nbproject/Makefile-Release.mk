@@ -43,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/InicioSesion.o \
 	${OBJECTDIR}/Itinerario_2.o \
 	${OBJECTDIR}/MainWindows.o \
+	${OBJECTDIR}/ModuloAdministrativo.o \
 	${OBJECTDIR}/MostrarAerolineas.o \
 	${OBJECTDIR}/MostrarItinerario.o \
 	${OBJECTDIR}/MuestraDestinos.o \
@@ -120,6 +121,11 @@ ${OBJECTDIR}/MainWindows.o: MainWindows.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MainWindows.o MainWindows.cpp
+
+${OBJECTDIR}/ModuloAdministrativo.o: ModuloAdministrativo.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ModuloAdministrativo.o ModuloAdministrativo.cpp
 
 ${OBJECTDIR}/MostrarAerolineas.o: MostrarAerolineas.cpp 
 	${MKDIR} -p ${OBJECTDIR}

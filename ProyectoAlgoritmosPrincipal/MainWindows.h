@@ -20,7 +20,8 @@
 #include "MostrarAerolineas.h"
 #include "MostrarItinerario.h"
 #include "MuestraDestinos.h"
-#include "MuestraSalidas.h" 
+#include "MuestraSalidas.h"
+#include "ModuloAdministrativo.h" 
 #include <gtkmm/window.h>
 #include <gtkmm/box.h>
 #include <gtkmm-3.0/gtkmm/menubar.h>
@@ -53,7 +54,10 @@ private:
     void abrirItinerarios();
     
     void abrirDestinos();
+    
     void abrirSalidas();
+    
+    void abrirModulo();
 
     void aboutWinClose(); //aboutWinClose
 
@@ -70,6 +74,8 @@ private:
     MostrarItinerario *mostrarItinerarios;
     MuestraDestinos *mostrarDestinos;
     MuestraSalidas *muestraSalidas;
+    ModuloAdministrativo *moduloAdministrativo;
+    
 };
 
 #endif /* MAINWINDOWS_H */

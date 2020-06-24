@@ -25,6 +25,7 @@
         <itemPath>Drawing.h</itemPath>
         <itemPath>InicioSesion.h</itemPath>
         <itemPath>MainWindows.h</itemPath>
+        <itemPath>ModuloAdministrativo.h</itemPath>
         <itemPath>MostrarAerolineas.h</itemPath>
         <itemPath>MostrarItinerario.h</itemPath>
         <itemPath>MuestraDestinos.h</itemPath>
@@ -59,6 +60,7 @@
         <itemPath>Drawing.cpp</itemPath>
         <itemPath>InicioSesion.cpp</itemPath>
         <itemPath>MainWindows.cpp</itemPath>
+        <itemPath>ModuloAdministrativo.cpp</itemPath>
         <itemPath>MostrarAerolineas.cpp</itemPath>
         <itemPath>MostrarItinerario.cpp</itemPath>
         <itemPath>MuestraDestinos.cpp</itemPath>
@@ -138,9 +140,9 @@
       </item>
       <item path="MainWindows.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="ModuloAdmin.cpp" ex="false" tool="1" flavor2="0">
+      <item path="ModuloAdministrativo.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="ModuloAdmin.h" ex="false" tool="3" flavor2="0">
+      <item path="ModuloAdministrativo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="MostrarAerolineas.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -239,9 +241,9 @@
       </item>
       <item path="MainWindows.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="ModuloAdmin.cpp" ex="false" tool="1" flavor2="0">
+      <item path="ModuloAdministrativo.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="ModuloAdmin.h" ex="false" tool="3" flavor2="0">
+      <item path="ModuloAdministrativo.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="MostrarAerolineas.cpp" ex="false" tool="1" flavor2="0">
       </item>

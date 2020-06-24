@@ -34,13 +34,14 @@ void MainWindows::initComponents() {
 
     this->menuAerolineas.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirAerolineas));
     this->subMenuArchivo.append(this->menuAerolineas);
+    
     this->menuDestinos.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirDestinos));
     this->subMenuArchivo.append(this->menuDestinos);
     
     this->menuSalidas.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirSalidas));
     this->subMenuArchivo.append(this->menuSalidas);
     
-    
+    this->menuAdministrar.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirModulo));
     this->subMenuArchivo.append(this->menuAdministrar);
 
 
@@ -49,6 +50,7 @@ void MainWindows::initComponents() {
     this->mostrarAerolineas = 0;
     this->mostrarDestinos = 0;
     this->muestraSalidas = 0;
+    this->moduloAdministrativo = 0;
 
     this->add(fixed);
     this->show_all_children();
@@ -99,11 +101,21 @@ void MainWindows::abrirSalidas() {
     this->muestraSalidas->show_all();
 }
 
+void MainWindows::abrirModulo() {
+    if (this->moduloAdministrativo != 0)
+        return;
+
+    this->moduloAdministrativo = new ModuloAdministrativo();
+    this->moduloAdministrativo->signal_hide().connect(sigc::mem_fun(*this, &MainWindows::aboutWinClose));
+    this->moduloAdministrativo->show_all();
+}
+
 void MainWindows::aboutWinClose() {
     this->registrarUsuario = 0;
     this->inicioSesion = 0;
     this->mostrarAerolineas = 0;
     this->mostrarDestinos = 0;
     this->muestraSalidas = 0;
+    this->moduloAdministrativo = 0;
 
 }
