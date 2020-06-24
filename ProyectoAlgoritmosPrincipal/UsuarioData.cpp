@@ -29,7 +29,7 @@ void UsuarioData::registrarUsuarios(Usuario *usuario){
     this->archivo<< usuario->getPasaporte() << "," ;
     this->archivo<< usuario->getGenero() << "," ;
     this->archivo<< usuario->getNacionalidad() << "," ;
-    this->archivo<< usuario->getContrasenia() << "/" ;
+    this->archivo<< usuario->getContrasenia()<< "\n" ;
     
     this->archivo.close();
 

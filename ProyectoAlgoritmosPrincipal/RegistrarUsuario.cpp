@@ -78,7 +78,7 @@ void RegistrarUsuario::onButtonClickedGuardar() {
         usuario = new Usuario(etNombre.get_text(), etEdad.get_text(), etPasaporte.get_text(),
                 etGenero.get_text(), etNacionalidad.get_text(), etContrasena.get_text());
         
-       // uB->registrarUsuario(new Usuario(usuario));
+        uB->registrarUsuario(usuario);
         cout<<"usuario registrado"<<endl;
              Gtk::MessageDialog dialogo(
                 *this,
@@ -89,5 +89,12 @@ void RegistrarUsuario::onButtonClickedGuardar() {
         dialogo.set_secondary_text(this->etNombre.get_text());
                
         dialogo.run();
+        
+        this->etNombre.set_text(" ");
+        this->etEdad.set_text(" ");
+        this->etPasaporte.set_text(" ");
+        this->etGenero.set_text(" ");
+        this->etNacionalidad.set_text(" ");
+        this->etContrasena.set_text(" ");
     }
 }
