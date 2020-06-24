@@ -78,7 +78,7 @@ void RegistrarUsuario::onButtonClickedGuardar() {
         usuario = new Usuario(etNombre.get_text(), etEdad.get_text(), etPasaporte.get_text(),
                 etGenero.get_text(), etNacionalidad.get_text(), etContrasena.get_text());
         
-       // uB->registrarUsuario(new Usuario(usuario));
+        uB->registrarUsuario(usuario);
         cout<<"usuario registrado"<<endl;
              Gtk::MessageDialog dialogo(
                 *this,

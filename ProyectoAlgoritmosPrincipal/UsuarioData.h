@@ -36,9 +36,11 @@ public:
     
     
     void registrarUsuarios(Usuario *usuario);
+    vector<Usuario> obtenerUsuarios();
 private:
     
         ofstream archivo;
+        vector<Usuario> vectorUsuarios;
 
 };
 

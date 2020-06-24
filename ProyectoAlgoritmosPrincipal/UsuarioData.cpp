@@ -29,8 +29,29 @@ void UsuarioData::registrarUsuarios(Usuario *usuario){
     this->archivo<< usuario->getPasaporte() << "," ;
     this->archivo<< usuario->getGenero() << "," ;
     this->archivo<< usuario->getNacionalidad() << "," ;
-    this->archivo<< usuario->getContrasenia() << "/" ;
+    this->archivo<< usuario->getContrasenia() << "\n" ;
     
     this->archivo.close();
+
+}
+vector<Usuario>  UsuarioData::obtenerUsuarios(){
+    ifstream archivo;
+    string contenidoLinea; // igualar readLine en c++
+    //string[] linea = NULL;
+    //string linea[5];;
+    archivo.open("usuarios.txt", ios::in); // abriendo el archivo en modo lectura
+    
+    while(!archivo.eof()){ // mientras no sea el final del archivo
+        //linea= contenidoLinea; // hace falta hacerle el split
+        //this->vectorUsuarios->push_back(new Usuario(linea[0],linea[1], linea[2], linea[3], linea[5], linea[5]));
+        //contenidoLinea= // igualar readLine en c++
+    
+    
+    }
+    
+    return vectorUsuarios;
+    
+    archivo.close(); // cerramos el archivo
+
 
 }

@@ -30,6 +30,9 @@ void InicioSesion::initComponents() {
     this->fixed.put(this->lblContrasena, 20, 50);
     this->fixed.put(this->etContrasena, 100, 50);
     this->fixed.put(this->btnIngresar, 20, 100);
+    
+    this->mostrarAerolineas = 0;
+    
     this->add(fixed);
 }
 
@@ -48,7 +51,21 @@ void InicioSesion::onButtonClickedIngresar() {
                 );
         dialogo.run();
     } else {
+            if (this->mostrarAerolineas != 0)
+        return;
+
+    this->mostrarAerolineas = new MostrarAerolineas();
+    this->mostrarAerolineas->signal_hide().connect(sigc::mem_fun(*this, &InicioSesion::aboutWinClose));
+    this->mostrarAerolineas->show_all();
 
 
     }
+}
+
+
+void InicioSesion::aboutWinClose() {
+
+    //this->mostrarAerolineas = 0;
+
+
 }
