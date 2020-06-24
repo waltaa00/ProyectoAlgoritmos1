@@ -61,7 +61,7 @@ private:
     Gtk::MenuItem menuArchivo;
     Gtk::Menu subMenuArchivo;
     Gtk::ImageMenuItem menuRegistraUsuario, menuIniciaSesion,menuAerolineas,menuItinerario,
-            menuDestinos,menuSalidas;
+            menuDestinos,menuSalidas, menuAdministrar;
     Gtk::Fixed fixed; // contenedor
 
     RegistrarUsuario *registrarUsuario;
