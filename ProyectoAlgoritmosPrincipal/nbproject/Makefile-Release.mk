@@ -46,6 +46,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/MostrarAerolineas.o \
 	${OBJECTDIR}/MostrarItinerario.o \
 	${OBJECTDIR}/MuestraDestinos.o \
+	${OBJECTDIR}/MuestraSalidas.o \
 	${OBJECTDIR}/OrigenDestinoBusiness.o \
 	${OBJECTDIR}/OrigenDestinoDataSingleton.o \
 	${OBJECTDIR}/RegistrarUsuario.o \
@@ -134,6 +135,11 @@ ${OBJECTDIR}/MuestraDestinos.o: MuestraDestinos.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MuestraDestinos.o MuestraDestinos.cpp
+
+${OBJECTDIR}/MuestraSalidas.o: MuestraSalidas.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MuestraSalidas.o MuestraSalidas.cpp
 
 ${OBJECTDIR}/OrigenDestinoBusiness.o: OrigenDestinoBusiness.cpp
 	${MKDIR} -p ${OBJECTDIR}
