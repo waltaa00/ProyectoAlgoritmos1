@@ -70,7 +70,7 @@ private:
 
     RegistrarUsuario *registrarUsuario;
     InicioSesion *inicioSesion;
-    MostrarAerolineas *mostrarAerolineas;
+    //MostrarAerolineas *mostrarAerolineas;
     MostrarItinerario *mostrarItinerarios;
     MuestraDestinos *mostrarDestinos;
     MuestraSalidas *muestraSalidas;

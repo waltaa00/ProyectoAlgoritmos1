@@ -20,6 +20,7 @@
 #include <gtkmm-3.0/gtkmm/entry.h>
 #include <gtkmm-3.0/gtkmm/fixed.h>
 #include <string.h>
+#include "MostrarAerolineas.h"
 
 
 using namespace std;
@@ -30,6 +31,8 @@ public:
     InicioSesion();
 
     virtual ~InicioSesion();
+    
+      void aboutWinClose(); 
 private:
 
     void initComponents();
@@ -40,6 +43,7 @@ private:
     Gtk::Button btnIngresar;
     Gtk::Entry etNombre, etContrasena;
     Gtk::Label lblNombre, lblContrasena, lblPersonajes;
+    MostrarAerolineas *mostrarAerolineas;
 };
 
 #endif /* INICIOSESION_H */
