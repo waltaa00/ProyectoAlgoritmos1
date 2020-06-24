@@ -7,9 +7,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/yareth/Documentos/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/UsuarioData.cpp</file>
-            <file>file:/home/yareth/Documentos/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/RegistrarUsuario.cpp</file>
-            <file>file:/home/yareth/Documentos/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/RegistrarUsuario.h</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/InicioSesion.cpp</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/MainWindows.cpp</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/ModuloAdmin.cpp</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/MuestraSalidas.h</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/ModuloAdmin.h</file>
+            <file>file:/home/mint/Escritorio/GitHub/ProyectoAlgoritmos1/ProyectoAlgoritmosPrincipal/MainWindows.h</file>
         </group>
     </open-files>
 </project-private>

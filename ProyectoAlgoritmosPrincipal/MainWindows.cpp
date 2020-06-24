@@ -23,6 +23,7 @@ void MainWindows::initComponents() {
     this->menuAerolineas.add_pixlabel("assets/plane.png", "Aerolineas");
     this->menuDestinos.add_pixlabel("assets/hiking.png", "Destinos");
     this->menuSalidas.add_pixlabel("assets/itinerary.png", "Salidas");
+    this->menuAdministrar.add_pixlabel("assets/ajustes.png", "Modulo Administrativo");
 
 
     this->menuIniciaSesion.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirInicioSesion));
@@ -38,6 +39,9 @@ void MainWindows::initComponents() {
     
     this->menuSalidas.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirSalidas));
     this->subMenuArchivo.append(this->menuSalidas);
+    
+    
+    this->subMenuArchivo.append(this->menuAdministrar);
 
 
     this->registrarUsuario = 0;
