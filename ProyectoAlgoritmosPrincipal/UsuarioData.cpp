@@ -36,17 +36,23 @@ void UsuarioData::registrarUsuarios(Usuario *usuario){
 }
 vector<Usuario>  UsuarioData::obtenerUsuarios(){
     ifstream archivo;
-    string contenidoLinea; // igualar readLine en c++
-    //string[] linea = NULL;
-    //string linea[5];;
+      char linea[5000];
+      char * contenidoLinea;
+
+   
     archivo.open("usuarios.txt", ios::in); // abriendo el archivo en modo lectura
     
     while(!archivo.eof()){ // mientras no sea el final del archivo
-        //linea= contenidoLinea; // hace falta hacerle el split
-        //this->vectorUsuarios->push_back(new Usuario(linea[0],linea[1], linea[2], linea[3], linea[5], linea[5]));
-        //contenidoLinea= // igualar readLine en c++
-    
-    
+        archivo.getline(linea, 5000);
+        contenidoLinea = strtok(linea, ",");
+
+        //contenidoLinea = archivo.getline(linea, 500);
+ 
+       //this->vectorUsuarios.push_back(new Usuario(contenidoLinea.str_c(),contenidoLinea[1].c_str(),contenidoLinea[2].c_str(),contenidoLinea[3].c_str().contenidoLinea[4].c_str(),contenidoLinea[5].c_str()));
+        cout<< contenidoLinea <<endl;
+   
+        
+
     }
     
     return vectorUsuarios;

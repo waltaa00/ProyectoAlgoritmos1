@@ -8,6 +8,7 @@ build/Debug/GNU-Linux/ModuloAdministrativo.o: ModuloAdministrativo.cpp \
  /usr/include/glibmm-2.4/glibmm/threads.h \
  /usr/include/glibmm-2.4/glibmm/balancedtree.h \
  /usr/include/glibmm-2.4/glibmm/base64.h \
+ /usr/include/glibmm-2.4/glibmm/binding.h \
  /usr/include/glibmm-2.4/glibmm/bytearray.h \
  /usr/include/glibmm-2.4/glibmm/checksum.h \
  /usr/include/glibmm-2.4/glibmm/convert.h \
@@ -27,7 +28,6 @@ build/Debug/GNU-Linux/ModuloAdministrativo.o: ModuloAdministrativo.cpp \
  /usr/include/glibmm-2.4/glibmm/module.h \
  /usr/include/glibmm-2.4/glibmm/nodetree.h \
  /usr/include/glibmm-2.4/glibmm/optioncontext.h \
- /usr/include/glibmm-2.4/glibmm/optionentry.h \
  /usr/include/glibmm-2.4/glibmm/pattern.h \
  /usr/include/glibmm-2.4/glibmm/property.h \
  /usr/include/glibmm-2.4/glibmm/random.h \
@@ -41,7 +41,7 @@ build/Debug/GNU-Linux/ModuloAdministrativo.o: ModuloAdministrativo.cpp \
  /usr/include/glibmm-2.4/glibmm/uriutils.h \
  /usr/include/glibmm-2.4/glibmm/valuearray.h \
  /usr/include/glibmm-2.4/glibmm/vectorutils.h \
- /usr/include/giomm-2.4/giomm.h \
+ /usr/include/glibmm-2.4/glibmm/weakref.h /usr/include/giomm-2.4/giomm.h \
  /usr/include/giomm-2.4/giomm/bufferedinputstream.h \
  /usr/include/giomm-2.4/giomm/filterinputstream.h \
  /usr/include/giomm-2.4/giomm/bufferedoutputstream.h \
@@ -82,14 +82,15 @@ build/Debug/GNU-Linux/ModuloAdministrativo.o: ModuloAdministrativo.cpp \
  /usr/include/giomm-2.4/giomm/socketaddressenumerator.h \
  /usr/include/giomm-2.4/giomm/init.h \
  /usr/include/giomm-2.4/giomm/wrap_init.h \
+ /usr/include/giomm-2.4/giomm/listmodel.h \
+ /usr/include/giomm-2.4/giomm/liststore.h \
  /usr/include/giomm-2.4/giomm/memoryinputstream.h \
  /usr/include/giomm-2.4/giomm/memoryoutputstream.h \
- /usr/include/giomm-2.4/giomm/menu.h \
- /usr/include/giomm-2.4/giomm/menuitem.h \
  /usr/include/giomm-2.4/giomm/menuattributeiter.h \
  /usr/include/giomm-2.4/giomm/menulinkiter.h \
  /usr/include/giomm-2.4/giomm/networkaddress.h \
  /usr/include/giomm-2.4/giomm/networkservice.h \
+ /usr/include/giomm-2.4/giomm/permission.h \
  /usr/include/giomm-2.4/giomm/proxy.h \
  /usr/include/giomm-2.4/giomm/proxyaddress.h \
  /usr/include/giomm-2.4/giomm/proxyresolver.h \
@@ -97,14 +98,21 @@ build/Debug/GNU-Linux/ModuloAdministrativo.o: ModuloAdministrativo.cpp \
  /usr/include/giomm-2.4/giomm/srvtarget.h \
  /usr/include/giomm-2.4/giomm/resource.h \
  /usr/include/giomm-2.4/giomm/settings.h \
+ /usr/include/giomm-2.4/giomm/settingsschema.h \
+ /usr/include/giomm-2.4/giomm/settingsschemakey.h \
+ /usr/include/giomm-2.4/giomm/settingsschemasource.h \
  /usr/include/giomm-2.4/giomm/simpleactiongroup.h \
+ /usr/include/giomm-2.4/giomm/simpleiostream.h \
+ /usr/include/giomm-2.4/giomm/simplepermission.h \
  /usr/include/giomm-2.4/giomm/socket.h \
  /usr/include/giomm-2.4/giomm/socketclient.h \
  /usr/include/giomm-2.4/giomm/socketconnection.h \
  /usr/include/giomm-2.4/giomm/socketcontrolmessage.h \
  /usr/include/giomm-2.4/giomm/socketlistener.h \
  /usr/include/giomm-2.4/giomm/socketservice.h \
+ /usr/include/giomm-2.4/giomm/socketsource.h \
  /usr/include/giomm-2.4/giomm/tcpconnection.h \
+ /usr/include/giomm-2.4/giomm/tcpwrapperconnection.h \
  /usr/include/giomm-2.4/giomm/themedicon.h \
  /usr/include/giomm-2.4/giomm/threadedsocketservice.h \
  /usr/include/giomm-2.4/giomm/tlscertificate.h \
@@ -126,14 +134,19 @@ build/Debug/GNU-Linux/ModuloAdministrativo.o: ModuloAdministrativo.cpp \
  /usr/include/giomm-2.4/giomm/zlibdecompressor.h \
  /usr/include/gdkmm-3.0/gdkmm.h \
  /usr/include/gdkmm-3.0/gdkmm/pixbufloader.h \
+ /usr/include/gdkmm-3.0/gdkmm/drawingcontext.h \
+ /usr/include/gdkmm-3.0/gdkmm/glcontext.h \
  /usr/include/gdkmm-3.0/gdkmm/displaymanager.h \
  /usr/include/gdkmm-3.0/gdkmm/devicemanager.h \
+ /usr/include/gdkmm-3.0/gdkmm/seat.h \
+ /usr/include/gdkmm-3.0/gdkmm/monitor.h \
  /usr/include/gdkmm-3.0/gdkmm/general.h \
  /usr/include/gtkmm-3.0/gtkmm/toggleaction.h \
  /usr/include/gtkmm-3.0/gtkmm/radioaction.h \
  /usr/include/gtkmm-3.0/gtkmm/aboutdialog.h \
  /usr/include/gtkmm-3.0/gtkmm/accelmap.h \
  /usr/include/gtkmm-3.0/gtkmm/actionable.h \
+ /usr/include/gtkmm-3.0/gtkmm/actionbar.h \
  /usr/include/gtkmm-3.0/gtkmm/alignment.h \
  /usr/include/gtkmm-3.0/gtkmm/appchooserbutton.h \
  /usr/include/gtkmm-3.0/gtkmm/appchooser.h \
@@ -162,23 +175,36 @@ build/Debug/GNU-Linux/ModuloAdministrativo.o: ModuloAdministrativo.cpp \
  /usr/include/gtkmm-3.0/gtkmm/colorselection.h \
  /usr/include/gtkmm-3.0/gtkmm/comboboxtext.h \
  /usr/include/gtkmm-3.0/gtkmm/cssprovider.h \
+ /usr/include/gtkmm-3.0/gtkmm/csssection.h \
  /usr/include/gtkmm-3.0/gtkmm/drawingarea.h \
  /usr/include/gtkmm-3.0/gtkmm/expander.h \
  /usr/include/gtkmm-3.0/gtkmm/eventbox.h \
+ /usr/include/gtkmm-3.0/gtkmm/eventcontroller.h \
  /usr/include/gtkmm-3.0/gtkmm/filechooser.h \
  /usr/include/gtkmm-3.0/gtkmm/filefilter.h \
  /usr/include/gtkmm-3.0/gtkmm/filechooserbutton.h \
  /usr/include/gtkmm-3.0/gtkmm/filechooserdialog.h \
  /usr/include/gtkmm-3.0/gtkmm/filechooserwidget.h \
  /usr/include/gtkmm-3.0/gtkmm/fixed.h \
+ /usr/include/gtkmm-3.0/gtkmm/flowbox.h \
+ /usr/include/gtkmm-3.0/gtkmm/flowboxchild.h \
  /usr/include/gtkmm-3.0/gtkmm/fontbutton.h \
  /usr/include/gtkmm-3.0/gtkmm/fontchooser.h \
  /usr/include/gtkmm-3.0/gtkmm/fontchooserdialog.h \
  /usr/include/gtkmm-3.0/gtkmm/fontchooserwidget.h \
  /usr/include/gtkmm-3.0/gtkmm/fontselection.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesture.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesturedrag.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesturesingle.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesturelongpress.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesturemultipress.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesturepan.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesturerotate.h \
+ /usr/include/gtkmm-3.0/gtkmm/gestureswipe.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesturezoom.h \
+ /usr/include/gtkmm-3.0/gtkmm/glarea.h \
  /usr/include/gtkmm-3.0/gtkmm/grid.h \
  /usr/include/gtkmm-3.0/gtkmm/handlebox.h \
- /usr/include/gtkmm-3.0/gtkmm/headerbar.h \
  /usr/include/gtkmm-3.0/gtkmm/hvpaned.h \
  /usr/include/gtkmm-3.0/gtkmm/paned.h \
  /usr/include/gtkmm-3.0/gtkmm/hvscale.h \
@@ -206,16 +232,20 @@ build/Debug/GNU-Linux/ModuloAdministrativo.o: ModuloAdministrativo.cpp \
  /usr/include/gtkmm-3.0/gtkmm/main.h \
  /usr/include/gtkmm-3.0/gtkmm/menubar.h \
  /usr/include/gtkmm-3.0/gtkmm/menubutton.h \
+ /usr/include/gtkmm-3.0/gtkmm/popover.h \
  /usr/include/gtkmm-3.0/gtkmm/messagedialog.h \
+ /usr/include/gtkmm-3.0/gtkmm/modelbutton.h \
  /usr/include/gtkmm-3.0/gtkmm/notebook.h \
  /usr/include/gtkmm-3.0/gtkmm/numerableicon.h \
  /usr/include/gtkmm-3.0/gtkmm/offscreenwindow.h \
+ /usr/include/gtkmm-3.0/gtkmm/overlay.h \
  /usr/include/gtkmm-3.0/gtkmm/pagesetup.h \
  /usr/include/gtkmm-3.0/gtkmm/papersize.h \
  /usr/include/gtkmm-3.0/gtkmm/pagesetupunixdialog.h \
  /usr/include/gtkmm-3.0/gtkmm/printsettings.h \
  /usr/include/gtkmm-3.0/gtkmm/placessidebar.h \
  /usr/include/gtkmm-3.0/gtkmm/scrolledwindow.h \
+ /usr/include/gtkmm-3.0/gtkmm/popovermenu.h \
  /usr/include/gtkmm-3.0/gtkmm/printcontext.h \
  /usr/include/gtkmm-3.0/gtkmm/printer.h \
  /usr/include/gtkmm-3.0/gtkmm/printjob.h \
@@ -247,14 +277,21 @@ build/Debug/GNU-Linux/ModuloAdministrativo.o: ModuloAdministrativo.cpp \
  /usr/include/gtkmm-3.0/gtkmm/settings.h \
  /usr/include/gtkmm-3.0/gtkmm/toolbar.h \
  /usr/include/gtkmm-3.0/gtkmm/toolshell.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutlabel.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutsgroup.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutssection.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutsshortcut.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutswindow.h \
  /usr/include/gtkmm-3.0/gtkmm/spinbutton.h \
  /usr/include/gtkmm-3.0/gtkmm/spinner.h \
  /usr/include/gtkmm-3.0/gtkmm/stack.h \
+ /usr/include/gtkmm-3.0/gtkmm/stacksidebar.h \
  /usr/include/gtkmm-3.0/gtkmm/stackswitcher.h \
  /usr/include/gtkmm-3.0/gtkmm/statusbar.h \
  /usr/include/gtkmm-3.0/gtkmm/statusicon.h \
  /usr/include/gtkmm-3.0/gtkmm/stock.h \
  /usr/include/gtkmm-3.0/gtkmm/stockitem.h \
+ /usr/include/gtkmm-3.0/gtkmm/styleproperty.h \
  /usr/include/gtkmm-3.0/gtkmm/switch.h \
  /usr/include/gtkmm-3.0/gtkmm/table.h \
  /usr/include/gtkmm-3.0/gtkmm/tearoffmenuitem.h \
@@ -325,6 +362,8 @@ Drawing.h:
 
 /usr/include/glibmm-2.4/glibmm/base64.h:
 
+/usr/include/glibmm-2.4/glibmm/binding.h:
+
 /usr/include/glibmm-2.4/glibmm/bytearray.h:
 
 /usr/include/glibmm-2.4/glibmm/checksum.h:
@@ -363,8 +402,6 @@ Drawing.h:
 
 /usr/include/glibmm-2.4/glibmm/optioncontext.h:
 
-/usr/include/glibmm-2.4/glibmm/optionentry.h:
-
 /usr/include/glibmm-2.4/glibmm/pattern.h:
 
 /usr/include/glibmm-2.4/glibmm/property.h:
@@ -390,6 +427,8 @@ Drawing.h:
 /usr/include/glibmm-2.4/glibmm/valuearray.h:
 
 /usr/include/glibmm-2.4/glibmm/vectorutils.h:
+
+/usr/include/glibmm-2.4/glibmm/weakref.h:
 
 /usr/include/giomm-2.4/giomm.h:
 
@@ -473,13 +512,13 @@ Drawing.h:
 
 /usr/include/giomm-2.4/giomm/wrap_init.h:
 
+/usr/include/giomm-2.4/giomm/listmodel.h:
+
+/usr/include/giomm-2.4/giomm/liststore.h:
+
 /usr/include/giomm-2.4/giomm/memoryinputstream.h:
 
 /usr/include/giomm-2.4/giomm/memoryoutputstream.h:
-
-/usr/include/giomm-2.4/giomm/menu.h:
-
-/usr/include/giomm-2.4/giomm/menuitem.h:
 
 /usr/include/giomm-2.4/giomm/menuattributeiter.h:
 
@@ -488,6 +527,8 @@ Drawing.h:
 /usr/include/giomm-2.4/giomm/networkaddress.h:
 
 /usr/include/giomm-2.4/giomm/networkservice.h:
+
+/usr/include/giomm-2.4/giomm/permission.h:
 
 /usr/include/giomm-2.4/giomm/proxy.h:
 
@@ -503,7 +544,17 @@ Drawing.h:
 
 /usr/include/giomm-2.4/giomm/settings.h:
 
+/usr/include/giomm-2.4/giomm/settingsschema.h:
+
+/usr/include/giomm-2.4/giomm/settingsschemakey.h:
+
+/usr/include/giomm-2.4/giomm/settingsschemasource.h:
+
 /usr/include/giomm-2.4/giomm/simpleactiongroup.h:
+
+/usr/include/giomm-2.4/giomm/simpleiostream.h:
+
+/usr/include/giomm-2.4/giomm/simplepermission.h:
 
 /usr/include/giomm-2.4/giomm/socket.h:
 
@@ -517,7 +568,11 @@ Drawing.h:
 
 /usr/include/giomm-2.4/giomm/socketservice.h:
 
+/usr/include/giomm-2.4/giomm/socketsource.h:
+
 /usr/include/giomm-2.4/giomm/tcpconnection.h:
+
+/usr/include/giomm-2.4/giomm/tcpwrapperconnection.h:
 
 /usr/include/giomm-2.4/giomm/themedicon.h:
 
@@ -561,9 +616,17 @@ Drawing.h:
 
 /usr/include/gdkmm-3.0/gdkmm/pixbufloader.h:
 
+/usr/include/gdkmm-3.0/gdkmm/drawingcontext.h:
+
+/usr/include/gdkmm-3.0/gdkmm/glcontext.h:
+
 /usr/include/gdkmm-3.0/gdkmm/displaymanager.h:
 
 /usr/include/gdkmm-3.0/gdkmm/devicemanager.h:
+
+/usr/include/gdkmm-3.0/gdkmm/seat.h:
+
+/usr/include/gdkmm-3.0/gdkmm/monitor.h:
 
 /usr/include/gdkmm-3.0/gdkmm/general.h:
 
@@ -576,6 +639,8 @@ Drawing.h:
 /usr/include/gtkmm-3.0/gtkmm/accelmap.h:
 
 /usr/include/gtkmm-3.0/gtkmm/actionable.h:
+
+/usr/include/gtkmm-3.0/gtkmm/actionbar.h:
 
 /usr/include/gtkmm-3.0/gtkmm/alignment.h:
 
@@ -633,11 +698,15 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/cssprovider.h:
 
+/usr/include/gtkmm-3.0/gtkmm/csssection.h:
+
 /usr/include/gtkmm-3.0/gtkmm/drawingarea.h:
 
 /usr/include/gtkmm-3.0/gtkmm/expander.h:
 
 /usr/include/gtkmm-3.0/gtkmm/eventbox.h:
+
+/usr/include/gtkmm-3.0/gtkmm/eventcontroller.h:
 
 /usr/include/gtkmm-3.0/gtkmm/filechooser.h:
 
@@ -651,6 +720,10 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/fixed.h:
 
+/usr/include/gtkmm-3.0/gtkmm/flowbox.h:
+
+/usr/include/gtkmm-3.0/gtkmm/flowboxchild.h:
+
 /usr/include/gtkmm-3.0/gtkmm/fontbutton.h:
 
 /usr/include/gtkmm-3.0/gtkmm/fontchooser.h:
@@ -661,11 +734,29 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/fontselection.h:
 
+/usr/include/gtkmm-3.0/gtkmm/gesture.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gesturedrag.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gesturesingle.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gesturelongpress.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gesturemultipress.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gesturepan.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gesturerotate.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gestureswipe.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gesturezoom.h:
+
+/usr/include/gtkmm-3.0/gtkmm/glarea.h:
+
 /usr/include/gtkmm-3.0/gtkmm/grid.h:
 
 /usr/include/gtkmm-3.0/gtkmm/handlebox.h:
-
-/usr/include/gtkmm-3.0/gtkmm/headerbar.h:
 
 /usr/include/gtkmm-3.0/gtkmm/hvpaned.h:
 
@@ -721,13 +812,19 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/menubutton.h:
 
+/usr/include/gtkmm-3.0/gtkmm/popover.h:
+
 /usr/include/gtkmm-3.0/gtkmm/messagedialog.h:
+
+/usr/include/gtkmm-3.0/gtkmm/modelbutton.h:
 
 /usr/include/gtkmm-3.0/gtkmm/notebook.h:
 
 /usr/include/gtkmm-3.0/gtkmm/numerableicon.h:
 
 /usr/include/gtkmm-3.0/gtkmm/offscreenwindow.h:
+
+/usr/include/gtkmm-3.0/gtkmm/overlay.h:
 
 /usr/include/gtkmm-3.0/gtkmm/pagesetup.h:
 
@@ -740,6 +837,8 @@ Drawing.h:
 /usr/include/gtkmm-3.0/gtkmm/placessidebar.h:
 
 /usr/include/gtkmm-3.0/gtkmm/scrolledwindow.h:
+
+/usr/include/gtkmm-3.0/gtkmm/popovermenu.h:
 
 /usr/include/gtkmm-3.0/gtkmm/printcontext.h:
 
@@ -803,11 +902,23 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/toolshell.h:
 
+/usr/include/gtkmm-3.0/gtkmm/shortcutlabel.h:
+
+/usr/include/gtkmm-3.0/gtkmm/shortcutsgroup.h:
+
+/usr/include/gtkmm-3.0/gtkmm/shortcutssection.h:
+
+/usr/include/gtkmm-3.0/gtkmm/shortcutsshortcut.h:
+
+/usr/include/gtkmm-3.0/gtkmm/shortcutswindow.h:
+
 /usr/include/gtkmm-3.0/gtkmm/spinbutton.h:
 
 /usr/include/gtkmm-3.0/gtkmm/spinner.h:
 
 /usr/include/gtkmm-3.0/gtkmm/stack.h:
+
+/usr/include/gtkmm-3.0/gtkmm/stacksidebar.h:
 
 /usr/include/gtkmm-3.0/gtkmm/stackswitcher.h:
 
@@ -818,6 +929,8 @@ Drawing.h:
 /usr/include/gtkmm-3.0/gtkmm/stock.h:
 
 /usr/include/gtkmm-3.0/gtkmm/stockitem.h:
+
+/usr/include/gtkmm-3.0/gtkmm/styleproperty.h:
 
 /usr/include/gtkmm-3.0/gtkmm/switch.h:
 
