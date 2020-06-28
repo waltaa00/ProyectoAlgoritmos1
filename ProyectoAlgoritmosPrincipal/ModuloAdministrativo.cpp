@@ -13,14 +13,15 @@
 
 #include "ModuloAdministrativo.h"
 #include "Avion.h"
+#include "MainWindows.h"
 
 ModuloAdministrativo::ModuloAdministrativo() {
     this->set_title("Modulo Administrativo");
     this->set_size_request(320, 450);
+    colaAviones = new ColaAviones();
     initComponents();
     this->show_all_children();
-    
-    //colaAviones->getColaAvianca()->push();
+
 }
 
 void ModuloAdministrativo::initComponents() {
@@ -72,22 +73,59 @@ void ModuloAdministrativo::onButtonClickedAceptar() {
     
     cout<<"\n\nDatos del Modulo:\n"<<nombreAvion<<"\n"<<origen<<"\n"<<destino<<"\n"<<endl;
 
-//    if (aerolinea == "" || nombreAvion == "" || origen == "" || horaSalida = "") {
-//        Gtk::MessageDialog dialogo(
-//                *this,
-//                "Cuadros sin llenar o valores mal ingresados",
-//                false,
-//                Gtk::MESSAGE_ERROR
-//                );
-//        dialogo.run();
-//    } else {
-//
-//
-//    }
+    if (aerolinea == "Avianca" || aerolinea == "avianca") {
+        colaAviones->pushAvianca(nombreAvion, pasajeros, destino, origen, horaSalida, horaLlegada);
+        Gtk::MessageDialog dialogo(
+                *this,
+                "Vuelo de Avianca ingresado en la cola",
+                false,
+                Gtk::MESSAGE_ERROR
+                );
+        dialogo.run();
+    } 
+    if (aerolinea == "Emirates" || aerolinea == "emirates") {
+        colaAviones->pushEmirates(nombreAvion, pasajeros, destino, origen, horaSalida, horaLlegada);
+        Gtk::MessageDialog dialogo(
+                *this,
+                "Vuelo de Emirates ingresado en la cola",
+                false,
+                Gtk::MESSAGE_ERROR
+                );
+        dialogo.run();
+    }
+    if (aerolinea == "Copa Airlines" || aerolinea == "copa airlines" || aerolinea == "Copa" || aerolinea == "copa") {
+        colaAviones->pushCopa(nombreAvion, pasajeros, destino, origen, horaSalida, horaLlegada);
+        Gtk::MessageDialog dialogo(
+                *this,
+                "Vuelo de Copa Airlines ingresado en la cola",
+                false,
+                Gtk::MESSAGE_ERROR
+                );
+        dialogo.run();
+    }
+    if (aerolinea == "Jetblue" || aerolinea == "JetBlue" || aerolinea == "jetblue") {
+        colaAviones->pushJetblue(nombreAvion, pasajeros, destino, origen, horaSalida, horaLlegada);
+        Gtk::MessageDialog dialogo(
+                *this,
+                "Vuelo de JetBlue ingresado en la cola",
+                false,
+                Gtk::MESSAGE_ERROR
+                );
+        dialogo.run();
+    }
+    if (aerolinea == "Volaris" || aerolinea == "volaris") {
+        colaAviones->pushVolaris(nombreAvion, pasajeros, destino, origen, horaSalida, horaLlegada);
+        Gtk::MessageDialog dialogo(
+                *this,
+                "Vuelo de Volaris ingresado en la cola",
+                false,
+                Gtk::MESSAGE_ERROR
+                );
+        dialogo.run();
+    }
     
     //Avion(string nombre, string cantidad,string destino, string origen, string horaSalida, string horaLlegada);
-    //colaAviones->getColaAvianca().push(new Avion(nombreAvion, pasajeros, destino, origen, horaSalida, horaLlegada));
-    colaAviones->pushAvianca(nombreAvion, pasajeros, destino, origen, horaSalida, horaLlegada);
+    
     
 }
 

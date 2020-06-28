@@ -23,6 +23,7 @@ ColaAviones::ColaAviones() {
     colaAvianca.push(new Avion("Yeezys", "205 pasajeros", "Panama", "Colombia", "20:03", "22:42"));
     colaAvianca.push(new Avion("Balenciaga1", "212 pasajeros", "Costa Rica", "Venezuela", "21:00", "1:50"));
     colaAvianca.push(new Avion("GucciTwo", "189 pasajeros", "Grecia", "Francia", "22:10", "23:55"));
+    //pushAvianca("","","","","","");
 
     colaVolaris.push(new Avion("Boeing707", "305 pasajeros", "USA", "Canada", "9:18", "11:43"));
     colaVolaris.push(new Avion("Boeing311", "155 pasajeros", "USA", "Costa Rica", "13:11", "14:05"));
@@ -38,11 +39,6 @@ ColaAviones::ColaAviones() {
 
 }
 
-ColaAviones::ColaAviones(const ColaAviones& orig) {
-}
-
-ColaAviones::~ColaAviones() {
-}
 
 priority_queue <Avion*> ColaAviones::getColaEmirates() {
     return colaEmirates;
@@ -59,6 +55,24 @@ priority_queue <Avion*> ColaAviones::getColaAvianca() {
 void ColaAviones::pushAvianca(string nombre, string cantidad, string destino, string origen, string horaSalida, string horaLlegada){
     colaAvianca.push(new Avion(nombre, cantidad, destino, origen, horaSalida, horaLlegada));
 }
+
+void ColaAviones::pushEmirates(string nombre, string cantidad, string destino, string origen, string horaSalida, string horaLlegada){
+    colaEmirates.push(new Avion(nombre, cantidad, destino, origen, horaSalida, horaLlegada));
+}
+
+void ColaAviones::pushCopa(string nombre, string cantidad, string destino, string origen, string horaSalida, string horaLlegada){
+    colaCopa.push(new Avion(nombre, cantidad, destino, origen, horaSalida, horaLlegada));
+}
+
+void ColaAviones::pushVolaris(string nombre, string cantidad, string destino, string origen, string horaSalida, string horaLlegada){
+    colaVolaris.push(new Avion(nombre, cantidad, destino, origen, horaSalida, horaLlegada));
+}
+
+void ColaAviones::pushJetblue(string nombre, string cantidad, string destino, string origen, string horaSalida, string horaLlegada){
+    colaJetblue.push(new Avion(nombre, cantidad, destino, origen, horaSalida, horaLlegada));
+}
+
+
 
 priority_queue <Avion*> ColaAviones::getColaVolaris() {
     return colaVolaris;

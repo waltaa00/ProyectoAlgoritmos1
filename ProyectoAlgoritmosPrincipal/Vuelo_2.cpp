@@ -3,18 +3,14 @@
 #include "Vuelo_2.h"
 #include "ColaAviones.h"
 
-Vuelo::Vuelo(int posX, int posY, ColaAviones colaAviones) {
-    this->posX = posX;
-    this->posY = posY;
-    this->colaAviones = colaAviones;
-    this->image=Gdk::Pixbuf::create_from_file("assets/plane(1).png");
-}//Contructor sobrecargado
-
 Vuelo::Vuelo(int posX, int posY) {
     this->posX = posX;
     this->posY = posY;
+    //this->colaAviones = ColaAviones::getInstance();
+    //this->colaAviones = colaAviones;
     this->image=Gdk::Pixbuf::create_from_file("assets/plane(1).png");
 }//Contructor sobrecargado
+
 
 Vuelo::Vuelo() {
     this->image=Gdk::Pixbuf::create_from_file("assets/plane(1).png");

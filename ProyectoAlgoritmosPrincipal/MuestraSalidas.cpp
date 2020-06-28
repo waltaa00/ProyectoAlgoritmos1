@@ -14,12 +14,14 @@
 #include "MuestraSalidas.h"
 
 MuestraSalidas::MuestraSalidas() {
+    
+    this->cA = new ColaAviones;
 
-    this->colaEmirates = cA.getColaEmirates();
-    this->colaAvianca = cA.getColaAvianca();
-    this->colaJetblue = cA.getColaJetblue();
-    this->colaCopa = cA.getColaCopa();
-    this->colaVolaris = cA.getColaVolaris();
+    this->colaEmirates = cA->getColaEmirates();
+    this->colaAvianca = cA->getColaAvianca();
+    this->colaJetblue = cA->getColaJetblue();
+    this->colaCopa = cA->getColaCopa();
+    this->colaVolaris = cA->getColaVolaris();
 
 
     m_ScrolledWindow.add(m_TreeView);

@@ -4,12 +4,18 @@
 
 MainWindows::MainWindows() {
     this->set_title("AeroTurri");
+    this->colaAviones = new ColaAviones;
     initComponents();
 }
 
 MainWindows::~MainWindows() {
 
 }
+
+ColaAviones* MainWindows::getColaAviones() const {
+    return colaAviones;
+}
+
 
 void MainWindows::initComponents() {
     this->set_size_request(400, 500);

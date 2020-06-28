@@ -14,7 +14,9 @@ MostrarItinerario::MostrarItinerario(string filtro) {
     this->filtro = filtro;
     this->set_title("Itinerarios");
     this->set_size_request(850, 400);
+    this->cA = new ColaAviones;
     initComponents();
+    
     this->show_all_children();
 }
 
@@ -30,11 +32,11 @@ void MostrarItinerario::initComponents() {
             &MostrarItinerario::onButtonClickedGuardarVuelo));
     this->btnGuardar.set_label("Seleccionar vuelo");
 
-    this->colaEmirates = cA.getColaEmirates();
-    this->colaAvianca = cA.getColaAvianca();
-    this->colaJetblue = cA.getColaJetblue();
-    this->colaCopa = cA.getColaCopa();
-    this->colaVolaris = cA.getColaVolaris();
+    this->colaEmirates = cA->getColaEmirates();
+    this->colaAvianca = cA->getColaAvianca();
+    this->colaJetblue = cA->getColaJetblue();
+    this->colaCopa = cA->getColaCopa();
+    this->colaVolaris = cA->getColaVolaris();
     this->aeroList = lA.getLista();
 
 
@@ -139,7 +141,7 @@ void MostrarItinerario::completaTabla() {
     } else if (this->filtro == "Avianca") {
         for (int i = 0; i < tamanoAvianca; i++) {
             cout << "hora salida" << colaAvianca.top()->getHoraSalida() << ", hora real " << hora << endl;
-            if (atoi(colaAvianca.top()->getHoraSalida().c_str()) > hora) {
+            //if (atoi(colaAvianca.top()->getHoraSalida().c_str()) > hora) {
                 Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
                 row3[columRecord.tmcHorasalida] = colaAvianca.top()->getHoraSalida();
                 row3[columRecord.tmcHorallegada] = colaAvianca.top()->getHoraLlegada();
@@ -156,7 +158,7 @@ void MostrarItinerario::completaTabla() {
                 //        grafo.AnadirNodo(colaAvianca.top()->getDestino());
 
 
-            }
+            //}
             colaAvianca.pop();
         }
     } else if (this->filtro == "Copa Airlines") {
