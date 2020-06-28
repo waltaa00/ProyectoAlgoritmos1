@@ -31,19 +31,16 @@ class MainWindows : public Gtk::Window {
 public:
 
     MainWindows(); // constructor
+    ColaAviones* getColaAviones() const;
 
     virtual ~MainWindows(); // destructor
 
 protected:
 
 
-
-
-
 private:
 
     void initComponents();
-
 
     void abrirRegistrarUsuario();
 
@@ -58,6 +55,7 @@ private:
     void abrirSalidas();
     
     void abrirModulo();
+ 
 
     void aboutWinClose(); //aboutWinClose
 
@@ -68,6 +66,7 @@ private:
             menuDestinos,menuSalidas, menuAdministrar;
     Gtk::Fixed fixed; // contenedor
 
+    ColaAviones * colaAviones;
     RegistrarUsuario *registrarUsuario;
     InicioSesion *inicioSesion;
     //MostrarAerolineas *mostrarAerolineas;

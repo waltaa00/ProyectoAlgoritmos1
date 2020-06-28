@@ -61,7 +61,7 @@ private:
     priority_queue <Avion*> colaAvianca;
     priority_queue <Avion*> colaVolaris;
     priority_queue <Avion*> colaJetblue;
-    ColaAviones cA;
+    ColaAviones* cA;
     Gtk::Fixed fixed;
     Gtk::TreeView m_TreeView;
     Glib::RefPtr<Gtk::ListStore> m_refTreeModel;

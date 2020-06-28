@@ -21,7 +21,6 @@ using namespace std;
 
 class Vuelo {
 public:
-    Vuelo(int posX, int posY, ColaAviones colaAviones);
     Vuelo(int posX, int posY);
     Vuelo();
 
@@ -47,7 +46,7 @@ private:
     
     int posX;
     int posY;
-    ColaAviones colaAviones;
+    ColaAviones* colaAviones;
     Glib::RefPtr<Gdk::Pixbuf> image;
     pthread_t vueloThread;
 

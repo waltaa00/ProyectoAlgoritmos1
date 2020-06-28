@@ -20,8 +20,7 @@
 class ColaAviones {
 public:
     ColaAviones();
-    ColaAviones(const ColaAviones& orig);
-    virtual ~ColaAviones();
+    
     priority_queue <Avion*> getColaEmirates();
     priority_queue <Avion*> getColaCopa();
     priority_queue <Avion*> getColaAvianca();
@@ -30,6 +29,11 @@ public:
     
     //Avion(string nombre, string cantidad,string destino, string origen, string horaSalida, string horaLlegada);
     void pushAvianca(string nombre, string cantidad,string destino, string origen, string horaSalida, string horaLlegada);
+    void pushEmirates(string nombre, string cantidad,string destino, string origen, string horaSalida, string horaLlegada);
+    void pushCopa(string nombre, string cantidad,string destino, string origen, string horaSalida, string horaLlegada);
+    void pushVolaris(string nombre, string cantidad,string destino, string origen, string horaSalida, string horaLlegada);
+    void pushJetblue(string nombre, string cantidad,string destino, string origen, string horaSalida, string horaLlegada);
+    
     
 private:
     priority_queue <Avion*> colaEmirates; //declaracion cola de prioridad
@@ -38,6 +42,7 @@ private:
     priority_queue <Avion*> colaVolaris;
     priority_queue <Avion*> colaJetblue;
 };
+
 
 #endif /* COLAAVIONES_H */
 

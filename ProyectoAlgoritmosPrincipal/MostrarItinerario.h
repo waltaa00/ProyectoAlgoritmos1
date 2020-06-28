@@ -73,7 +73,7 @@ private:
     priority_queue <Avion*> colaAvianca;
     priority_queue <Avion*> colaVolaris;
     priority_queue <Avion*> colaJetblue;
-    ColaAviones cA;
+    ColaAviones* cA;
     
     list <string> aeroList;
     ListaAerolineas lA;
