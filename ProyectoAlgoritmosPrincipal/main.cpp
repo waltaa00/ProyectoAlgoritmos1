@@ -36,11 +36,16 @@ int main(int argc, char** argv) {
 //    cout << " tiempo en horas: "<<hora<<"\n tiempo en minutos: "<<
 //            minutos<<"\n tiempo en segundos: "<<segundos<<endl;
     
+     UsuarioData uD;
+    uD.obtenerUsuarios();
+    
     Glib::RefPtr<Gtk::Application> app =
             Gtk::Application::create(argc, argv, "titulo");
     MainWindows window;
     return app->run(window);
     return 0;
+    
+   
     
 }
 
