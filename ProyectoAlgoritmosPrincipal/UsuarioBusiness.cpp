@@ -16,11 +16,14 @@
 UsuarioBusiness::UsuarioBusiness() {
 }
 
-
-
 UsuarioBusiness::~UsuarioBusiness() {
 }
 
-    void UsuarioBusiness::registrarUsuario(Usuario *usuario) {
-        this->usuarioData.registrarUsuarios(usuario);
-    }//registrarMapa
+void UsuarioBusiness::registrarUsuario(Usuario *usuario) {
+    this->usuarioData.registrarUsuarios(usuario);
+}//registrarMapa
+
+vector<Usuario> UsuarioBusiness::obtenerUsuario() {
+    return this->usuarioData.obtenerUsuarios();
+}
+

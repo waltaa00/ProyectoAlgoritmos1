@@ -21,6 +21,7 @@
 #include <gtkmm-3.0/gtkmm/fixed.h>
 #include <string.h>
 #include "MostrarAerolineas.h"
+#include "UsuarioBusiness.h"
 
 
 using namespace std;
@@ -44,6 +45,7 @@ private:
     Gtk::Entry etNombre, etContrasena;
     Gtk::Label lblNombre, lblContrasena, lblPersonajes;
     MostrarAerolineas *mostrarAerolineas;
+    UsuarioBusiness *usuarioBusiness;
 };
 
 #endif /* INICIOSESION_H */

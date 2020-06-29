@@ -13,51 +13,54 @@
 
 #include "UsuarioData.h"
 
-UsuarioData::UsuarioData()  {
+UsuarioData::UsuarioData() {
 
 }
-
 
 UsuarioData::~UsuarioData() {
 }
 
-void UsuarioData::registrarUsuarios(Usuario *usuario){
+void UsuarioData::registrarUsuarios(Usuario *usuario) {
     //string nombre, string edad, string pasaporte, string genero,  string nacionalidad, string contrasenia
     this->archivo.open("usuarios.txt", ios::app);
-    this->archivo<< usuario->getNombre() << "," ;
-    this->archivo<< usuario->getEdad() << "," ;
-    this->archivo<< usuario->getPasaporte() << "," ;
-    this->archivo<< usuario->getGenero() << "," ;
-    this->archivo<< usuario->getNacionalidad() << "," ;
-    this->archivo<< usuario->getContrasenia() << "\n" ;
-    
+    this->archivo << usuario->getNombre() << ",";
+    this->archivo << usuario->getEdad() << ",";
+    this->archivo << usuario->getPasaporte() << ",";
+    this->archivo << usuario->getGenero() << ",";
+    this->archivo << usuario->getNacionalidad() << ",";
+    this->archivo << usuario->getContrasenia() << endl;
     this->archivo.close();
 
 }
-vector<Usuario>  UsuarioData::obtenerUsuarios(){
+
+vector<Usuario> UsuarioData::obtenerUsuarios() {
     ifstream archivo;
-      char linea[5000];
-      char * contenidoLinea;
+    string lineaz;
+    archivo.open("usuarios.txt", ios::out | ios::in); // abriendo el archivo en modo lectura
 
-   
-    archivo.open("usuarios.txt", ios::in); // abriendo el archivo en modo lectura
-    
-    while(!archivo.eof()){ // mientras no sea el final del archivo
-        archivo.getline(linea, 5000);
-        contenidoLinea = strtok(linea, ",");
+    while (!archivo.eof()) { // mientras no sea el final del archivo
+        archivo>>lineaz;
+        stringstream lineaSplit(lineaz);
+        string parte;
+        vector<string> contenidoLinea;
+        while (getline(lineaSplit, parte, ',')) {
+            contenidoLinea.push_back(parte);
+        }
 
-        //contenidoLinea = archivo.getline(linea, 500);
- 
-       //this->vectorUsuarios.push_back(new Usuario(contenidoLinea.str_c(),contenidoLinea[1].c_str(),contenidoLinea[2].c_str(),contenidoLinea[3].c_str().contenidoLinea[4].c_str(),contenidoLinea[5].c_str()));
-        cout<< contenidoLinea <<endl;
-   
-        
-
+        Usuario u(contenidoLinea[0], contenidoLinea[1], contenidoLinea[2],
+                contenidoLinea[3], contenidoLinea[4], contenidoLinea[5]);
+        bool rep = false;
+        for (int i = 0; i < vectorUsuarios.size(); i++) {
+            if (vectorUsuarios.at(i).getPasaporte() == u.getPasaporte()) {
+                rep = true;
+                break;
+            }
+        }
+        if (!rep) {
+            vectorUsuarios.push_back(u);
+        }
     }
-    
-    return vectorUsuarios;
-    
     archivo.close(); // cerramos el archivo
-
-
+    cout << vectorUsuarios.size() << endl;
+    return vectorUsuarios;
 }
