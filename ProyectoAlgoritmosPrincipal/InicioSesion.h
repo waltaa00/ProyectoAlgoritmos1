@@ -46,6 +46,7 @@ private:
     Gtk::Label lblNombre, lblContrasena, lblPersonajes;
     MostrarAerolineas *mostrarAerolineas;
     UsuarioBusiness *usuarioBusiness;
+    UsuarioData *usuarioData;
 };
 
 #endif /* INICIOSESION_H */

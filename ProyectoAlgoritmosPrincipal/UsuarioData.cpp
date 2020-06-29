@@ -49,18 +49,32 @@ vector<Usuario> UsuarioData::obtenerUsuarios() {
 
         Usuario u(contenidoLinea[0], contenidoLinea[1], contenidoLinea[2],
                 contenidoLinea[3], contenidoLinea[4], contenidoLinea[5]);
-        bool rep = false;
-        for (int i = 0; i < vectorUsuarios.size(); i++) {
-            if (vectorUsuarios.at(i).getPasaporte() == u.getPasaporte()) {
-                rep = true;
-                break;
-            }
-        }
-        if (!rep) {
+//        bool rep = false;
+//        for (int i = 0; i < vectorUsuarios.size(); i++) {
+//            if (vectorUsuarios.at(i).getPasaporte() == u.getPasaporte()) {
+//                rep = true;
+//                break;
+//            }
+//        }
+//        //if (!rep) {
             vectorUsuarios.push_back(u);
-        }
+        //}
     }
+    
+      cout << vectorUsuarios.size() << endl;
     archivo.close(); // cerramos el archivo
-    cout << vectorUsuarios.size() << endl;
+  
+
     return vectorUsuarios;
+}
+
+bool UsuarioData::buscarUsuario(string nombre, string contrasenia) {
+    for (int i = 0; i < this->obtenerUsuarios().size(); i++) {
+        if (this->vectorUsuarios.at(i).getNombre() == nombre 
+            && this->vectorUsuarios.at(i).getContrasenia() == contrasenia) {
+                return true;
+            }
+    }
+    return false;
+
 }

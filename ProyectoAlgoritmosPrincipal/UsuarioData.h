@@ -37,6 +37,7 @@ public:
     
     void registrarUsuarios(Usuario *usuario);
     vector<Usuario> obtenerUsuarios();
+    bool buscarUsuario(string nombre, string contrasenia);
 private:
     
         ofstream archivo;
