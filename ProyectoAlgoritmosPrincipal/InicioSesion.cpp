@@ -17,6 +17,7 @@ InicioSesion::~InicioSesion() {
 }
 
 void InicioSesion::initComponents() {
+    this->usuarioBusiness = new UsuarioBusiness();
     //label
     this->lblNombre.set_label("Nombre:");
     this->lblContrasena.set_label("Contraseña:");
@@ -30,9 +31,9 @@ void InicioSesion::initComponents() {
     this->fixed.put(this->lblContrasena, 20, 50);
     this->fixed.put(this->etContrasena, 100, 50);
     this->fixed.put(this->btnIngresar, 20, 100);
-    
+
     this->mostrarAerolineas = 0;
-    
+
     this->add(fixed);
 }
 
@@ -41,7 +42,7 @@ void InicioSesion::onButtonClickedIngresar() {
     nombre = etNombre.get_text().c_str();
     string contrasena;
     contrasena = etContrasena.get_text().c_str();
-
+    vector<Usuario> usuarios= this->usuarioBusiness->obtenerUsuario();
     if (nombre == "" || contrasena == "") {
         Gtk::MessageDialog dialogo(
                 *this,
@@ -51,17 +52,16 @@ void InicioSesion::onButtonClickedIngresar() {
                 );
         dialogo.run();
     } else {
-            if (this->mostrarAerolineas != 0)
-        return;
+        if (this->mostrarAerolineas != 0)
+            return;
 
-    this->mostrarAerolineas = new MostrarAerolineas();
-    this->mostrarAerolineas->signal_hide().connect(sigc::mem_fun(*this, &InicioSesion::aboutWinClose));
-    this->mostrarAerolineas->show_all();
+        this->mostrarAerolineas = new MostrarAerolineas();
+        this->mostrarAerolineas->signal_hide().connect(sigc::mem_fun(*this, &InicioSesion::aboutWinClose));
+        this->mostrarAerolineas->show_all();
 
 
     }
 }
-
 
 void InicioSesion::aboutWinClose() {
 

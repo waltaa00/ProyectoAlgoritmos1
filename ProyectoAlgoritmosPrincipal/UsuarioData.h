@@ -41,7 +41,6 @@ private:
     
         ofstream archivo;
         vector<Usuario> vectorUsuarios;
-
 };
 
 #endif /* USUARIODATA_H */

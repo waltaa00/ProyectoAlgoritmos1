@@ -27,7 +27,7 @@ public:
     
     void registrarUsuario(Usuario *usuario);
       
-
+    vector<Usuario> obtenerUsuario();
 private:
     UsuarioData usuarioData;;
     
