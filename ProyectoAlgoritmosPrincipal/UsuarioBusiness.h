@@ -28,6 +28,7 @@ public:
     void registrarUsuario(Usuario *usuario);
       
     vector<Usuario> obtenerUsuario();
+    bool buscarUsuario(string nombre, string contrasenia);
 private:
     UsuarioData usuarioData;;
     
