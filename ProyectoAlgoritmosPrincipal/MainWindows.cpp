@@ -12,24 +12,24 @@ MainWindows::~MainWindows() {
 
 }
 
-ColaAviones* MainWindows::getColaAviones() const {
-    return colaAviones;
-}
-
-
 void MainWindows::initComponents() {
     this->set_size_request(400, 500);
     this->set_resizable(false);
     this->fixed.put(menuBar, 0, 0); // se agrega el menuBar al contenedor fixed
+    this->fixed.put(menuBar2, 60, 0);
     this->menuArchivo.set_label("Archivo");
     this->menuBar.append(this->menuArchivo);
+    this->menuModulo.set_label("Modulo Administrativo");
+    this->menuBar2.append(this->menuModulo);
     this->menuArchivo.set_submenu(this->subMenuArchivo);
+    this->menuModulo.set_submenu(this->subMenuModulo);    
     this->menuRegistraUsuario.add_pixlabel("assets/register.png", "Registrar Usuario");
     this->menuIniciaSesion.add_pixlabel("assets/user.png", "Iniciar Sesion");
     //this->menuAerolineas.add_pixlabel("assets/plane.png", "Aerolineas");
     this->menuDestinos.add_pixlabel("assets/hiking.png", "Destinos");
     this->menuSalidas.add_pixlabel("assets/itinerary.png", "Salidas");
-    this->menuAdministrar.add_pixlabel("assets/ajustes.png", "Modulo Administrativo");
+    this->menuAdministrar.add_pixlabel("assets/ajustes.png", "Agregar Vuelo");
+    this->menuEliminar.add_pixlabel("assets/ajustes.png", "Eliminar Vuelo");
 
 
     this->menuIniciaSesion.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirInicioSesion));
@@ -48,7 +48,10 @@ void MainWindows::initComponents() {
     this->subMenuArchivo.append(this->menuSalidas);
     
     this->menuAdministrar.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirModulo));
-    this->subMenuArchivo.append(this->menuAdministrar);
+    this->subMenuModulo.append(this->menuAdministrar);
+    
+    this->menuEliminar.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirEliminarVuelo));
+    this->subMenuModulo.append(this->menuEliminar);
 
 
     this->registrarUsuario = 0;
@@ -57,6 +60,7 @@ void MainWindows::initComponents() {
     this->mostrarDestinos = 0;
     this->muestraSalidas = 0;
     this->moduloAdministrativo = 0;
+    this->eliminarVuelo = 0;
 
     this->add(fixed);
     this->show_all_children();
@@ -116,6 +120,15 @@ void MainWindows::abrirModulo() {
     this->moduloAdministrativo->show_all();
 }
 
+void MainWindows::abrirEliminarVuelo() {
+    if (this->eliminarVuelo != 0)
+        return;
+
+    this->eliminarVuelo = new EliminarVuelo();
+    this->eliminarVuelo->signal_hide().connect(sigc::mem_fun(*this, &MainWindows::aboutWinClose));
+    this->eliminarVuelo->show_all();
+}
+
 void MainWindows::aboutWinClose() {
     this->registrarUsuario = 0;
     this->inicioSesion = 0;
@@ -123,5 +136,6 @@ void MainWindows::aboutWinClose() {
     this->mostrarDestinos = 0;
     this->muestraSalidas = 0;
     this->moduloAdministrativo = 0;
+    this->eliminarVuelo = 0;
 
 }

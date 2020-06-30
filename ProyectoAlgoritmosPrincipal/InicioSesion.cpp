@@ -46,8 +46,6 @@ void InicioSesion::onButtonClickedIngresar() {
     string contrasena;
     contrasena = etContrasena.get_text().c_str();
 
-
-
     //vector<Usuario> usuarios= this->usuarioBusiness->obtenerUsuario();
     if (nombre == "" || contrasena == "") {
         Gtk::MessageDialog dialogo(
@@ -57,8 +55,9 @@ void InicioSesion::onButtonClickedIngresar() {
                 Gtk::MESSAGE_ERROR
                 );
         dialogo.run();
-    } else if (usuarioBusiness->buscarUsuario(nombre, contrasena) == true) {
-
+    }
+    if (usuarioBusiness->buscarUsuario(nombre, contrasena) == true) {
+ 
         Gtk::MessageDialog dialogo(
                 *this,
                 "Bienvenido a AeroTurri",
@@ -70,6 +69,9 @@ void InicioSesion::onButtonClickedIngresar() {
         dialogo.run();
         if (this->mostrarAerolineas != 0)
             return;
+        
+        this->hide();//Esconde la ventana
+        
         this->mostrarAerolineas = new MostrarAerolineas();
         this->mostrarAerolineas->signal_hide().connect(sigc::mem_fun(*this, &InicioSesion::aboutWinClose));
         this->mostrarAerolineas->show_all();
