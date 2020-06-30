@@ -34,6 +34,12 @@ public:
     void pushVolaris(string nombre, string cantidad,string destino, string origen, string horaSalida, string horaLlegada);
     void pushJetblue(string nombre, string cantidad,string destino, string origen, string horaSalida, string horaLlegada);
     
+    void popAvianca();
+    void popEmirates();
+    void popCopa();
+    void popVolaris();
+    void popJetblue();
+    
     
 private:
     priority_queue <Avion*> colaEmirates; //declaracion cola de prioridad

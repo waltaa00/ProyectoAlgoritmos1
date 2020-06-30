@@ -63,18 +63,21 @@ vector<Usuario> UsuarioData::obtenerUsuarios() {
     
       cout << vectorUsuarios.size() << endl;
     archivo.close(); // cerramos el archivo
+    cout<<"archivo cerrado"<<endl;
   
 
     return vectorUsuarios;
 }
 
 bool UsuarioData::buscarUsuario(string nombre, string contrasenia) {
+    cout<<this->obtenerUsuarios().size()<<endl;
     for (int i = 0; i < this->obtenerUsuarios().size(); i++) {
         if (this->vectorUsuarios.at(i).getNombre() == nombre 
             && this->vectorUsuarios.at(i).getContrasenia() == contrasenia) {
                 return true;
             }
+        return false;
     }
-    return false;
+    
 
 }

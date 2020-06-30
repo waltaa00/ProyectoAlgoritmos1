@@ -37,9 +37,9 @@ ColaAviones::ColaAviones() {
     colaJetblue.push(new Avion("FuturesPlane", "130 pasajeros", "USA", "Mexico", "20:00", "21:35"));
     colaJetblue.push(new Avion("LilYatchy", "150 pasajeros", "USA", "Canada", "22:00", "23:45"));
 
-}
+}//Constructor
 
-
+//gets
 priority_queue <Avion*> ColaAviones::getColaEmirates() {
     return colaEmirates;
 }
@@ -52,6 +52,15 @@ priority_queue <Avion*> ColaAviones::getColaAvianca() {
     return colaAvianca;
 }
 
+priority_queue <Avion*> ColaAviones::getColaVolaris() {
+    return colaVolaris;
+}
+
+priority_queue <Avion*> ColaAviones::getColaJetblue() {
+    return colaJetblue;
+}
+
+//metodos pop
 void ColaAviones::pushAvianca(string nombre, string cantidad, string destino, string origen, string horaSalida, string horaLlegada){
     colaAvianca.push(new Avion(nombre, cantidad, destino, origen, horaSalida, horaLlegada));
 }
@@ -72,12 +81,23 @@ void ColaAviones::pushJetblue(string nombre, string cantidad, string destino, st
     colaJetblue.push(new Avion(nombre, cantidad, destino, origen, horaSalida, horaLlegada));
 }
 
-
-
-priority_queue <Avion*> ColaAviones::getColaVolaris() {
-    return colaVolaris;
+//metodos pop
+void ColaAviones::popAvianca(){
+    colaAvianca.pop();
 }
 
-priority_queue <Avion*> ColaAviones::getColaJetblue() {
-    return colaJetblue;
+void ColaAviones::popEmirates(){
+    colaEmirates.pop();
+}
+
+void ColaAviones::popCopa(){
+    colaCopa.pop();
+}
+
+void ColaAviones::popVolaris(){
+    colaVolaris.pop();
+}
+
+void ColaAviones::popJetblue(){
+    colaJetblue.pop();
 }
