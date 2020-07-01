@@ -1,16 +1,16 @@
 build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtkmm-3.0/gtkmm.h /usr/include/glibmm-2.4/glibmm.h \
- /usr/lib/i386-linux-gnu/glibmm-2.4/include/glibmmconfig.h \
+ /usr/lib/x86_64-linux-gnu/glibmm-2.4/include/glibmmconfig.h \
  /usr/include/glibmm-2.4/glibmm/thread.h /usr/include/glib-2.0/glib.h \
  /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
- /usr/lib/i386-linux-gnu/glib-2.0/include/glibconfig.h \
+ /usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h \
  /usr/include/glib-2.0/glib/gmacros.h \
  /usr/include/glib-2.0/glib/gversionmacros.h \
  /usr/include/glib-2.0/glib/garray.h \
  /usr/include/glib-2.0/glib/gasyncqueue.h \
  /usr/include/glib-2.0/glib/gthread.h \
  /usr/include/glib-2.0/glib/gatomic.h /usr/include/glib-2.0/glib/gerror.h \
- /usr/include/glib-2.0/glib/gquark.h \
+ /usr/include/glib-2.0/glib/gquark.h /usr/include/glib-2.0/glib/gutils.h \
  /usr/include/glib-2.0/glib/gbacktrace.h \
  /usr/include/glib-2.0/glib/gbase64.h \
  /usr/include/glib-2.0/glib/gbitlock.h \
@@ -34,11 +34,12 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/glib-2.0/glib/gmain.h /usr/include/glib-2.0/glib/gpoll.h \
  /usr/include/glib-2.0/glib/gslist.h /usr/include/glib-2.0/glib/gstring.h \
  /usr/include/glib-2.0/glib/gunicode.h \
- /usr/include/glib-2.0/glib/gutils.h \
  /usr/include/glib-2.0/glib/gkeyfile.h \
  /usr/include/glib-2.0/glib/gmappedfile.h \
  /usr/include/glib-2.0/glib/gmarkup.h \
  /usr/include/glib-2.0/glib/gmessages.h \
+ /usr/include/glib-2.0/glib/gvariant.h \
+ /usr/include/glib-2.0/glib/gvarianttype.h \
  /usr/include/glib-2.0/glib/goption.h \
  /usr/include/glib-2.0/glib/gpattern.h \
  /usr/include/glib-2.0/glib/gprimes.h /usr/include/glib-2.0/glib/gqsort.h \
@@ -56,15 +57,14 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/glib-2.0/glib/gtrashstack.h \
  /usr/include/glib-2.0/glib/gtree.h \
  /usr/include/glib-2.0/glib/gurifuncs.h \
- /usr/include/glib-2.0/glib/gvarianttype.h \
- /usr/include/glib-2.0/glib/gvariant.h \
- /usr/include/glib-2.0/glib/gversion.h \
+ /usr/include/glib-2.0/glib/guuid.h /usr/include/glib-2.0/glib/gversion.h \
  /usr/include/glib-2.0/glib/deprecated/gallocator.h \
  /usr/include/glib-2.0/glib/deprecated/gcache.h \
  /usr/include/glib-2.0/glib/deprecated/gcompletion.h \
  /usr/include/glib-2.0/glib/deprecated/gmain.h \
  /usr/include/glib-2.0/glib/deprecated/grel.h \
  /usr/include/glib-2.0/glib/deprecated/gthread.h \
+ /usr/include/glib-2.0/glib/glib-autocleanups.h \
  /usr/include/glibmm-2.4/glibmm/error.h \
  /usr/include/glibmm-2.4/glibmm/exception.h \
  /usr/include/glibmm-2.4/glibmm/ustring.h \
@@ -73,7 +73,7 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/sigc++-2.0/sigc++/sigc++.h \
  /usr/include/sigc++-2.0/sigc++/signal.h \
  /usr/include/sigc++-2.0/sigc++/signal_base.h \
- /usr/lib/i386-linux-gnu/sigc++-2.0/include/sigc++config.h \
+ /usr/lib/x86_64-linux-gnu/sigc++-2.0/include/sigc++config.h \
  /usr/include/sigc++-2.0/sigc++/type_traits.h \
  /usr/include/sigc++-2.0/sigc++/trackable.h \
  /usr/include/sigc++-2.0/sigc++/functors/slot.h \
@@ -96,11 +96,7 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/sigc++-2.0/sigc++/adaptors/retype.h \
  /usr/include/sigc++-2.0/sigc++/adaptors/compose.h \
  /usr/include/sigc++-2.0/sigc++/adaptors/exception_catch.h \
- /usr/include/sigc++-2.0/sigc++/adaptors/lambda/lambda.h \
- /usr/include/sigc++-2.0/sigc++/adaptors/lambda/base.h \
- /usr/include/sigc++-2.0/sigc++/adaptors/lambda/select.h \
- /usr/include/sigc++-2.0/sigc++/adaptors/lambda/operator.h \
- /usr/include/sigc++-2.0/sigc++/adaptors/lambda/group.h \
+ /usr/include/sigc++-2.0/sigc++/adaptors/track_obj.h \
  /usr/include/sigc++-2.0/sigc++/functors/functors.h \
  /usr/include/glibmm-2.4/glibmm/threads.h \
  /usr/include/glibmm-2.4/glibmm/arrayhandle.h \
@@ -126,7 +122,9 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/glib-2.0/gobject/gtypeplugin.h \
  /usr/include/glib-2.0/gobject/gvaluearray.h \
  /usr/include/glib-2.0/gobject/gvaluetypes.h \
+ /usr/include/glib-2.0/gobject/gobject-autocleanups.h \
  /usr/include/glibmm-2.4/glibmm/variantiter.h \
+ /usr/include/glibmm-2.4/glibmm/variantdbusstring.h \
  /usr/include/glibmm-2.4/glibmm/variant_basictypes.h \
  /usr/include/glibmm-2.4/glibmm/wrap.h \
  /usr/include/glibmm-2.4/glibmm/objectbase.h \
@@ -136,12 +134,16 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/glibmm-2.4/glibmm/propertyproxy.h \
  /usr/include/glibmm-2.4/glibmm/propertyproxy_base.h \
  /usr/include/glibmm-2.4/glibmm/value.h \
+ /usr/include/glibmm-2.4/glibmm/enums.h \
  /usr/include/glibmm-2.4/glibmm/value_custom.h \
  /usr/include/glibmm-2.4/glibmm/value_basictypes.h \
  /usr/include/glibmm-2.4/glibmm/quark.h \
  /usr/include/glibmm-2.4/glibmm/debug.h \
  /usr/include/glibmm-2.4/glibmm/balancedtree.h \
  /usr/include/glibmm-2.4/glibmm/base64.h \
+ /usr/include/glibmm-2.4/glibmm/binding.h \
+ /usr/include/glibmm-2.4/glibmm/object.h \
+ /usr/include/glibmm-2.4/glibmm/utility.h \
  /usr/include/glibmm-2.4/glibmm/bytearray.h \
  /usr/include/sigc++-2.0/sigc++/slot.h \
  /usr/include/glibmm-2.4/glibmm/bytes.h \
@@ -159,8 +161,6 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/glibmm-2.4/glibmm/containers.h \
  /usr/include/glibmm-2.4/glibmm/sarray.h \
  /usr/include/glibmm-2.4/glibmm/interface.h \
- /usr/include/glibmm-2.4/glibmm/object.h \
- /usr/include/glibmm-2.4/glibmm/utility.h \
  /usr/include/glibmm-2.4/glibmm/init.h \
  /usr/include/glibmm-2.4/glibmm/keyfile.h \
  /usr/include/glibmm-2.4/glibmm/streamiochannel.h \
@@ -187,7 +187,9 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/glibmm-2.4/glibmm/valuearray.h \
  /usr/include/glibmm-2.4/glibmm/variantdict.h \
  /usr/include/glibmm-2.4/glibmm/vectorutils.h \
- /usr/include/giomm-2.4/giomm.h /usr/include/giomm-2.4/giomm/action.h \
+ /usr/include/glibmm-2.4/glibmm/weakref.h /usr/include/giomm-2.4/giomm.h \
+ /usr/include/giomm-2.4/giomm/action.h \
+ /usr/lib/x86_64-linux-gnu/giomm-2.4/include/giommconfig.h \
  /usr/include/glib-2.0/gio/gio.h /usr/include/glib-2.0/gio/giotypes.h \
  /usr/include/glib-2.0/gio/gioenums.h /usr/include/glib-2.0/gio/gaction.h \
  /usr/include/glib-2.0/gio/gactiongroup.h \
@@ -213,6 +215,7 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/glib-2.0/gio/gconverterinputstream.h \
  /usr/include/glib-2.0/gio/gconverteroutputstream.h \
  /usr/include/glib-2.0/gio/gcredentials.h \
+ /usr/include/glib-2.0/gio/gdatagrambased.h \
  /usr/include/glib-2.0/gio/gdatainputstream.h \
  /usr/include/glib-2.0/gio/gdataoutputstream.h \
  /usr/include/glib-2.0/gio/gdbusaddress.h \
@@ -228,6 +231,9 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/glib-2.0/gio/gdbusserver.h \
  /usr/include/glib-2.0/gio/gdbusutils.h \
  /usr/include/glib-2.0/gio/gdrive.h \
+ /usr/include/glib-2.0/gio/gdtlsclientconnection.h \
+ /usr/include/glib-2.0/gio/gdtlsconnection.h \
+ /usr/include/glib-2.0/gio/gdtlsserverconnection.h \
  /usr/include/glib-2.0/gio/gemblemedicon.h \
  /usr/include/glib-2.0/gio/gicon.h /usr/include/glib-2.0/gio/gemblem.h \
  /usr/include/glib-2.0/gio/gfileattribute.h \
@@ -278,6 +284,7 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/glib-2.0/gio/gactiongroup.h \
  /usr/include/glib-2.0/gio/gactionmap.h \
  /usr/include/glib-2.0/gio/gsimpleasyncresult.h \
+ /usr/include/glib-2.0/gio/gsimpleiostream.h \
  /usr/include/glib-2.0/gio/gsimplepermission.h \
  /usr/include/glib-2.0/gio/gsocketclient.h \
  /usr/include/glib-2.0/gio/gsocketconnectable.h \
@@ -323,20 +330,23 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/glib-2.0/gio/gmenuexporter.h \
  /usr/include/glib-2.0/gio/gdbusmenumodel.h \
  /usr/include/glib-2.0/gio/gnotification.h \
+ /usr/include/glib-2.0/gio/glistmodel.h \
+ /usr/include/glib-2.0/gio/gliststore.h \
+ /usr/include/glib-2.0/gio/gio-autocleanups.h \
  /usr/include/giomm-2.4/giomm/actiongroup.h \
  /usr/include/giomm-2.4/giomm/actionmap.h \
  /usr/include/giomm-2.4/giomm/simpleaction.h \
  /usr/include/giomm-2.4/giomm/appinfo.h \
  /usr/include/giomm-2.4/giomm/applaunchcontext.h \
  /usr/include/giomm-2.4/giomm/icon.h \
+ /usr/include/giomm-2.4/giomm/asyncresult.h \
+ /usr/include/giomm-2.4/giomm/cancellable.h \
  /usr/include/giomm-2.4/giomm/application.h \
  /usr/include/giomm-2.4/giomm/applicationcommandline.h \
  /usr/include/giomm-2.4/giomm/file.h \
- /usr/include/giomm-2.4/giomm/asyncresult.h \
  /usr/include/giomm-2.4/giomm/fileattributeinfolist.h \
  /usr/include/giomm-2.4/giomm/fileattributeinfo.h \
  /usr/include/giomm-2.4/giomm/fileenumerator.h \
- /usr/include/giomm-2.4/giomm/cancellable.h \
  /usr/include/giomm-2.4/giomm/fileinfo.h \
  /usr/include/giomm-2.4/giomm/fileinputstream.h \
  /usr/include/giomm-2.4/giomm/inputstream.h \
@@ -403,6 +413,8 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/giomm-2.4/giomm/socketaddressenumerator.h \
  /usr/include/giomm-2.4/giomm/init.h \
  /usr/include/giomm-2.4/giomm/wrap_init.h \
+ /usr/include/giomm-2.4/giomm/listmodel.h \
+ /usr/include/giomm-2.4/giomm/liststore.h \
  /usr/include/giomm-2.4/giomm/memoryinputstream.h \
  /usr/include/giomm-2.4/giomm/memoryoutputstream.h \
  /usr/include/giomm-2.4/giomm/menu.h \
@@ -411,6 +423,7 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/giomm-2.4/giomm/menulinkiter.h \
  /usr/include/giomm-2.4/giomm/networkaddress.h \
  /usr/include/giomm-2.4/giomm/networkservice.h \
+ /usr/include/giomm-2.4/giomm/permission.h \
  /usr/include/giomm-2.4/giomm/proxy.h \
  /usr/include/giomm-2.4/giomm/proxyaddress.h \
  /usr/include/giomm-2.4/giomm/proxyresolver.h \
@@ -418,14 +431,21 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/giomm-2.4/giomm/srvtarget.h \
  /usr/include/giomm-2.4/giomm/resource.h \
  /usr/include/giomm-2.4/giomm/settings.h \
+ /usr/include/giomm-2.4/giomm/settingsschema.h \
+ /usr/include/giomm-2.4/giomm/settingsschemakey.h \
+ /usr/include/giomm-2.4/giomm/settingsschemasource.h \
  /usr/include/giomm-2.4/giomm/simpleactiongroup.h \
+ /usr/include/giomm-2.4/giomm/simpleiostream.h \
+ /usr/include/giomm-2.4/giomm/simplepermission.h \
  /usr/include/giomm-2.4/giomm/socket.h \
  /usr/include/giomm-2.4/giomm/socketclient.h \
  /usr/include/giomm-2.4/giomm/socketconnection.h \
  /usr/include/giomm-2.4/giomm/socketcontrolmessage.h \
  /usr/include/giomm-2.4/giomm/socketlistener.h \
  /usr/include/giomm-2.4/giomm/socketservice.h \
+ /usr/include/giomm-2.4/giomm/socketsource.h \
  /usr/include/giomm-2.4/giomm/tcpconnection.h \
+ /usr/include/giomm-2.4/giomm/tcpwrapperconnection.h \
  /usr/include/giomm-2.4/giomm/themedicon.h \
  /usr/include/giomm-2.4/giomm/threadedsocketservice.h \
  /usr/include/giomm-2.4/giomm/tlscertificate.h \
@@ -447,8 +467,8 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/giomm-2.4/giomm/zlibdecompressor.h \
  /usr/include/gdkmm-3.0/gdkmm/dragcontext.h \
  /usr/include/gdkmm-3.0/gdkmm/color.h \
- /usr/lib/i386-linux-gnu/gdkmm-3.0/include/gdkmmconfig.h \
- /usr/lib/i386-linux-gnu/pangomm-1.4/include/pangommconfig.h \
+ /usr/lib/x86_64-linux-gnu/gdkmm-3.0/include/gdkmmconfig.h \
+ /usr/lib/x86_64-linux-gnu/pangomm-1.4/include/pangommconfig.h \
  /usr/include/gtk-3.0/gdk/gdk.h /usr/include/gtk-3.0/gdk/gdkconfig.h \
  /usr/include/gtk-3.0/gdk/gdkversionmacros.h \
  /usr/include/gtk-3.0/gdk/gdkapplaunchcontext.h \
@@ -456,6 +476,8 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/pango-1.0/pango/pango-attributes.h \
  /usr/include/pango-1.0/pango/pango-font.h \
  /usr/include/pango-1.0/pango/pango-coverage.h \
+ /usr/include/pango-1.0/pango/pango-version-macros.h \
+ /usr/include/pango-1.0/pango/pango-features.h \
  /usr/include/pango-1.0/pango/pango-types.h \
  /usr/include/pango-1.0/pango/pango-gravity.h \
  /usr/include/pango-1.0/pango/pango-matrix.h \
@@ -470,7 +492,6 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/pango-1.0/pango/pango-engine.h \
  /usr/include/pango-1.0/pango/pango-glyph.h \
  /usr/include/pango-1.0/pango/pango-enum-types.h \
- /usr/include/pango-1.0/pango/pango-features.h \
  /usr/include/pango-1.0/pango/pango-glyph-item.h \
  /usr/include/pango-1.0/pango/pango-layout.h \
  /usr/include/pango-1.0/pango/pango-tabs.h \
@@ -480,12 +501,21 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/cairo/cairo-deprecated.h \
  /usr/include/gtk-3.0/gdk/gdkscreen.h \
  /usr/include/gtk-3.0/gdk/gdkdisplay.h \
- /usr/include/gtk-3.0/gdk/gdkevents.h /usr/include/gtk-3.0/gdk/gdkcolor.h \
- /usr/include/gtk-3.0/gdk/gdkdnd.h /usr/include/gtk-3.0/gdk/gdkdevice.h \
+ /usr/include/gtk-3.0/gdk/gdkevents.h /usr/include/gtk-3.0/gdk/gdkdnd.h \
+ /usr/include/gtk-3.0/gdk/gdkdevice.h \
+ /usr/include/gtk-3.0/gdk/gdkdevicetool.h \
  /usr/include/gtk-3.0/gdk/gdkdevicemanager.h \
- /usr/include/gtk-3.0/gdk/gdkcairo.h /usr/include/gtk-3.0/gdk/gdkrgba.h \
- /usr/include/gtk-3.0/gdk/gdkpixbuf.h \
+ /usr/include/gtk-3.0/gdk/gdkseat.h /usr/include/gtk-3.0/gdk/gdkwindow.h \
+ /usr/include/gtk-3.0/gdk/gdkdrawingcontext.h \
+ /usr/include/gtk-3.0/gdk/gdkframeclock.h \
+ /usr/include/gtk-3.0/gdk/gdkframetimings.h \
+ /usr/include/gtk-3.0/gdk/gdkmonitor.h \
+ /usr/include/gtk-3.0/gdk/gdkrectangle.h \
+ /usr/include/gtk-3.0/gdk/gdkcairo.h \
+ /usr/include/gtk-3.0/gdk/deprecated/gdkcolor.h \
+ /usr/include/gtk-3.0/gdk/gdkrgba.h /usr/include/gtk-3.0/gdk/gdkpixbuf.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h \
+ /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-macros.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-features.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-transform.h \
@@ -494,41 +524,43 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-io.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-loader.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-enum-types.h \
+ /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h \
  /usr/include/pango-1.0/pango/pangocairo.h \
  /usr/include/gtk-3.0/gdk/gdkcursor.h \
+ /usr/include/gtk-3.0/gdk/gdkdevicepad.h \
  /usr/include/gtk-3.0/gdk/gdkdisplaymanager.h \
  /usr/include/gtk-3.0/gdk/gdkenumtypes.h \
- /usr/include/gtk-3.0/gdk/gdkframeclock.h \
- /usr/include/gtk-3.0/gdk/gdkframetimings.h \
+ /usr/include/gtk-3.0/gdk/gdkglcontext.h \
  /usr/include/gtk-3.0/gdk/gdkkeys.h /usr/include/gtk-3.0/gdk/gdkkeysyms.h \
  /usr/include/gtk-3.0/gdk/gdkmain.h /usr/include/gtk-3.0/gdk/gdkpango.h \
  /usr/include/gtk-3.0/gdk/gdkproperty.h \
- /usr/include/gtk-3.0/gdk/gdkrectangle.h \
  /usr/include/gtk-3.0/gdk/gdkselection.h \
  /usr/include/gtk-3.0/gdk/gdktestutils.h \
- /usr/include/gtk-3.0/gdk/gdkwindow.h \
  /usr/include/gtk-3.0/gdk/gdkthreads.h \
  /usr/include/gtk-3.0/gdk/gdkvisual.h \
+ /usr/include/gtk-3.0/gdk/gdk-autocleanup.h \
  /usr/include/gdkmm-3.0/gdkmm/pixbuf.h \
  /usr/include/gdkmm-3.0/gdkmm/pixbufformat.h \
  /usr/include/gdkmm-3.0/gdkmm/types.h \
  /usr/include/cairomm-1.0/cairomm/surface.h \
- /usr/include/cairomm-1.0/cairomm/enums.h \
+ /usr/include/cairomm-1.0/cairomm/enums.h /usr/include/cairo/cairo-ft.h \
+ /usr/include/cairo/cairo.h /usr/include/freetype2/ft2build.h \
+ /usr/include/freetype2/freetype/config/ftheader.h \
+ /usr/include/freetype2/freetype/freetype.h \
+ /usr/include/freetype2/freetype/config/ftconfig.h \
+ /usr/include/freetype2/freetype/config/ftoption.h \
+ /usr/include/freetype2/freetype/config/ftstdlib.h \
+ /usr/include/freetype2/freetype/fttypes.h \
+ /usr/include/freetype2/freetype/ftsystem.h \
+ /usr/include/freetype2/freetype/ftimage.h \
+ /usr/include/freetype2/freetype/fterrors.h \
+ /usr/include/freetype2/freetype/ftmoderr.h \
+ /usr/include/freetype2/freetype/fterrdef.h \
  /usr/include/cairomm-1.0/cairomm/exception.h \
  /usr/include/cairomm-1.0/cairomm/device.h \
  /usr/include/cairomm-1.0/cairomm/types.h \
  /usr/include/cairomm-1.0/cairomm/refptr.h \
  /usr/include/cairomm-1.0/cairomm/fontoptions.h \
- /usr/include/cairo/cairo-ft.h /usr/include/cairo/cairo.h \
- /usr/include/freetype2/ft2build.h \
- /usr/include/freetype2/config/ftheader.h \
- /usr/include/freetype2/freetype.h \
- /usr/include/freetype2/config/ftconfig.h \
- /usr/include/freetype2/config/ftoption.h \
- /usr/include/freetype2/config/ftstdlib.h \
- /usr/include/freetype2/fttypes.h /usr/include/freetype2/ftsystem.h \
- /usr/include/freetype2/ftimage.h /usr/include/freetype2/fterrors.h \
- /usr/include/freetype2/ftmoderr.h /usr/include/freetype2/fterrdef.h \
  /usr/include/cairo/cairo-pdf.h /usr/include/cairo/cairo-ps.h \
  /usr/include/cairo/cairo-svg.h /usr/include/gdkmm-3.0/gdkmm/device.h \
  /usr/include/gdkmm-3.0/gdkmm/cursor.h \
@@ -551,12 +583,16 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gdkmm-3.0/gdkmm/pixbufanimation.h \
  /usr/include/gdkmm-3.0/gdkmm/pixbufanimationiter.h \
  /usr/include/gdkmm-3.0/gdkmm/pixbufloader.h \
+ /usr/include/gdkmm-3.0/gdkmm/drawingcontext.h \
+ /usr/include/gdkmm-3.0/gdkmm/glcontext.h \
  /usr/include/gdkmm-3.0/gdkmm/displaymanager.h \
  /usr/include/gdkmm-3.0/gdkmm/devicemanager.h \
+ /usr/include/gdkmm-3.0/gdkmm/seat.h \
+ /usr/include/gdkmm-3.0/gdkmm/monitor.h \
  /usr/include/gdkmm-3.0/gdkmm/general.h \
  /usr/include/gtkmm-3.0/gtkmm/toggleaction.h \
  /usr/include/gtkmm-3.0/gtkmm/action.h \
- /usr/lib/i386-linux-gnu/gtkmm-3.0/include/gtkmmconfig.h \
+ /usr/lib/x86_64-linux-gnu/gtkmm-3.0/include/gtkmmconfig.h \
  /usr/include/gtkmm-3.0/gtkmm/widget.h \
  /usr/include/pangomm-1.4/pangomm/context.h \
  /usr/include/pangomm-1.4/pangomm/fontdescription.h \
@@ -597,7 +633,9 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtk-3.0/gtk/gtkaccelgroup.h \
  /usr/include/gtk-3.0/gtk/gtkenums.h /usr/include/gtk-3.0/gtk/gtkborder.h \
  /usr/include/gtk-3.0/gtk/gtktypes.h /usr/include/atk-1.0/atk/atk.h \
- /usr/include/atk-1.0/atk/atkobject.h /usr/include/atk-1.0/atk/atkstate.h \
+ /usr/include/atk-1.0/atk/atkobject.h \
+ /usr/include/atk-1.0/atk/atkversion.h \
+ /usr/include/atk-1.0/atk/atkstate.h \
  /usr/include/atk-1.0/atk/atkrelationtype.h \
  /usr/include/atk-1.0/atk/atkaction.h \
  /usr/include/atk-1.0/atk/atkcomponent.h \
@@ -605,6 +643,7 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/atk-1.0/atk/atkdocument.h \
  /usr/include/atk-1.0/atk/atkeditabletext.h \
  /usr/include/atk-1.0/atk/atktext.h \
+ /usr/include/atk-1.0/atk/atk-enum-types.h \
  /usr/include/atk-1.0/atk/atkgobjectaccessible.h \
  /usr/include/atk-1.0/atk/atkhyperlink.h \
  /usr/include/atk-1.0/atk/atkhyperlinkimpl.h \
@@ -613,7 +652,7 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/atk-1.0/atk/atknoopobject.h \
  /usr/include/atk-1.0/atk/atknoopobjectfactory.h \
  /usr/include/atk-1.0/atk/atkobjectfactory.h \
- /usr/include/atk-1.0/atk/atkplug.h \
+ /usr/include/atk-1.0/atk/atkplug.h /usr/include/atk-1.0/atk/atkrange.h \
  /usr/include/atk-1.0/atk/atkregistry.h \
  /usr/include/atk-1.0/atk/atkobjectfactory.h \
  /usr/include/atk-1.0/atk/atkrelation.h \
@@ -622,20 +661,21 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/atk-1.0/atk/atksocket.h \
  /usr/include/atk-1.0/atk/atkstateset.h \
  /usr/include/atk-1.0/atk/atkstreamablecontent.h \
- /usr/include/atk-1.0/atk/atktable.h /usr/include/atk-1.0/atk/atkmisc.h \
- /usr/include/atk-1.0/atk/atkvalue.h \
- /usr/include/atk-1.0/atk/atkversion.h \
+ /usr/include/atk-1.0/atk/atktable.h \
+ /usr/include/atk-1.0/atk/atktablecell.h \
+ /usr/include/atk-1.0/atk/atkmisc.h /usr/include/atk-1.0/atk/atkvalue.h \
  /usr/include/atk-1.0/atk/atkwindow.h /usr/include/gtk-3.0/gtk/gtkbin.h \
  /usr/include/gtk-3.0/gtk/gtkcontainer.h \
  /usr/include/gtk-3.0/gtk/gtkaccellabel.h \
- /usr/include/gtk-3.0/gtk/gtklabel.h /usr/include/gtk-3.0/gtk/gtkmisc.h \
+ /usr/include/gtk-3.0/gtk/gtklabel.h \
+ /usr/include/gtk-3.0/gtk/deprecated/gtkmisc.h \
  /usr/include/gtk-3.0/gtk/gtkmenu.h \
  /usr/include/gtk-3.0/gtk/gtkmenushell.h \
  /usr/include/gtk-3.0/gtk/gtkaccelmap.h \
  /usr/include/gtk-3.0/gtk/gtkaccessible.h \
  /usr/include/gtk-3.0/gtk/gtkactionable.h \
+ /usr/include/gtk-3.0/gtk/gtkactionbar.h \
  /usr/include/gtk-3.0/gtk/gtkadjustment.h \
- /usr/include/gtk-3.0/gtk/gtkalignment.h \
  /usr/include/gtk-3.0/gtk/gtkappchooser.h \
  /usr/include/gtk-3.0/gtk/gtkappchooserdialog.h \
  /usr/include/gtk-3.0/gtk/gtkappchooserwidget.h \
@@ -663,7 +703,7 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtk-3.0/gtk/gtktreemodelfilter.h \
  /usr/include/gtk-3.0/gtk/gtkimage.h \
  /usr/include/gtk-3.0/gtk/gtkapplicationwindow.h \
- /usr/include/gtk-3.0/gtk/gtkarrow.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutswindow.h \
  /usr/include/gtk-3.0/gtk/gtkaspectframe.h \
  /usr/include/gtk-3.0/gtk/gtkframe.h \
  /usr/include/gtk-3.0/gtk/gtkassistant.h \
@@ -699,26 +739,41 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtk-3.0/gtk/gtkcssprovider.h \
  /usr/include/gtk-3.0/gtk/gtkcsssection.h \
  /usr/include/gtk-3.0/gtk/gtkdebug.h \
+ /usr/include/gtk-3.0/gtk/gtkdragdest.h \
+ /usr/include/gtk-3.0/gtk/gtkdragsource.h \
  /usr/include/gtk-3.0/gtk/gtkdrawingarea.h \
  /usr/include/gtk-3.0/gtk/gtkeventbox.h \
+ /usr/include/gtk-3.0/gtk/gtkeventcontroller.h \
  /usr/include/gtk-3.0/gtk/gtkexpander.h \
  /usr/include/gtk-3.0/gtk/gtkfixed.h \
  /usr/include/gtk-3.0/gtk/gtkfilechooser.h \
  /usr/include/gtk-3.0/gtk/gtkfilefilter.h \
  /usr/include/gtk-3.0/gtk/gtkfilechooserbutton.h \
  /usr/include/gtk-3.0/gtk/gtkfilechooserdialog.h \
+ /usr/include/gtk-3.0/gtk/gtkfilechoosernative.h \
+ /usr/include/gtk-3.0/gtk/gtknativedialog.h \
  /usr/include/gtk-3.0/gtk/gtkfilechooserwidget.h \
+ /usr/include/gtk-3.0/gtk/gtkflowbox.h \
  /usr/include/gtk-3.0/gtk/gtkfontbutton.h \
  /usr/include/gtk-3.0/gtk/gtkfontchooser.h \
  /usr/include/gtk-3.0/gtk/gtkfontchooserdialog.h \
  /usr/include/gtk-3.0/gtk/gtkfontchooserwidget.h \
- /usr/include/gtk-3.0/gtk/gtkgrid.h \
+ /usr/include/gtk-3.0/gtk/gtkgesture.h \
+ /usr/include/gtk-3.0/gtk/gtkgesturedrag.h \
+ /usr/include/gtk-3.0/gtk/gtkgesturesingle.h \
+ /usr/include/gtk-3.0/gtk/gtkgesturelongpress.h \
+ /usr/include/gtk-3.0/gtk/gtkgesturemultipress.h \
+ /usr/include/gtk-3.0/gtk/gtkgesturepan.h \
+ /usr/include/gtk-3.0/gtk/gtkgesturerotate.h \
+ /usr/include/gtk-3.0/gtk/gtkgestureswipe.h \
+ /usr/include/gtk-3.0/gtk/gtkgesturezoom.h \
+ /usr/include/gtk-3.0/gtk/gtkglarea.h /usr/include/gtk-3.0/gtk/gtkgrid.h \
  /usr/include/gtk-3.0/gtk/gtkheaderbar.h \
  /usr/include/gtk-3.0/gtk/gtkicontheme.h \
  /usr/include/gtk-3.0/gtk/gtkstylecontext.h \
  /usr/include/gtk-3.0/gtk/gtkstyleprovider.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkiconfactory.h \
- /usr/include/gtk-3.0/gtk/gtkstyleproperties.h \
+ /usr/include/gtk-3.0/gtk/deprecated/gtkstyleproperties.h \
  /usr/include/gtk-3.0/gtk/gtkiconview.h \
  /usr/include/gtk-3.0/gtk/gtktooltip.h \
  /usr/include/gtk-3.0/gtk/gtkimcontextinfo.h \
@@ -733,22 +788,25 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtk-3.0/gtk/gtklockbutton.h \
  /usr/include/gtk-3.0/gtk/gtkmain.h /usr/include/gtk-3.0/gtk/gtkmenubar.h \
  /usr/include/gtk-3.0/gtk/gtkmenubutton.h \
+ /usr/include/gtk-3.0/gtk/gtkpopover.h \
  /usr/include/gtk-3.0/gtk/gtkmenutoolbutton.h \
  /usr/include/gtk-3.0/gtk/gtktoolbutton.h \
  /usr/include/gtk-3.0/gtk/gtktoolitem.h \
  /usr/include/gtk-3.0/gtk/gtksizegroup.h \
  /usr/include/gtk-3.0/gtk/gtkmessagedialog.h \
+ /usr/include/gtk-3.0/gtk/gtkmodelbutton.h \
  /usr/include/gtk-3.0/gtk/gtkmodules.h \
  /usr/include/gtk-3.0/gtk/gtkmountoperation.h \
  /usr/include/gtk-3.0/gtk/gtknotebook.h \
- /usr/include/gtk-3.0/gtk/gtknumerableicon.h \
  /usr/include/gtk-3.0/gtk/gtkoffscreenwindow.h \
  /usr/include/gtk-3.0/gtk/gtkorientable.h \
  /usr/include/gtk-3.0/gtk/gtkoverlay.h \
+ /usr/include/gtk-3.0/gtk/gtkpadcontroller.h \
  /usr/include/gtk-3.0/gtk/gtkpagesetup.h \
  /usr/include/gtk-3.0/gtk/gtkpapersize.h \
  /usr/include/gtk-3.0/gtk/gtkpaned.h \
  /usr/include/gtk-3.0/gtk/gtkplacessidebar.h \
+ /usr/include/gtk-3.0/gtk/gtkpopovermenu.h \
  /usr/include/gtk-3.0/gtk/gtkprintcontext.h \
  /usr/include/gtk-3.0/gtk/gtkprintoperation.h \
  /usr/include/gtk-3.0/gtk/gtkprintsettings.h \
@@ -765,6 +823,7 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtk-3.0/gtk/gtkrecentchooserdialog.h \
  /usr/include/gtk-3.0/gtk/gtkrecentchoosermenu.h \
  /usr/include/gtk-3.0/gtk/gtkrecentchooserwidget.h \
+ /usr/include/gtk-3.0/gtk/gtkrender.h \
  /usr/include/gtk-3.0/gtk/gtkrevealer.h \
  /usr/include/gtk-3.0/gtk/gtkscale.h \
  /usr/include/gtk-3.0/gtk/gtkscalebutton.h \
@@ -777,22 +836,24 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtk-3.0/gtk/gtkseparatormenuitem.h \
  /usr/include/gtk-3.0/gtk/gtkseparatortoolitem.h \
  /usr/include/gtk-3.0/gtk/gtksettings.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutlabel.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutsgroup.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutssection.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutsshortcut.h \
  /usr/include/gtk-3.0/gtk/gtkshow.h \
+ /usr/include/gtk-3.0/gtk/gtkstacksidebar.h \
+ /usr/include/gtk-3.0/gtk/gtkstack.h \
  /usr/include/gtk-3.0/gtk/gtksizerequest.h \
  /usr/include/gtk-3.0/gtk/gtkspinbutton.h \
  /usr/include/gtk-3.0/gtk/gtkspinner.h \
- /usr/include/gtk-3.0/gtk/gtkstack.h \
  /usr/include/gtk-3.0/gtk/gtkstackswitcher.h \
- /usr/include/gtk-3.0/gtk/gtkstack.h \
  /usr/include/gtk-3.0/gtk/gtkstatusbar.h \
- /usr/include/gtk-3.0/gtk/gtkstatusicon.h \
  /usr/include/gtk-3.0/gtk/gtkswitch.h \
  /usr/include/gtk-3.0/gtk/gtktextbuffer.h \
  /usr/include/gtk-3.0/gtk/gtktexttagtable.h \
  /usr/include/gtk-3.0/gtk/gtktextmark.h \
  /usr/include/gtk-3.0/gtk/gtktextbufferrichtext.h \
  /usr/include/gtk-3.0/gtk/gtktextview.h \
- /usr/include/gtk-3.0/gtk/gtkthemingengine.h \
  /usr/include/gtk-3.0/gtk/gtktoolbar.h \
  /usr/include/gtk-3.0/gtk/gtktoolitemgroup.h \
  /usr/include/gtk-3.0/gtk/gtktoolpalette.h \
@@ -807,10 +868,14 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtk-3.0/gtk/gtkviewport.h \
  /usr/include/gtk-3.0/gtk/gtkvolumebutton.h \
  /usr/include/gtk-3.0/gtk/gtkwidgetpath.h \
+ /usr/include/gtk-3.0/gtk/gtkwindowgroup.h \
+ /usr/include/gtk-3.0/gtk/gtkwindow.h \
+ /usr/include/gtk-3.0/gtk/deprecated/gtkarrow.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkactivatable.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkaction.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkactiongroup.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkstock.h \
+ /usr/include/gtk-3.0/gtk/deprecated/gtkalignment.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkcolorsel.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkcolorseldialog.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkfontsel.h \
@@ -825,13 +890,16 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkhscrollbar.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkhseparator.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkimagemenuitem.h \
+ /usr/include/gtk-3.0/gtk/deprecated/gtknumerableicon.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkradioaction.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtktoggleaction.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkrc.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkrecentaction.h \
+ /usr/include/gtk-3.0/gtk/deprecated/gtkstatusicon.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkstyle.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtktable.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtktearoffmenuitem.h \
+ /usr/include/gtk-3.0/gtk/deprecated/gtkthemingengine.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkuimanager.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvbbox.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvbox.h \
@@ -839,6 +907,7 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscale.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h \
+ /usr/include/gtk-3.0/gtk/gtk-autocleanups.h \
  /usr/include/gtkmm-3.0/gtkmm/targetlist.h \
  /usr/include/gtkmm-3.0/gtkmm/targetentry.h \
  /usr/include/gtkmm-3.0/gtkmm/clipboard.h \
@@ -858,9 +927,12 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtkmm-3.0/gtkmm/dialog.h \
  /usr/include/gtkmm-3.0/gtkmm/window.h /usr/include/gtkmm-3.0/gtkmm/bin.h \
  /usr/include/gtkmm-3.0/gtkmm/container.h \
+ /usr/include/gtkmm-3.0/gtkmm/childpropertyproxy.h \
+ /usr/include/gtkmm-3.0/gtkmm/childpropertyproxy_base.h \
  /usr/include/gtkmm-3.0/gtkmm/application.h \
  /usr/include/gtkmm-3.0/gtkmm/actiongroup.h \
  /usr/include/gtkmm-3.0/gtkmm/accelkey.h \
+ /usr/include/gtkmm-3.0/gtkmm/windowgroup.h \
  /usr/include/gtkmm-3.0/gtkmm/box.h \
  /usr/include/gtkmm-3.0/gtkmm/orientable.h \
  /usr/include/gtkmm-3.0/gtkmm/hvbox.h \
@@ -868,8 +940,10 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtkmm-3.0/gtkmm/activatable.h \
  /usr/include/gtkmm-3.0/gtkmm/buttonbox.h \
  /usr/include/gtkmm-3.0/gtkmm/hvbuttonbox.h \
+ /usr/include/gtkmm-3.0/gtkmm/headerbar.h \
  /usr/include/gtkmm-3.0/gtkmm/accelmap.h \
  /usr/include/gtkmm-3.0/gtkmm/actionable.h \
+ /usr/include/gtkmm-3.0/gtkmm/actionbar.h \
  /usr/include/gtkmm-3.0/gtkmm/adjustment.h \
  /usr/include/gtkmm-3.0/gtkmm/alignment.h \
  /usr/include/gtkmm-3.0/gtkmm/appchooserbutton.h \
@@ -927,23 +1001,36 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtkmm-3.0/gtkmm/colorselection.h \
  /usr/include/gtkmm-3.0/gtkmm/comboboxtext.h \
  /usr/include/gtkmm-3.0/gtkmm/cssprovider.h \
+ /usr/include/gtkmm-3.0/gtkmm/csssection.h \
  /usr/include/gtkmm-3.0/gtkmm/drawingarea.h \
  /usr/include/gtkmm-3.0/gtkmm/expander.h \
  /usr/include/gtkmm-3.0/gtkmm/eventbox.h \
+ /usr/include/gtkmm-3.0/gtkmm/eventcontroller.h \
  /usr/include/gtkmm-3.0/gtkmm/filechooser.h \
  /usr/include/gtkmm-3.0/gtkmm/filefilter.h \
  /usr/include/gtkmm-3.0/gtkmm/filechooserbutton.h \
  /usr/include/gtkmm-3.0/gtkmm/filechooserdialog.h \
  /usr/include/gtkmm-3.0/gtkmm/filechooserwidget.h \
  /usr/include/gtkmm-3.0/gtkmm/fixed.h \
+ /usr/include/gtkmm-3.0/gtkmm/flowbox.h \
+ /usr/include/gtkmm-3.0/gtkmm/flowboxchild.h \
  /usr/include/gtkmm-3.0/gtkmm/fontbutton.h \
  /usr/include/gtkmm-3.0/gtkmm/fontchooser.h \
  /usr/include/gtkmm-3.0/gtkmm/fontchooserdialog.h \
  /usr/include/gtkmm-3.0/gtkmm/fontchooserwidget.h \
  /usr/include/gtkmm-3.0/gtkmm/fontselection.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesture.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesturedrag.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesturesingle.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesturelongpress.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesturemultipress.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesturepan.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesturerotate.h \
+ /usr/include/gtkmm-3.0/gtkmm/gestureswipe.h \
+ /usr/include/gtkmm-3.0/gtkmm/gesturezoom.h \
+ /usr/include/gtkmm-3.0/gtkmm/glarea.h \
  /usr/include/gtkmm-3.0/gtkmm/grid.h \
  /usr/include/gtkmm-3.0/gtkmm/handlebox.h \
- /usr/include/gtkmm-3.0/gtkmm/headerbar.h \
  /usr/include/gtkmm-3.0/gtkmm/hvpaned.h \
  /usr/include/gtkmm-3.0/gtkmm/paned.h \
  /usr/include/gtkmm-3.0/gtkmm/hvscale.h \
@@ -974,16 +1061,20 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtkmm-3.0/gtkmm/main.h \
  /usr/include/gtkmm-3.0/gtkmm/menubar.h \
  /usr/include/gtkmm-3.0/gtkmm/menubutton.h \
+ /usr/include/gtkmm-3.0/gtkmm/popover.h \
  /usr/include/gtkmm-3.0/gtkmm/messagedialog.h \
+ /usr/include/gtkmm-3.0/gtkmm/modelbutton.h \
  /usr/include/gtkmm-3.0/gtkmm/notebook.h \
  /usr/include/gtkmm-3.0/gtkmm/numerableicon.h \
  /usr/include/gtkmm-3.0/gtkmm/offscreenwindow.h \
+ /usr/include/gtkmm-3.0/gtkmm/overlay.h \
  /usr/include/gtkmm-3.0/gtkmm/pagesetup.h \
  /usr/include/gtkmm-3.0/gtkmm/papersize.h \
  /usr/include/gtkmm-3.0/gtkmm/pagesetupunixdialog.h \
  /usr/include/gtkmm-3.0/gtkmm/printsettings.h \
  /usr/include/gtkmm-3.0/gtkmm/placessidebar.h \
  /usr/include/gtkmm-3.0/gtkmm/scrolledwindow.h \
+ /usr/include/gtkmm-3.0/gtkmm/popovermenu.h \
  /usr/include/gtkmm-3.0/gtkmm/printcontext.h \
  /usr/include/gtkmm-3.0/gtkmm/printer.h \
  /usr/include/gtkmm-3.0/gtkmm/printjob.h \
@@ -1015,14 +1106,21 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtkmm-3.0/gtkmm/settings.h \
  /usr/include/gtkmm-3.0/gtkmm/toolbar.h \
  /usr/include/gtkmm-3.0/gtkmm/toolshell.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutlabel.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutsgroup.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutssection.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutsshortcut.h \
+ /usr/include/gtkmm-3.0/gtkmm/shortcutswindow.h \
  /usr/include/gtkmm-3.0/gtkmm/spinbutton.h \
  /usr/include/gtkmm-3.0/gtkmm/spinner.h \
  /usr/include/gtkmm-3.0/gtkmm/stack.h \
+ /usr/include/gtkmm-3.0/gtkmm/stacksidebar.h \
  /usr/include/gtkmm-3.0/gtkmm/stackswitcher.h \
  /usr/include/gtkmm-3.0/gtkmm/statusbar.h \
  /usr/include/gtkmm-3.0/gtkmm/statusicon.h \
  /usr/include/gtkmm-3.0/gtkmm/stock.h \
  /usr/include/gtkmm-3.0/gtkmm/stockitem.h \
+ /usr/include/gtkmm-3.0/gtkmm/styleproperty.h \
  /usr/include/gtkmm-3.0/gtkmm/switch.h \
  /usr/include/gtkmm-3.0/gtkmm/table.h \
  /usr/include/gtkmm-3.0/gtkmm/tearoffmenuitem.h \
@@ -1045,7 +1143,8 @@ build/Debug/GNU-Linux/Drawing.o: Drawing.cpp Drawing.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
  /usr/include/gtkmm-3.0/gtkmm/volumebutton.h Vuelo_2.h Avion.h \
  ColaAviones.h Avion_2.h MostrarItinerario.h ListaAerolineas.h \
- GrafoViajes.h OrigenDestinoBusiness.h OrigenDestinoDataSingleton.h
+ GrafoViajes.h OrigenDestinoBusiness.h OrigenDestinoDataSingleton.h \
+ UsuarioBusiness.h Usuario_2.h UsuarioData.h
 
 Drawing.h:
 
@@ -1053,7 +1152,7 @@ Drawing.h:
 
 /usr/include/glibmm-2.4/glibmm.h:
 
-/usr/lib/i386-linux-gnu/glibmm-2.4/include/glibmmconfig.h:
+/usr/lib/x86_64-linux-gnu/glibmm-2.4/include/glibmmconfig.h:
 
 /usr/include/glibmm-2.4/glibmm/thread.h:
 
@@ -1063,7 +1162,7 @@ Drawing.h:
 
 /usr/include/glib-2.0/glib/gtypes.h:
 
-/usr/lib/i386-linux-gnu/glib-2.0/include/glibconfig.h:
+/usr/lib/x86_64-linux-gnu/glib-2.0/include/glibconfig.h:
 
 /usr/include/glib-2.0/glib/gmacros.h:
 
@@ -1080,6 +1179,8 @@ Drawing.h:
 /usr/include/glib-2.0/glib/gerror.h:
 
 /usr/include/glib-2.0/glib/gquark.h:
+
+/usr/include/glib-2.0/glib/gutils.h:
 
 /usr/include/glib-2.0/glib/gbacktrace.h:
 
@@ -1141,8 +1242,6 @@ Drawing.h:
 
 /usr/include/glib-2.0/glib/gunicode.h:
 
-/usr/include/glib-2.0/glib/gutils.h:
-
 /usr/include/glib-2.0/glib/gkeyfile.h:
 
 /usr/include/glib-2.0/glib/gmappedfile.h:
@@ -1150,6 +1249,10 @@ Drawing.h:
 /usr/include/glib-2.0/glib/gmarkup.h:
 
 /usr/include/glib-2.0/glib/gmessages.h:
+
+/usr/include/glib-2.0/glib/gvariant.h:
+
+/usr/include/glib-2.0/glib/gvarianttype.h:
 
 /usr/include/glib-2.0/glib/goption.h:
 
@@ -1191,9 +1294,7 @@ Drawing.h:
 
 /usr/include/glib-2.0/glib/gurifuncs.h:
 
-/usr/include/glib-2.0/glib/gvarianttype.h:
-
-/usr/include/glib-2.0/glib/gvariant.h:
+/usr/include/glib-2.0/glib/guuid.h:
 
 /usr/include/glib-2.0/glib/gversion.h:
 
@@ -1208,6 +1309,8 @@ Drawing.h:
 /usr/include/glib-2.0/glib/deprecated/grel.h:
 
 /usr/include/glib-2.0/glib/deprecated/gthread.h:
+
+/usr/include/glib-2.0/glib/glib-autocleanups.h:
 
 /usr/include/glibmm-2.4/glibmm/error.h:
 
@@ -1225,7 +1328,7 @@ Drawing.h:
 
 /usr/include/sigc++-2.0/sigc++/signal_base.h:
 
-/usr/lib/i386-linux-gnu/sigc++-2.0/include/sigc++config.h:
+/usr/lib/x86_64-linux-gnu/sigc++-2.0/include/sigc++config.h:
 
 /usr/include/sigc++-2.0/sigc++/type_traits.h:
 
@@ -1271,15 +1374,7 @@ Drawing.h:
 
 /usr/include/sigc++-2.0/sigc++/adaptors/exception_catch.h:
 
-/usr/include/sigc++-2.0/sigc++/adaptors/lambda/lambda.h:
-
-/usr/include/sigc++-2.0/sigc++/adaptors/lambda/base.h:
-
-/usr/include/sigc++-2.0/sigc++/adaptors/lambda/select.h:
-
-/usr/include/sigc++-2.0/sigc++/adaptors/lambda/operator.h:
-
-/usr/include/sigc++-2.0/sigc++/adaptors/lambda/group.h:
+/usr/include/sigc++-2.0/sigc++/adaptors/track_obj.h:
 
 /usr/include/sigc++-2.0/sigc++/functors/functors.h:
 
@@ -1331,7 +1426,11 @@ Drawing.h:
 
 /usr/include/glib-2.0/gobject/gvaluetypes.h:
 
+/usr/include/glib-2.0/gobject/gobject-autocleanups.h:
+
 /usr/include/glibmm-2.4/glibmm/variantiter.h:
+
+/usr/include/glibmm-2.4/glibmm/variantdbusstring.h:
 
 /usr/include/glibmm-2.4/glibmm/variant_basictypes.h:
 
@@ -1351,6 +1450,8 @@ Drawing.h:
 
 /usr/include/glibmm-2.4/glibmm/value.h:
 
+/usr/include/glibmm-2.4/glibmm/enums.h:
+
 /usr/include/glibmm-2.4/glibmm/value_custom.h:
 
 /usr/include/glibmm-2.4/glibmm/value_basictypes.h:
@@ -1362,6 +1463,12 @@ Drawing.h:
 /usr/include/glibmm-2.4/glibmm/balancedtree.h:
 
 /usr/include/glibmm-2.4/glibmm/base64.h:
+
+/usr/include/glibmm-2.4/glibmm/binding.h:
+
+/usr/include/glibmm-2.4/glibmm/object.h:
+
+/usr/include/glibmm-2.4/glibmm/utility.h:
 
 /usr/include/glibmm-2.4/glibmm/bytearray.h:
 
@@ -1396,10 +1503,6 @@ Drawing.h:
 /usr/include/glibmm-2.4/glibmm/sarray.h:
 
 /usr/include/glibmm-2.4/glibmm/interface.h:
-
-/usr/include/glibmm-2.4/glibmm/object.h:
-
-/usr/include/glibmm-2.4/glibmm/utility.h:
 
 /usr/include/glibmm-2.4/glibmm/init.h:
 
@@ -1453,9 +1556,13 @@ Drawing.h:
 
 /usr/include/glibmm-2.4/glibmm/vectorutils.h:
 
+/usr/include/glibmm-2.4/glibmm/weakref.h:
+
 /usr/include/giomm-2.4/giomm.h:
 
 /usr/include/giomm-2.4/giomm/action.h:
+
+/usr/lib/x86_64-linux-gnu/giomm-2.4/include/giommconfig.h:
 
 /usr/include/glib-2.0/gio/gio.h:
 
@@ -1511,6 +1618,8 @@ Drawing.h:
 
 /usr/include/glib-2.0/gio/gcredentials.h:
 
+/usr/include/glib-2.0/gio/gdatagrambased.h:
+
 /usr/include/glib-2.0/gio/gdatainputstream.h:
 
 /usr/include/glib-2.0/gio/gdataoutputstream.h:
@@ -1540,6 +1649,12 @@ Drawing.h:
 /usr/include/glib-2.0/gio/gdbusutils.h:
 
 /usr/include/glib-2.0/gio/gdrive.h:
+
+/usr/include/glib-2.0/gio/gdtlsclientconnection.h:
+
+/usr/include/glib-2.0/gio/gdtlsconnection.h:
+
+/usr/include/glib-2.0/gio/gdtlsserverconnection.h:
 
 /usr/include/glib-2.0/gio/gemblemedicon.h:
 
@@ -1647,6 +1762,8 @@ Drawing.h:
 
 /usr/include/glib-2.0/gio/gsimpleasyncresult.h:
 
+/usr/include/glib-2.0/gio/gsimpleiostream.h:
+
 /usr/include/glib-2.0/gio/gsimplepermission.h:
 
 /usr/include/glib-2.0/gio/gsocketclient.h:
@@ -1741,6 +1858,12 @@ Drawing.h:
 
 /usr/include/glib-2.0/gio/gnotification.h:
 
+/usr/include/glib-2.0/gio/glistmodel.h:
+
+/usr/include/glib-2.0/gio/gliststore.h:
+
+/usr/include/glib-2.0/gio/gio-autocleanups.h:
+
 /usr/include/giomm-2.4/giomm/actiongroup.h:
 
 /usr/include/giomm-2.4/giomm/actionmap.h:
@@ -1753,21 +1876,21 @@ Drawing.h:
 
 /usr/include/giomm-2.4/giomm/icon.h:
 
+/usr/include/giomm-2.4/giomm/asyncresult.h:
+
+/usr/include/giomm-2.4/giomm/cancellable.h:
+
 /usr/include/giomm-2.4/giomm/application.h:
 
 /usr/include/giomm-2.4/giomm/applicationcommandline.h:
 
 /usr/include/giomm-2.4/giomm/file.h:
 
-/usr/include/giomm-2.4/giomm/asyncresult.h:
-
 /usr/include/giomm-2.4/giomm/fileattributeinfolist.h:
 
 /usr/include/giomm-2.4/giomm/fileattributeinfo.h:
 
 /usr/include/giomm-2.4/giomm/fileenumerator.h:
-
-/usr/include/giomm-2.4/giomm/cancellable.h:
 
 /usr/include/giomm-2.4/giomm/fileinfo.h:
 
@@ -1901,6 +2024,10 @@ Drawing.h:
 
 /usr/include/giomm-2.4/giomm/wrap_init.h:
 
+/usr/include/giomm-2.4/giomm/listmodel.h:
+
+/usr/include/giomm-2.4/giomm/liststore.h:
+
 /usr/include/giomm-2.4/giomm/memoryinputstream.h:
 
 /usr/include/giomm-2.4/giomm/memoryoutputstream.h:
@@ -1917,6 +2044,8 @@ Drawing.h:
 
 /usr/include/giomm-2.4/giomm/networkservice.h:
 
+/usr/include/giomm-2.4/giomm/permission.h:
+
 /usr/include/giomm-2.4/giomm/proxy.h:
 
 /usr/include/giomm-2.4/giomm/proxyaddress.h:
@@ -1931,7 +2060,17 @@ Drawing.h:
 
 /usr/include/giomm-2.4/giomm/settings.h:
 
+/usr/include/giomm-2.4/giomm/settingsschema.h:
+
+/usr/include/giomm-2.4/giomm/settingsschemakey.h:
+
+/usr/include/giomm-2.4/giomm/settingsschemasource.h:
+
 /usr/include/giomm-2.4/giomm/simpleactiongroup.h:
+
+/usr/include/giomm-2.4/giomm/simpleiostream.h:
+
+/usr/include/giomm-2.4/giomm/simplepermission.h:
 
 /usr/include/giomm-2.4/giomm/socket.h:
 
@@ -1945,7 +2084,11 @@ Drawing.h:
 
 /usr/include/giomm-2.4/giomm/socketservice.h:
 
+/usr/include/giomm-2.4/giomm/socketsource.h:
+
 /usr/include/giomm-2.4/giomm/tcpconnection.h:
+
+/usr/include/giomm-2.4/giomm/tcpwrapperconnection.h:
 
 /usr/include/giomm-2.4/giomm/themedicon.h:
 
@@ -1989,9 +2132,9 @@ Drawing.h:
 
 /usr/include/gdkmm-3.0/gdkmm/color.h:
 
-/usr/lib/i386-linux-gnu/gdkmm-3.0/include/gdkmmconfig.h:
+/usr/lib/x86_64-linux-gnu/gdkmm-3.0/include/gdkmmconfig.h:
 
-/usr/lib/i386-linux-gnu/pangomm-1.4/include/pangommconfig.h:
+/usr/lib/x86_64-linux-gnu/pangomm-1.4/include/pangommconfig.h:
 
 /usr/include/gtk-3.0/gdk/gdk.h:
 
@@ -2010,6 +2153,10 @@ Drawing.h:
 /usr/include/pango-1.0/pango/pango-font.h:
 
 /usr/include/pango-1.0/pango/pango-coverage.h:
+
+/usr/include/pango-1.0/pango/pango-version-macros.h:
+
+/usr/include/pango-1.0/pango/pango-features.h:
 
 /usr/include/pango-1.0/pango/pango-types.h:
 
@@ -2039,8 +2186,6 @@ Drawing.h:
 
 /usr/include/pango-1.0/pango/pango-enum-types.h:
 
-/usr/include/pango-1.0/pango/pango-features.h:
-
 /usr/include/pango-1.0/pango/pango-glyph-item.h:
 
 /usr/include/pango-1.0/pango/pango-layout.h:
@@ -2065,21 +2210,39 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gdk/gdkevents.h:
 
-/usr/include/gtk-3.0/gdk/gdkcolor.h:
-
 /usr/include/gtk-3.0/gdk/gdkdnd.h:
 
 /usr/include/gtk-3.0/gdk/gdkdevice.h:
 
+/usr/include/gtk-3.0/gdk/gdkdevicetool.h:
+
 /usr/include/gtk-3.0/gdk/gdkdevicemanager.h:
 
+/usr/include/gtk-3.0/gdk/gdkseat.h:
+
+/usr/include/gtk-3.0/gdk/gdkwindow.h:
+
+/usr/include/gtk-3.0/gdk/gdkdrawingcontext.h:
+
+/usr/include/gtk-3.0/gdk/gdkframeclock.h:
+
+/usr/include/gtk-3.0/gdk/gdkframetimings.h:
+
+/usr/include/gtk-3.0/gdk/gdkmonitor.h:
+
+/usr/include/gtk-3.0/gdk/gdkrectangle.h:
+
 /usr/include/gtk-3.0/gdk/gdkcairo.h:
+
+/usr/include/gtk-3.0/gdk/deprecated/gdkcolor.h:
 
 /usr/include/gtk-3.0/gdk/gdkrgba.h:
 
 /usr/include/gtk-3.0/gdk/gdkpixbuf.h:
 
 /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:
+
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-macros.h:
 
 /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-features.h:
 
@@ -2097,17 +2260,19 @@ Drawing.h:
 
 /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-enum-types.h:
 
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h:
+
 /usr/include/pango-1.0/pango/pangocairo.h:
 
 /usr/include/gtk-3.0/gdk/gdkcursor.h:
+
+/usr/include/gtk-3.0/gdk/gdkdevicepad.h:
 
 /usr/include/gtk-3.0/gdk/gdkdisplaymanager.h:
 
 /usr/include/gtk-3.0/gdk/gdkenumtypes.h:
 
-/usr/include/gtk-3.0/gdk/gdkframeclock.h:
-
-/usr/include/gtk-3.0/gdk/gdkframetimings.h:
+/usr/include/gtk-3.0/gdk/gdkglcontext.h:
 
 /usr/include/gtk-3.0/gdk/gdkkeys.h:
 
@@ -2119,17 +2284,15 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gdk/gdkproperty.h:
 
-/usr/include/gtk-3.0/gdk/gdkrectangle.h:
-
 /usr/include/gtk-3.0/gdk/gdkselection.h:
 
 /usr/include/gtk-3.0/gdk/gdktestutils.h:
 
-/usr/include/gtk-3.0/gdk/gdkwindow.h:
-
 /usr/include/gtk-3.0/gdk/gdkthreads.h:
 
 /usr/include/gtk-3.0/gdk/gdkvisual.h:
+
+/usr/include/gtk-3.0/gdk/gdk-autocleanup.h:
 
 /usr/include/gdkmm-3.0/gdkmm/pixbuf.h:
 
@@ -2141,6 +2304,34 @@ Drawing.h:
 
 /usr/include/cairomm-1.0/cairomm/enums.h:
 
+/usr/include/cairo/cairo-ft.h:
+
+/usr/include/cairo/cairo.h:
+
+/usr/include/freetype2/ft2build.h:
+
+/usr/include/freetype2/freetype/config/ftheader.h:
+
+/usr/include/freetype2/freetype/freetype.h:
+
+/usr/include/freetype2/freetype/config/ftconfig.h:
+
+/usr/include/freetype2/freetype/config/ftoption.h:
+
+/usr/include/freetype2/freetype/config/ftstdlib.h:
+
+/usr/include/freetype2/freetype/fttypes.h:
+
+/usr/include/freetype2/freetype/ftsystem.h:
+
+/usr/include/freetype2/freetype/ftimage.h:
+
+/usr/include/freetype2/freetype/fterrors.h:
+
+/usr/include/freetype2/freetype/ftmoderr.h:
+
+/usr/include/freetype2/freetype/fterrdef.h:
+
 /usr/include/cairomm-1.0/cairomm/exception.h:
 
 /usr/include/cairomm-1.0/cairomm/device.h:
@@ -2150,34 +2341,6 @@ Drawing.h:
 /usr/include/cairomm-1.0/cairomm/refptr.h:
 
 /usr/include/cairomm-1.0/cairomm/fontoptions.h:
-
-/usr/include/cairo/cairo-ft.h:
-
-/usr/include/cairo/cairo.h:
-
-/usr/include/freetype2/ft2build.h:
-
-/usr/include/freetype2/config/ftheader.h:
-
-/usr/include/freetype2/freetype.h:
-
-/usr/include/freetype2/config/ftconfig.h:
-
-/usr/include/freetype2/config/ftoption.h:
-
-/usr/include/freetype2/config/ftstdlib.h:
-
-/usr/include/freetype2/fttypes.h:
-
-/usr/include/freetype2/ftsystem.h:
-
-/usr/include/freetype2/ftimage.h:
-
-/usr/include/freetype2/fterrors.h:
-
-/usr/include/freetype2/ftmoderr.h:
-
-/usr/include/freetype2/fterrdef.h:
 
 /usr/include/cairo/cairo-pdf.h:
 
@@ -2229,9 +2392,17 @@ Drawing.h:
 
 /usr/include/gdkmm-3.0/gdkmm/pixbufloader.h:
 
+/usr/include/gdkmm-3.0/gdkmm/drawingcontext.h:
+
+/usr/include/gdkmm-3.0/gdkmm/glcontext.h:
+
 /usr/include/gdkmm-3.0/gdkmm/displaymanager.h:
 
 /usr/include/gdkmm-3.0/gdkmm/devicemanager.h:
+
+/usr/include/gdkmm-3.0/gdkmm/seat.h:
+
+/usr/include/gdkmm-3.0/gdkmm/monitor.h:
 
 /usr/include/gdkmm-3.0/gdkmm/general.h:
 
@@ -2239,7 +2410,7 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/action.h:
 
-/usr/lib/i386-linux-gnu/gtkmm-3.0/include/gtkmmconfig.h:
+/usr/lib/x86_64-linux-gnu/gtkmm-3.0/include/gtkmmconfig.h:
 
 /usr/include/gtkmm-3.0/gtkmm/widget.h:
 
@@ -2329,6 +2500,8 @@ Drawing.h:
 
 /usr/include/atk-1.0/atk/atkobject.h:
 
+/usr/include/atk-1.0/atk/atkversion.h:
+
 /usr/include/atk-1.0/atk/atkstate.h:
 
 /usr/include/atk-1.0/atk/atkrelationtype.h:
@@ -2344,6 +2517,8 @@ Drawing.h:
 /usr/include/atk-1.0/atk/atkeditabletext.h:
 
 /usr/include/atk-1.0/atk/atktext.h:
+
+/usr/include/atk-1.0/atk/atk-enum-types.h:
 
 /usr/include/atk-1.0/atk/atkgobjectaccessible.h:
 
@@ -2363,6 +2538,8 @@ Drawing.h:
 
 /usr/include/atk-1.0/atk/atkplug.h:
 
+/usr/include/atk-1.0/atk/atkrange.h:
+
 /usr/include/atk-1.0/atk/atkregistry.h:
 
 /usr/include/atk-1.0/atk/atkobjectfactory.h:
@@ -2381,11 +2558,11 @@ Drawing.h:
 
 /usr/include/atk-1.0/atk/atktable.h:
 
+/usr/include/atk-1.0/atk/atktablecell.h:
+
 /usr/include/atk-1.0/atk/atkmisc.h:
 
 /usr/include/atk-1.0/atk/atkvalue.h:
-
-/usr/include/atk-1.0/atk/atkversion.h:
 
 /usr/include/atk-1.0/atk/atkwindow.h:
 
@@ -2397,7 +2574,7 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gtk/gtklabel.h:
 
-/usr/include/gtk-3.0/gtk/gtkmisc.h:
+/usr/include/gtk-3.0/gtk/deprecated/gtkmisc.h:
 
 /usr/include/gtk-3.0/gtk/gtkmenu.h:
 
@@ -2409,9 +2586,9 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gtk/gtkactionable.h:
 
-/usr/include/gtk-3.0/gtk/gtkadjustment.h:
+/usr/include/gtk-3.0/gtk/gtkactionbar.h:
 
-/usr/include/gtk-3.0/gtk/gtkalignment.h:
+/usr/include/gtk-3.0/gtk/gtkadjustment.h:
 
 /usr/include/gtk-3.0/gtk/gtkappchooser.h:
 
@@ -2469,7 +2646,7 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gtk/gtkapplicationwindow.h:
 
-/usr/include/gtk-3.0/gtk/gtkarrow.h:
+/usr/include/gtk-3.0/gtk/gtkshortcutswindow.h:
 
 /usr/include/gtk-3.0/gtk/gtkaspectframe.h:
 
@@ -2541,9 +2718,15 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gtk/gtkdebug.h:
 
+/usr/include/gtk-3.0/gtk/gtkdragdest.h:
+
+/usr/include/gtk-3.0/gtk/gtkdragsource.h:
+
 /usr/include/gtk-3.0/gtk/gtkdrawingarea.h:
 
 /usr/include/gtk-3.0/gtk/gtkeventbox.h:
+
+/usr/include/gtk-3.0/gtk/gtkeventcontroller.h:
 
 /usr/include/gtk-3.0/gtk/gtkexpander.h:
 
@@ -2557,7 +2740,13 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gtk/gtkfilechooserdialog.h:
 
+/usr/include/gtk-3.0/gtk/gtkfilechoosernative.h:
+
+/usr/include/gtk-3.0/gtk/gtknativedialog.h:
+
 /usr/include/gtk-3.0/gtk/gtkfilechooserwidget.h:
+
+/usr/include/gtk-3.0/gtk/gtkflowbox.h:
 
 /usr/include/gtk-3.0/gtk/gtkfontbutton.h:
 
@@ -2566,6 +2755,26 @@ Drawing.h:
 /usr/include/gtk-3.0/gtk/gtkfontchooserdialog.h:
 
 /usr/include/gtk-3.0/gtk/gtkfontchooserwidget.h:
+
+/usr/include/gtk-3.0/gtk/gtkgesture.h:
+
+/usr/include/gtk-3.0/gtk/gtkgesturedrag.h:
+
+/usr/include/gtk-3.0/gtk/gtkgesturesingle.h:
+
+/usr/include/gtk-3.0/gtk/gtkgesturelongpress.h:
+
+/usr/include/gtk-3.0/gtk/gtkgesturemultipress.h:
+
+/usr/include/gtk-3.0/gtk/gtkgesturepan.h:
+
+/usr/include/gtk-3.0/gtk/gtkgesturerotate.h:
+
+/usr/include/gtk-3.0/gtk/gtkgestureswipe.h:
+
+/usr/include/gtk-3.0/gtk/gtkgesturezoom.h:
+
+/usr/include/gtk-3.0/gtk/gtkglarea.h:
 
 /usr/include/gtk-3.0/gtk/gtkgrid.h:
 
@@ -2579,7 +2788,7 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtkiconfactory.h:
 
-/usr/include/gtk-3.0/gtk/gtkstyleproperties.h:
+/usr/include/gtk-3.0/gtk/deprecated/gtkstyleproperties.h:
 
 /usr/include/gtk-3.0/gtk/gtkiconview.h:
 
@@ -2611,6 +2820,8 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gtk/gtkmenubutton.h:
 
+/usr/include/gtk-3.0/gtk/gtkpopover.h:
+
 /usr/include/gtk-3.0/gtk/gtkmenutoolbutton.h:
 
 /usr/include/gtk-3.0/gtk/gtktoolbutton.h:
@@ -2621,19 +2832,21 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gtk/gtkmessagedialog.h:
 
+/usr/include/gtk-3.0/gtk/gtkmodelbutton.h:
+
 /usr/include/gtk-3.0/gtk/gtkmodules.h:
 
 /usr/include/gtk-3.0/gtk/gtkmountoperation.h:
 
 /usr/include/gtk-3.0/gtk/gtknotebook.h:
 
-/usr/include/gtk-3.0/gtk/gtknumerableicon.h:
-
 /usr/include/gtk-3.0/gtk/gtkoffscreenwindow.h:
 
 /usr/include/gtk-3.0/gtk/gtkorientable.h:
 
 /usr/include/gtk-3.0/gtk/gtkoverlay.h:
+
+/usr/include/gtk-3.0/gtk/gtkpadcontroller.h:
 
 /usr/include/gtk-3.0/gtk/gtkpagesetup.h:
 
@@ -2642,6 +2855,8 @@ Drawing.h:
 /usr/include/gtk-3.0/gtk/gtkpaned.h:
 
 /usr/include/gtk-3.0/gtk/gtkplacessidebar.h:
+
+/usr/include/gtk-3.0/gtk/gtkpopovermenu.h:
 
 /usr/include/gtk-3.0/gtk/gtkprintcontext.h:
 
@@ -2675,6 +2890,8 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gtk/gtkrecentchooserwidget.h:
 
+/usr/include/gtk-3.0/gtk/gtkrender.h:
+
 /usr/include/gtk-3.0/gtk/gtkrevealer.h:
 
 /usr/include/gtk-3.0/gtk/gtkscale.h:
@@ -2699,7 +2916,19 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gtk/gtksettings.h:
 
+/usr/include/gtk-3.0/gtk/gtkshortcutlabel.h:
+
+/usr/include/gtk-3.0/gtk/gtkshortcutsgroup.h:
+
+/usr/include/gtk-3.0/gtk/gtkshortcutssection.h:
+
+/usr/include/gtk-3.0/gtk/gtkshortcutsshortcut.h:
+
 /usr/include/gtk-3.0/gtk/gtkshow.h:
+
+/usr/include/gtk-3.0/gtk/gtkstacksidebar.h:
+
+/usr/include/gtk-3.0/gtk/gtkstack.h:
 
 /usr/include/gtk-3.0/gtk/gtksizerequest.h:
 
@@ -2707,15 +2936,9 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gtk/gtkspinner.h:
 
-/usr/include/gtk-3.0/gtk/gtkstack.h:
-
 /usr/include/gtk-3.0/gtk/gtkstackswitcher.h:
 
-/usr/include/gtk-3.0/gtk/gtkstack.h:
-
 /usr/include/gtk-3.0/gtk/gtkstatusbar.h:
-
-/usr/include/gtk-3.0/gtk/gtkstatusicon.h:
 
 /usr/include/gtk-3.0/gtk/gtkswitch.h:
 
@@ -2728,8 +2951,6 @@ Drawing.h:
 /usr/include/gtk-3.0/gtk/gtktextbufferrichtext.h:
 
 /usr/include/gtk-3.0/gtk/gtktextview.h:
-
-/usr/include/gtk-3.0/gtk/gtkthemingengine.h:
 
 /usr/include/gtk-3.0/gtk/gtktoolbar.h:
 
@@ -2759,6 +2980,12 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gtk/gtkwidgetpath.h:
 
+/usr/include/gtk-3.0/gtk/gtkwindowgroup.h:
+
+/usr/include/gtk-3.0/gtk/gtkwindow.h:
+
+/usr/include/gtk-3.0/gtk/deprecated/gtkarrow.h:
+
 /usr/include/gtk-3.0/gtk/deprecated/gtkactivatable.h:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtkaction.h:
@@ -2766,6 +2993,8 @@ Drawing.h:
 /usr/include/gtk-3.0/gtk/deprecated/gtkactiongroup.h:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtkstock.h:
+
+/usr/include/gtk-3.0/gtk/deprecated/gtkalignment.h:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtkcolorsel.h:
 
@@ -2795,6 +3024,8 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtkimagemenuitem.h:
 
+/usr/include/gtk-3.0/gtk/deprecated/gtknumerableicon.h:
+
 /usr/include/gtk-3.0/gtk/deprecated/gtkradioaction.h:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtktoggleaction.h:
@@ -2803,11 +3034,15 @@ Drawing.h:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtkrecentaction.h:
 
+/usr/include/gtk-3.0/gtk/deprecated/gtkstatusicon.h:
+
 /usr/include/gtk-3.0/gtk/deprecated/gtkstyle.h:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtktable.h:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtktearoffmenuitem.h:
+
+/usr/include/gtk-3.0/gtk/deprecated/gtkthemingengine.h:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtkuimanager.h:
 
@@ -2822,6 +3057,8 @@ Drawing.h:
 /usr/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h:
+
+/usr/include/gtk-3.0/gtk/gtk-autocleanups.h:
 
 /usr/include/gtkmm-3.0/gtkmm/targetlist.h:
 
@@ -2863,11 +3100,17 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/container.h:
 
+/usr/include/gtkmm-3.0/gtkmm/childpropertyproxy.h:
+
+/usr/include/gtkmm-3.0/gtkmm/childpropertyproxy_base.h:
+
 /usr/include/gtkmm-3.0/gtkmm/application.h:
 
 /usr/include/gtkmm-3.0/gtkmm/actiongroup.h:
 
 /usr/include/gtkmm-3.0/gtkmm/accelkey.h:
+
+/usr/include/gtkmm-3.0/gtkmm/windowgroup.h:
 
 /usr/include/gtkmm-3.0/gtkmm/box.h:
 
@@ -2883,9 +3126,13 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/hvbuttonbox.h:
 
+/usr/include/gtkmm-3.0/gtkmm/headerbar.h:
+
 /usr/include/gtkmm-3.0/gtkmm/accelmap.h:
 
 /usr/include/gtkmm-3.0/gtkmm/actionable.h:
+
+/usr/include/gtkmm-3.0/gtkmm/actionbar.h:
 
 /usr/include/gtkmm-3.0/gtkmm/adjustment.h:
 
@@ -3003,11 +3250,15 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/cssprovider.h:
 
+/usr/include/gtkmm-3.0/gtkmm/csssection.h:
+
 /usr/include/gtkmm-3.0/gtkmm/drawingarea.h:
 
 /usr/include/gtkmm-3.0/gtkmm/expander.h:
 
 /usr/include/gtkmm-3.0/gtkmm/eventbox.h:
+
+/usr/include/gtkmm-3.0/gtkmm/eventcontroller.h:
 
 /usr/include/gtkmm-3.0/gtkmm/filechooser.h:
 
@@ -3021,6 +3272,10 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/fixed.h:
 
+/usr/include/gtkmm-3.0/gtkmm/flowbox.h:
+
+/usr/include/gtkmm-3.0/gtkmm/flowboxchild.h:
+
 /usr/include/gtkmm-3.0/gtkmm/fontbutton.h:
 
 /usr/include/gtkmm-3.0/gtkmm/fontchooser.h:
@@ -3031,11 +3286,29 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/fontselection.h:
 
+/usr/include/gtkmm-3.0/gtkmm/gesture.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gesturedrag.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gesturesingle.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gesturelongpress.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gesturemultipress.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gesturepan.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gesturerotate.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gestureswipe.h:
+
+/usr/include/gtkmm-3.0/gtkmm/gesturezoom.h:
+
+/usr/include/gtkmm-3.0/gtkmm/glarea.h:
+
 /usr/include/gtkmm-3.0/gtkmm/grid.h:
 
 /usr/include/gtkmm-3.0/gtkmm/handlebox.h:
-
-/usr/include/gtkmm-3.0/gtkmm/headerbar.h:
 
 /usr/include/gtkmm-3.0/gtkmm/hvpaned.h:
 
@@ -3097,13 +3370,19 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/menubutton.h:
 
+/usr/include/gtkmm-3.0/gtkmm/popover.h:
+
 /usr/include/gtkmm-3.0/gtkmm/messagedialog.h:
+
+/usr/include/gtkmm-3.0/gtkmm/modelbutton.h:
 
 /usr/include/gtkmm-3.0/gtkmm/notebook.h:
 
 /usr/include/gtkmm-3.0/gtkmm/numerableicon.h:
 
 /usr/include/gtkmm-3.0/gtkmm/offscreenwindow.h:
+
+/usr/include/gtkmm-3.0/gtkmm/overlay.h:
 
 /usr/include/gtkmm-3.0/gtkmm/pagesetup.h:
 
@@ -3116,6 +3395,8 @@ Drawing.h:
 /usr/include/gtkmm-3.0/gtkmm/placessidebar.h:
 
 /usr/include/gtkmm-3.0/gtkmm/scrolledwindow.h:
+
+/usr/include/gtkmm-3.0/gtkmm/popovermenu.h:
 
 /usr/include/gtkmm-3.0/gtkmm/printcontext.h:
 
@@ -3179,11 +3460,23 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/toolshell.h:
 
+/usr/include/gtkmm-3.0/gtkmm/shortcutlabel.h:
+
+/usr/include/gtkmm-3.0/gtkmm/shortcutsgroup.h:
+
+/usr/include/gtkmm-3.0/gtkmm/shortcutssection.h:
+
+/usr/include/gtkmm-3.0/gtkmm/shortcutsshortcut.h:
+
+/usr/include/gtkmm-3.0/gtkmm/shortcutswindow.h:
+
 /usr/include/gtkmm-3.0/gtkmm/spinbutton.h:
 
 /usr/include/gtkmm-3.0/gtkmm/spinner.h:
 
 /usr/include/gtkmm-3.0/gtkmm/stack.h:
+
+/usr/include/gtkmm-3.0/gtkmm/stacksidebar.h:
 
 /usr/include/gtkmm-3.0/gtkmm/stackswitcher.h:
 
@@ -3194,6 +3487,8 @@ Drawing.h:
 /usr/include/gtkmm-3.0/gtkmm/stock.h:
 
 /usr/include/gtkmm-3.0/gtkmm/stockitem.h:
+
+/usr/include/gtkmm-3.0/gtkmm/styleproperty.h:
 
 /usr/include/gtkmm-3.0/gtkmm/switch.h:
 
@@ -3254,3 +3549,9 @@ GrafoViajes.h:
 OrigenDestinoBusiness.h:
 
 OrigenDestinoDataSingleton.h:
+
+UsuarioBusiness.h:
+
+Usuario_2.h:
+
+UsuarioData.h:

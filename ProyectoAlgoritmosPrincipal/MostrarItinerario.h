@@ -28,6 +28,8 @@
 #include "ListaAerolineas.h"
 #include "GrafoViajes.h"
 #include "OrigenDestinoBusiness.h"
+#include "UsuarioBusiness.h"
+//#include "InicioSesion.h"
 #include <stdio.h>      /* printf, fgets */
 #include <stdlib.h> 
 #include <stdlib.h> 
@@ -81,6 +83,7 @@ private:
     
     string filtro;
 //    InicioSesion *inicioSesion;
+    UsuarioBusiness *uB;
     
     
     Gtk::Fixed fixed;
