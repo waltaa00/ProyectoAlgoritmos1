@@ -67,7 +67,9 @@ void InicioSesion::onButtonClickedIngresar() {
     contrasena = etContrasena.get_text().c_str();
     
     nombreFiltro= nombre;
+    cout<<"nombre filtro: " << nombreFiltro<<endl;
     contraseniaFiltro= contrasena;
+     cout<<"ncontrasenia filtro: " << contraseniaFiltro<<endl;
 
     //vector<Usuario> usuarios= this->usuarioBusiness->obtenerUsuario();
     if (nombre == "" || contrasena == "") {
