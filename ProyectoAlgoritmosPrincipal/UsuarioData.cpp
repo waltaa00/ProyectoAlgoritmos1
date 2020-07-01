@@ -69,6 +69,28 @@ vector<Usuario> UsuarioData::obtenerUsuarios() {
     return vectorUsuarios;
 }
 
+string UsuarioData::leerUsuarios(){
+    
+    cout<<"Leyendo el archivo"<<endl;
+    ifstream archivo;
+    string texto;
+    string informe;
+    
+    archivo.open("usuarios.txt", ios::out | ios::in); // abriendo el archivo en modo lectura
+    
+    while (!archivo.eof()) { // mientras no sea el final del archivo
+        getline(archivo, texto);
+        informe += texto;
+        informe += "\n";
+        //cout<<texto<<endl;
+    }
+    //cout<<informe<<endl;
+    return informe;
+    
+    archivo.close();
+    
+}
+
 bool UsuarioData::buscarUsuario(string nombre, string contrasenia) {
     cout<<this->obtenerUsuarios().size()<<endl;
     for (int i = 0; i < this->obtenerUsuarios().size(); i++) {

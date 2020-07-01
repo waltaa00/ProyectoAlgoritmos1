@@ -39,6 +39,7 @@ public:
     vector<Usuario> obtenerUsuarios();
     bool buscarUsuario(string nombre, string contrasenia);
     string buscarNacionalidad(string nombre, string contrasenia);
+    string leerUsuarios();
 private:
     
         ofstream archivo;

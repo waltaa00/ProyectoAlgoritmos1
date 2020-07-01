@@ -22,7 +22,8 @@
 #include "MuestraDestinos.h"
 #include "MuestraSalidas.h"
 #include "EliminarVuelo.h"
-#include "ModuloAdministrativo.h" 
+#include "ModuloAdministrativo.h"
+#include "Informe.h" 
 #include <gtkmm/window.h>
 #include <gtkmm/box.h>
 #include <gtkmm-3.0/gtkmm/menubar.h>
@@ -58,6 +59,8 @@ private:
     void abrirModulo();
     
     void abrirEliminarVuelo();
+    
+    void abrirInformes();
  
 
     void aboutWinClose(); //aboutWinClose
@@ -66,7 +69,7 @@ private:
     Gtk::MenuItem menuArchivo, menuModulo;
     Gtk::Menu subMenuArchivo, subMenuModulo;
     Gtk::ImageMenuItem menuRegistraUsuario, menuIniciaSesion,menuAerolineas,menuItinerario,
-            menuDestinos,menuSalidas, menuAdministrar, menuEliminar;
+            menuDestinos,menuSalidas, menuAdministrar, menuEliminar, menuInformes;
     Gtk::Fixed fixed; // contenedor
 
     ColaAviones * colaAviones;
@@ -78,6 +81,7 @@ private:
     MuestraSalidas *muestraSalidas;
     ModuloAdministrativo *moduloAdministrativo;
     EliminarVuelo *eliminarVuelo;
+    Informe *informes;
     
 };
 

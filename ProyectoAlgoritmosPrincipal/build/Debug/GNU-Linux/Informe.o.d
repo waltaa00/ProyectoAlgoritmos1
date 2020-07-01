@@ -1,8 +1,4 @@
-build/Debug/GNU-Linux/main.o: main.cpp MainWindows.h RegistrarUsuario.h \
- Usuario_2.h UsuarioBusiness.h UsuarioData.h InicioSesion.h \
- MostrarAerolineas.h ListaAerolineas.h MostrarItinerario.h ColaAviones.h \
- Avion_2.h GrafoViajes.h OrigenDestinoBusiness.h \
- OrigenDestinoDataSingleton.h MuestraDestinos.h Drawing.h \
+build/Debug/GNU-Linux/Informe.o: Informe.cpp Informe.h \
  /usr/include/gtkmm-3.0/gtkmm.h /usr/include/glibmm-2.4/glibmm.h \
  /usr/include/glibmm-2.4/glibmm/thread.h \
  /usr/include/glibmm-2.4/glibmm/threads.h \
@@ -131,6 +127,7 @@ build/Debug/GNU-Linux/main.o: main.cpp MainWindows.h RegistrarUsuario.h \
  /usr/include/gdkmm-3.0/gdkmm/general.h \
  /usr/include/gtkmm-3.0/gtkmm/toggleaction.h \
  /usr/include/gtkmm-3.0/gtkmm/radioaction.h \
+ /usr/include/gtkmm-3.0/gtkmm/radiobuttongroup.h \
  /usr/include/gtkmm-3.0/gtkmm/aboutdialog.h \
  /usr/include/gtkmm-3.0/gtkmm/accelmap.h \
  /usr/include/gtkmm-3.0/gtkmm/actionable.h \
@@ -141,6 +138,12 @@ build/Debug/GNU-Linux/main.o: main.cpp MainWindows.h RegistrarUsuario.h \
  /usr/include/gtkmm-3.0/gtkmm/cellarea.h \
  /usr/include/gtkmm-3.0/gtkmm/cellareacontext.h \
  /usr/include/gtkmm-3.0/gtkmm/treeview.h \
+ /usr/include/gtkmm-3.0/gtkmm/treeviewcolumn.h \
+ /usr/include/gtkmm-3.0/gtkmm/treeselection.h \
+ /usr/include/gtkmm-3.0/gtkmm/treepath.h \
+ /usr/include/gtkmm-3.0/gtkmm/scrollable.h \
+ /usr/include/gtkmm-3.0/gtkmm/entry.h \
+ /usr/include/gtkmm-3.0/gtkmm/tooltip.h \
  /usr/include/gtkmm-3.0/gtkmm/appchooserdialog.h \
  /usr/include/gtkmm-3.0/gtkmm/appchooserwidget.h \
  /usr/include/gtkmm-3.0/gtkmm/applicationwindow.h \
@@ -151,6 +154,8 @@ build/Debug/GNU-Linux/main.o: main.cpp MainWindows.h RegistrarUsuario.h \
  /usr/include/gtkmm-3.0/gtkmm/builder.h \
  /usr/include/gtkmm-3.0/gtkmm/cellareabox.h \
  /usr/include/gtkmm-3.0/gtkmm/cellview.h \
+ /usr/include/gtkmm-3.0/gtkmm/checkbutton.h \
+ /usr/include/gtkmm-3.0/gtkmm/togglebutton.h \
  /usr/include/gtkmm-3.0/gtkmm/checkmenuitem.h \
  /usr/include/gtkmm-3.0/gtkmm/cellrenderercombo.h \
  /usr/include/gtkmm-3.0/gtkmm/cellrendererprogress.h \
@@ -201,6 +206,9 @@ build/Debug/GNU-Linux/main.o: main.cpp MainWindows.h RegistrarUsuario.h \
  /usr/include/gtkmm-3.0/gtkmm/listbox.h \
  /usr/include/gtkmm-3.0/gtkmm/listboxrow.h \
  /usr/include/gtkmm-3.0/gtkmm/liststore.h \
+ /usr/include/gtkmm-3.0/gtkmm/treesortable.h \
+ /usr/include/gtkmm-3.0/gtkmm/treedragdest.h \
+ /usr/include/gtkmm-3.0/gtkmm/treedragsource.h \
  /usr/include/gtkmm-3.0/gtkmm/listviewtext.h \
  /usr/include/gtkmm-3.0/gtkmm/linkbutton.h \
  /usr/include/gtkmm-3.0/gtkmm/main.h \
@@ -275,40 +283,10 @@ build/Debug/GNU-Linux/main.o: main.cpp MainWindows.h RegistrarUsuario.h \
  /usr/include/gtkmm-3.0/gtkmm/treestore.h \
  /usr/include/gtkmm-3.0/gtkmm/uimanager.h \
  /usr/include/gtkmm-3.0/gtkmm/viewport.h \
- /usr/include/gtkmm-3.0/gtkmm/volumebutton.h Vuelo_2.h Avion.h \
- MuestraSalidas.h EliminarVuelo.h ModuloAdministrativo.h Informe.h
+ /usr/include/gtkmm-3.0/gtkmm/volumebutton.h UsuarioBusiness.h \
+ Usuario_2.h UsuarioData.h ColaAviones.h Avion_2.h
 
-MainWindows.h:
-
-RegistrarUsuario.h:
-
-Usuario_2.h:
-
-UsuarioBusiness.h:
-
-UsuarioData.h:
-
-InicioSesion.h:
-
-MostrarAerolineas.h:
-
-ListaAerolineas.h:
-
-MostrarItinerario.h:
-
-ColaAviones.h:
-
-Avion_2.h:
-
-GrafoViajes.h:
-
-OrigenDestinoBusiness.h:
-
-OrigenDestinoDataSingleton.h:
-
-MuestraDestinos.h:
-
-Drawing.h:
+Informe.h:
 
 /usr/include/gtkmm-3.0/gtkmm.h:
 
@@ -568,6 +546,8 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/radioaction.h:
 
+/usr/include/gtkmm-3.0/gtkmm/radiobuttongroup.h:
+
 /usr/include/gtkmm-3.0/gtkmm/aboutdialog.h:
 
 /usr/include/gtkmm-3.0/gtkmm/accelmap.h:
@@ -588,6 +568,18 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/treeview.h:
 
+/usr/include/gtkmm-3.0/gtkmm/treeviewcolumn.h:
+
+/usr/include/gtkmm-3.0/gtkmm/treeselection.h:
+
+/usr/include/gtkmm-3.0/gtkmm/treepath.h:
+
+/usr/include/gtkmm-3.0/gtkmm/scrollable.h:
+
+/usr/include/gtkmm-3.0/gtkmm/entry.h:
+
+/usr/include/gtkmm-3.0/gtkmm/tooltip.h:
+
 /usr/include/gtkmm-3.0/gtkmm/appchooserdialog.h:
 
 /usr/include/gtkmm-3.0/gtkmm/appchooserwidget.h:
@@ -607,6 +599,10 @@ Drawing.h:
 /usr/include/gtkmm-3.0/gtkmm/cellareabox.h:
 
 /usr/include/gtkmm-3.0/gtkmm/cellview.h:
+
+/usr/include/gtkmm-3.0/gtkmm/checkbutton.h:
+
+/usr/include/gtkmm-3.0/gtkmm/togglebutton.h:
 
 /usr/include/gtkmm-3.0/gtkmm/checkmenuitem.h:
 
@@ -707,6 +703,12 @@ Drawing.h:
 /usr/include/gtkmm-3.0/gtkmm/listboxrow.h:
 
 /usr/include/gtkmm-3.0/gtkmm/liststore.h:
+
+/usr/include/gtkmm-3.0/gtkmm/treesortable.h:
+
+/usr/include/gtkmm-3.0/gtkmm/treedragdest.h:
+
+/usr/include/gtkmm-3.0/gtkmm/treedragsource.h:
 
 /usr/include/gtkmm-3.0/gtkmm/listviewtext.h:
 
@@ -858,14 +860,12 @@ Drawing.h:
 
 /usr/include/gtkmm-3.0/gtkmm/volumebutton.h:
 
-Vuelo_2.h:
+UsuarioBusiness.h:
 
-Avion.h:
+Usuario_2.h:
 
-MuestraSalidas.h:
+UsuarioData.h:
 
-EliminarVuelo.h:
+ColaAviones.h:
 
-ModuloAdministrativo.h:
-
-Informe.h:
+Avion_2.h:

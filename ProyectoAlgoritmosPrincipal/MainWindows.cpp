@@ -1,6 +1,7 @@
 
 
 #include "MainWindows.h"
+#include "Informe.h"
 
 MainWindows::MainWindows() {
     this->set_title("AeroTurri");
@@ -30,6 +31,7 @@ void MainWindows::initComponents() {
     this->menuSalidas.add_pixlabel("assets/itinerary.png", "Salidas");
     this->menuAdministrar.add_pixlabel("assets/ajustes.png", "Agregar Vuelo");
     this->menuEliminar.add_pixlabel("assets/ajustes.png", "Eliminar Vuelo");
+    this->menuInformes.add_pixlabel("assets/information.png", "Generar Informe");
 
 
     this->menuIniciaSesion.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirInicioSesion));
@@ -52,6 +54,9 @@ void MainWindows::initComponents() {
     
     this->menuEliminar.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirEliminarVuelo));
     this->subMenuModulo.append(this->menuEliminar);
+    
+    this->menuInformes.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirInformes));
+    this->subMenuModulo.append(this->menuInformes);
 
 
     this->registrarUsuario = 0;
@@ -61,6 +66,7 @@ void MainWindows::initComponents() {
     this->muestraSalidas = 0;
     this->moduloAdministrativo = 0;
     this->eliminarVuelo = 0;
+    this->informes = 0;
 
     this->add(fixed);
     this->show_all_children();
@@ -129,6 +135,15 @@ void MainWindows::abrirEliminarVuelo() {
     this->eliminarVuelo->show_all();
 }
 
+void MainWindows::abrirInformes() {
+    if (this->informes != 0)
+        return;
+
+    this->informes = new Informe();
+    this->informes->signal_hide().connect(sigc::mem_fun(*this, &MainWindows::aboutWinClose));
+    this->informes->show_all();
+}
+
 void MainWindows::aboutWinClose() {
     this->registrarUsuario = 0;
     this->inicioSesion = 0;
@@ -137,5 +152,6 @@ void MainWindows::aboutWinClose() {
     this->muestraSalidas = 0;
     this->moduloAdministrativo = 0;
     this->eliminarVuelo = 0;
+    this->informes;
 
 }
