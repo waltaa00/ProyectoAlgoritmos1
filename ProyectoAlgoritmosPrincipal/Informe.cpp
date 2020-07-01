@@ -15,7 +15,7 @@
 
 Informe::Informe() {
     this->set_title("Informes");
-    this->set_size_request(250, 600);
+    this->set_size_request(630, 800);
     this->usuarioData = new UsuarioData();
     this->cA = new ColaAviones;
     initComponents();
@@ -45,13 +45,13 @@ void Informe::initComponents() {
 //    this->btnAvionesHoras.signal_clicked().connect(sigc::mem_fun(*this,
 //            &Informes::onButtonClickedIngresar));
     
-    this->tvInforme.set_size_request(200, 300);
+    this->tvInforme.set_size_request(400, 700);
     //this->tvInforme.set_text("Prueba");
     //Fixed
-    this->fixed.put(this->lblInfo, 50, 20);
-    this->fixed.put(this->btnInfoUsuarios, 20, 70);
-    this->fixed.put(this->btnTotalAviones, 20, 160);
-    this->fixed.put(this->tvInforme, 20, 240);
+    this->fixed.put(this->lblInfo, 100, 20);
+    this->fixed.put(this->btnInfoUsuarios, 440, 60);
+    this->fixed.put(this->btnTotalAviones, 440, 150);
+    this->fixed.put(this->tvInforme, 20, 50);
 //    this->fixed.put(this->btnAvionesHoras, 20, 260);
 
     this->add(fixed);
@@ -91,29 +91,63 @@ void Informe::onButtonClickedAviones() {
        colaEmirates.pop();
     }
     
+    resultado += "\nVuelos de Avianca:\n";
+    for (int i = 0; i < tamanoAvianca; i++) {
+        resultado += colaAvianca.top()->getNombre() + ", ";
+       resultado += colaAvianca.top()->getHoraSalida() + ", "; 
+       resultado += colaAvianca.top()->getHoraLlegada() + ", ";
+       resultado += colaAvianca.top()->getOrigen() + ", ";
+       resultado += colaAvianca.top()->getDestino() + ", ";
+       resultado += colaAvianca.top()->getCantidad() + "\n";
+       
+       colaAvianca.pop();
+    }
+    
+    resultado += "\nVuelos de Copa Airlines:\n";
+    for (int i = 0; i < tamanoCopa; i++) {
+        resultado += colaCopa.top()->getNombre() + ", ";
+       resultado += colaCopa.top()->getHoraSalida() + ", "; 
+       resultado += colaCopa.top()->getHoraLlegada() + ", ";
+       resultado += colaCopa.top()->getOrigen() + ", ";
+       resultado += colaCopa.top()->getDestino() + ", ";
+       resultado += colaCopa.top()->getCantidad() + "\n";
+       
+       colaCopa.pop();
+    }
+    
+    resultado += "\nVuelos de Volaris:\n";
+    for (int i = 0; i < tamanoVolaris; i++) {
+        resultado += colaVolaris.top()->getNombre() + ", ";
+       resultado += colaVolaris.top()->getHoraSalida() + ", "; 
+       resultado += colaVolaris.top()->getHoraLlegada() + ", ";
+       resultado += colaVolaris.top()->getOrigen() + ", ";
+       resultado += colaVolaris.top()->getDestino() + ", ";
+       resultado += colaVolaris.top()->getCantidad() + "\n";
+       
+       colaVolaris.pop();
+    }
+    
+    resultado += "\nVuelos de JetBlue:\n";
+    for (int i = 0; i < tamanoJetblue; i++) {
+        resultado += colaJetblue.top()->getNombre() + ", ";
+       resultado += colaJetblue.top()->getHoraSalida() + ", "; 
+       resultado += colaJetblue.top()->getHoraLlegada() + ", ";
+       resultado += colaJetblue.top()->getOrigen() + ", ";
+       resultado += colaJetblue.top()->getDestino() + ", ";
+       resultado += colaJetblue.top()->getCantidad() + "\n";
+       
+       colaJetblue.pop();
+    }
+    
     Glib::RefPtr<Gtk::TextBuffer> informe;
     
     informe = Gtk::TextBuffer::create();
     informe->set_text(resultado);
     
     this->tvInforme.set_buffer(informe);
-        
-        
-//                row3[columRecord.tmcHorasalida] = colaEmirates.top()->getHoraSalida();
-//                row3[columRecord.tmcHorallegada] = colaEmirates.top()->getHoraLlegada();
-//                row3[columRecord.tmcOrigen] = colaEmirates.top()->getOrigen();
-//                row3[columRecord.tmcDestino] = colaEmirates.top()->getDestino();
-//
-//                //        this->paisesVuelo = colaEmirates.top()->getOrigen()+" - "+colaEmirates.top()->getDestino();
-//                //        cout<<this->paisesVuelo<<endl;
-//
-//                row3[columRecord.tmcCapacidad] = colaEmirates.top()->getCantidad();
-//                row3[columRecord.tmcAvion] = colaEmirates.top()->getNombre();
-
-
     
     
-}
+}//OnButtonClickedAviones
 
 
 
