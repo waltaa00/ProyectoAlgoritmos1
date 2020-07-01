@@ -80,6 +80,7 @@ private:
     //GrafoViajes grafo;
     
     string filtro;
+//    InicioSesion *inicioSesion;
     
     
     Gtk::Fixed fixed;

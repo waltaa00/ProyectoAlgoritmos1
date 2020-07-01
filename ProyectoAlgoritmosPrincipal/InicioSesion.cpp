@@ -40,11 +40,34 @@ void InicioSesion::initComponents() {
     this->add(fixed);
 }
 
+std::string InicioSesion::getNombre() {
+    return nombreFiltro;
+
+}
+
+void InicioSesion::setNombre(string nombre) {
+    nombreFiltro = nombre;
+
+}
+
+std::string InicioSesion::getContrasenia() {
+    return contraseniaFiltro;
+
+}
+
+void InicioSesion::setContrasenia(string contrasenia) {
+    contraseniaFiltro= contrasenia;
+
+}
+
 void InicioSesion::onButtonClickedIngresar() {
     string nombre;
     nombre = etNombre.get_text().c_str();
     string contrasena;
     contrasena = etContrasena.get_text().c_str();
+    
+    nombreFiltro= nombre;
+    contraseniaFiltro= contrasena;
 
     //vector<Usuario> usuarios= this->usuarioBusiness->obtenerUsuario();
     if (nombre == "" || contrasena == "") {

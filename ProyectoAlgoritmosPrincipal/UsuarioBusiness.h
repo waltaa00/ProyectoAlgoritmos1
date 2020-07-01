@@ -29,6 +29,8 @@ public:
       
     vector<Usuario> obtenerUsuario();
     bool buscarUsuario(string nombre, string contrasenia);
+    
+    string buscarNacionalidad(string nombre, string contrasenia);
 private:
     UsuarioData usuarioData;;
     

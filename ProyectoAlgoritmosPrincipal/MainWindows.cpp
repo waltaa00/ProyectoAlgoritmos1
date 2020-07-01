@@ -42,7 +42,7 @@ void MainWindows::initComponents() {
 //    this->subMenuArchivo.append(this->menuAerolineas);
     
     this->menuDestinos.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirDestinos));
-    this->subMenuArchivo.append(this->menuDestinos);
+    this->subMenuModulo.append(this->menuDestinos);
     
     this->menuSalidas.signal_activate().connect(sigc::mem_fun(*this, &MainWindows::abrirSalidas));
     this->subMenuArchivo.append(this->menuSalidas);
