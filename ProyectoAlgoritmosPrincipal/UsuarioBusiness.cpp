@@ -33,3 +33,9 @@ bool UsuarioBusiness::buscarUsuario(string nombre, string contrasenia){
 
 }
 
+string UsuarioBusiness::buscarNacionalidad(string nombre, string contrasenia){
+    return this->usuarioData.buscarNacionalidad(nombre, contrasenia);
+
+
+}
+

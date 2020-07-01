@@ -1,6 +1,7 @@
 
 
 #include "MostrarItinerario.h"
+#include "InicioSesion.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -15,6 +16,7 @@ MostrarItinerario::MostrarItinerario(string filtro) {
     this->set_title("Itinerarios");
     this->set_size_request(850, 400);
     this->cA = new ColaAviones;
+//    this->inicioSesion = new InicioSesion;
     initComponents();
     
     this->show_all_children();

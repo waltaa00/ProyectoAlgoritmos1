@@ -32,14 +32,23 @@ public:
     InicioSesion();
 
     virtual ~InicioSesion();
-    
-      void aboutWinClose(); 
+
+    void aboutWinClose();
+
+    string getContrasenia();
+    void setContrasenia(string contrasenia);
+    string getNombre();
+    void setNombre(string nombre);
+
 private:
 
     void initComponents();
 
     void onButtonClickedIngresar();
     //Gtk
+
+    string nombreFiltro;
+    string contraseniaFiltro;
     Gtk::Fixed fixed;
     Gtk::Button btnIngresar;
     Gtk::Entry etNombre, etContrasena;

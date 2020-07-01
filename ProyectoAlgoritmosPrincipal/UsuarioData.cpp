@@ -81,3 +81,16 @@ bool UsuarioData::buscarUsuario(string nombre, string contrasenia) {
     
 
 }
+
+string UsuarioData::buscarNacionalidad(string nombre, string contrasenia) {
+   
+    for (int i = 0; i < this->obtenerUsuarios().size(); i++) {
+        if (this->vectorUsuarios.at(i).getNombre() == nombre 
+            && this->vectorUsuarios.at(i).getContrasenia() == contrasenia) {
+                this->vectorUsuarios.at(i).getNacionalidad();
+            }
+        return NULL;
+    }
+    
+
+}
