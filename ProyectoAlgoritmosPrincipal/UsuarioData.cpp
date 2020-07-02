@@ -68,7 +68,6 @@ vector<Usuario> UsuarioData::obtenerUsuarios() {
     archivo.close(); // cerramos el archivo
     cout << "archivo cerrado" << endl;
 
-
     return vectorUsuarios;
 }
 

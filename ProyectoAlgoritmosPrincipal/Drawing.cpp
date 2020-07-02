@@ -138,7 +138,6 @@ void Drawing::vuelosTiempoReal() {
     int tamanoJetblue = colaJetblue.size();
 
     for (int i = 0; i < tamanoEmirates; i++) {
-        cout << "hora salida" << colaEmirates.top()->getHoraSalida() << " hora real " << hora << endl;
         if (atoi(colaEmirates.top()->getHoraSalida().c_str()) > hora) {
             Vuelo v(colaEmirates.top()->getOrigen(), colaEmirates.top()->getDestino());
             vuelos.push_back(v);
@@ -152,8 +151,7 @@ void Drawing::vuelosTiempoReal() {
         }
         colaJetblue.pop();
     }
-    for (int i = 0; i < tamanoAvianca; i++) {
-        cout << "hora salida" << colaAvianca.top()->getHoraSalida() << ", hora real " << hora << endl;
+    for (int i = 0; i < tamanoAvianca; i++) {;
         if (atoi(colaAvianca.top()->getHoraSalida().c_str()) > hora) {
             Vuelo v(colaAvianca.top()->getOrigen(), colaAvianca.top()->getDestino());
             vuelos.push_back(v);

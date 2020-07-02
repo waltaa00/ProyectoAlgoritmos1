@@ -15,9 +15,9 @@
 
 Informe::Informe() {
     this->set_title("Informes");
-    this->set_size_request(630, 800);
+    this->set_size_request(660, 800);
     this->usuarioData = new UsuarioData();
-    this->cA = new ColaAviones;
+    this->cA = new ColaAviones; 
     initComponents();
     this->show_all_children();
 }
@@ -29,15 +29,23 @@ void Informe::initComponents() {
     this->colaJetblue = cA->getColaJetblue();
     this->colaCopa = cA->getColaCopa();
     this->colaVolaris = cA->getColaVolaris();
+    
+    this->tamanoEmirates = colaEmirates.size();
+    this->tamanoAvianca = colaAvianca.size();
+    this->tamanoCopa = colaCopa.size();
+    this->tamanoVolaris = colaVolaris.size();
+    this->tamanoJetblue = colaJetblue.size();
 
     //label
     this->lblInfo.set_label("Que informe desea generar?");
     //Button
     this->btnInfoUsuarios.add_pixlabel("assets/info.png", "Usuarios Registrados");
+    this->btnInfoUsuarios.set_size_request(200, 70);
     this->btnInfoUsuarios.signal_clicked().connect(sigc::mem_fun(*this,
             &Informe::onButtonClickedIngresar));
     
-    this->btnTotalAviones.add_pixlabel("assets/info2.png", "Todos los Aviones");
+    this->btnTotalAviones.add_pixlabel("assets/info3.png", "Todos los Aviones");
+    this->btnTotalAviones.set_size_request(207, 70);
     this->btnTotalAviones.signal_clicked().connect(sigc::mem_fun(*this,
             &Informe::onButtonClickedAviones));
     
@@ -49,8 +57,8 @@ void Informe::initComponents() {
     //this->tvInforme.set_text("Prueba");
     //Fixed
     this->fixed.put(this->lblInfo, 100, 20);
-    this->fixed.put(this->btnInfoUsuarios, 440, 60);
-    this->fixed.put(this->btnTotalAviones, 440, 150);
+    this->fixed.put(this->btnInfoUsuarios, 435, 60);
+    this->fixed.put(this->btnTotalAviones, 435, 150);
     this->fixed.put(this->tvInforme, 20, 50);
 //    this->fixed.put(this->btnAvionesHoras, 20, 260);
 
@@ -71,16 +79,12 @@ void Informe::onButtonClickedIngresar() {
 
 void Informe::onButtonClickedAviones() {
     
-    int tamanoEmirates = colaEmirates.size();
-    int tamanoAvianca = colaAvianca.size();
-    int tamanoCopa = colaCopa.size();
-    int tamanoVolaris = colaVolaris.size();
-    int tamanoJetblue = colaJetblue.size();
+    
     
     string resultado;
     
     resultado = "Vuelos de Emirates:\n";
-    for (int i = 0; i < tamanoEmirates; i++) {
+    for (int i = 0; i < this->tamanoEmirates; i++) {
         resultado += colaEmirates.top()->getNombre() + ", ";
        resultado += colaEmirates.top()->getHoraSalida() + ", "; 
        resultado += colaEmirates.top()->getHoraLlegada() + ", ";
@@ -92,7 +96,7 @@ void Informe::onButtonClickedAviones() {
     }
     
     resultado += "\nVuelos de Avianca:\n";
-    for (int i = 0; i < tamanoAvianca; i++) {
+    for (int i = 0; i < this->tamanoAvianca; i++) {
         resultado += colaAvianca.top()->getNombre() + ", ";
        resultado += colaAvianca.top()->getHoraSalida() + ", "; 
        resultado += colaAvianca.top()->getHoraLlegada() + ", ";
@@ -104,7 +108,7 @@ void Informe::onButtonClickedAviones() {
     }
     
     resultado += "\nVuelos de Copa Airlines:\n";
-    for (int i = 0; i < tamanoCopa; i++) {
+    for (int i = 0; i < this->tamanoCopa; i++) {
         resultado += colaCopa.top()->getNombre() + ", ";
        resultado += colaCopa.top()->getHoraSalida() + ", "; 
        resultado += colaCopa.top()->getHoraLlegada() + ", ";
@@ -116,7 +120,7 @@ void Informe::onButtonClickedAviones() {
     }
     
     resultado += "\nVuelos de Volaris:\n";
-    for (int i = 0; i < tamanoVolaris; i++) {
+    for (int i = 0; i < this->tamanoVolaris; i++) {
         resultado += colaVolaris.top()->getNombre() + ", ";
        resultado += colaVolaris.top()->getHoraSalida() + ", "; 
        resultado += colaVolaris.top()->getHoraLlegada() + ", ";
@@ -128,7 +132,7 @@ void Informe::onButtonClickedAviones() {
     }
     
     resultado += "\nVuelos de JetBlue:\n";
-    for (int i = 0; i < tamanoJetblue; i++) {
+    for (int i = 0; i < this->tamanoJetblue; i++) {
         resultado += colaJetblue.top()->getNombre() + ", ";
        resultado += colaJetblue.top()->getHoraSalida() + ", "; 
        resultado += colaJetblue.top()->getHoraLlegada() + ", ";
