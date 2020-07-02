@@ -20,7 +20,7 @@ InicioSesion::~InicioSesion() {
 
 void InicioSesion::initComponents() {
     this->usuarioBusiness = new UsuarioBusiness();
-
+    this->origenDestino = new OrigenDestinoBusiness();
     //label
     this->lblNombre.set_label("Nombre:");
     this->lblContrasena.set_label("Contraseña:");
@@ -65,11 +65,6 @@ void InicioSesion::onButtonClickedIngresar() {
     nombre = etNombre.get_text().c_str();
     string contrasena;
     contrasena = etContrasena.get_text().c_str();
-    
-    nombreFiltro= nombre;
-    cout<<"nombre filtro: " << nombreFiltro<<endl;
-    contraseniaFiltro= contrasena;
-     cout<<"ncontrasenia filtro: " << contraseniaFiltro<<endl;
 
     //vector<Usuario> usuarios= this->usuarioBusiness->obtenerUsuario();
     if (nombre == "" || contrasena == "") {
@@ -90,8 +85,8 @@ void InicioSesion::onButtonClickedIngresar() {
                 Gtk::MESSAGE_INFO
                 );
         dialogo.set_secondary_text(this->etNombre.get_text());
-
         dialogo.run();
+        this->origenDestino->guardarUsuario(nombre,contrasena);
         if (this->mostrarAerolineas != 0)
             return;
         

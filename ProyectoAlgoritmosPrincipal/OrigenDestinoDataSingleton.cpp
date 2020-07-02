@@ -12,7 +12,7 @@
  */
 
 #include "OrigenDestinoDataSingleton.h"
-
+#include <iostream>
 OrigenDestinoDataSingleton* OrigenDestinoDataSingleton::GetInstance() {
     if (instance == 0) {
         instance = new OrigenDestinoDataSingleton();
@@ -32,6 +32,16 @@ void OrigenDestinoDataSingleton::guardarOrigenDestino(string origen, string dest
 
 vector<string> OrigenDestinoDataSingleton::recuperarOrigenDestino() {
     return origenDestino;
+}
+
+void OrigenDestinoDataSingleton::guardarUsuario(string nombre, string contrasena) {
+    usuario.clear();
+    usuario.push_back(nombre);
+    usuario.push_back(contrasena);
+}
+
+vector<string> OrigenDestinoDataSingleton::recuperarUsuario() {
+    return usuario;
 }
 
 OrigenDestinoDataSingleton* OrigenDestinoDataSingleton::instance = 0;

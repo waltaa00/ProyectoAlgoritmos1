@@ -1,3 +1,9 @@
 Diego,20,12345678,Masculino,Costarricense,222
-Walter,20,12345678,Masculino,Costarricense,111
-Yareth,20,12345678,Masculino,Costarricense,333
+Walter,20,12345679,Masculino,Costarricense,111
+Yareth,20,12345677,Masculino,Costarricense,333
+Juan,25,1982375,Masculino,Mexicano,123
+Mohamed,29,946987,Masculino,Musulman,123
+Li,22,56897,Masculino,China,123
+Pedro,40,000000,Femenino,Venenzolano,123
+Ali,18,5984567,Masculino,Israeli,123
+Priscilla,80,078345,Femenino,Iraqui,123

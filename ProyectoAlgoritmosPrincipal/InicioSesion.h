@@ -56,6 +56,7 @@ private:
     MostrarAerolineas *mostrarAerolineas;
     UsuarioBusiness *usuarioBusiness;
     UsuarioData *usuarioData;
+    OrigenDestinoBusiness* origenDestino;
 };
 
 #endif /* INICIOSESION_H */
