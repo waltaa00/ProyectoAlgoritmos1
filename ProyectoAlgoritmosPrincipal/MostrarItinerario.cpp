@@ -111,8 +111,8 @@ void MostrarItinerario::completaTabla() {
                 row3[columRecord.tmcCapacidad] = colaEmirates.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaEmirates.top()->getNombre();
 
-//                this->grafo->AnadirNodo(colaEmirates.top()->getNombre());
-//                this->grafo->AnadirArco(colaEmirates.top()->getOrigen(), colaEmirates.top()->getDestino());
+                //                this->grafo->AnadirNodo(colaEmirates.top()->getNombre());
+                //                this->grafo->AnadirArco(colaEmirates.top()->getOrigen(), colaEmirates.top()->getDestino());
 
             }
             colaEmirates.pop();
@@ -128,10 +128,10 @@ void MostrarItinerario::completaTabla() {
                 row3[columRecord.tmcDestino] = colaJetblue.top()->getDestino();
                 row3[columRecord.tmcCapacidad] = colaJetblue.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaJetblue.top()->getNombre();
-                
-//                this->grafo->AnadirNodo(colaJetblue.top()->getNombre());
-//                this->grafo->AnadirArco(colaJetblue.top()->getOrigen(), colaJetblue.top()->getDestino());
-                
+
+                //                this->grafo->AnadirNodo(colaJetblue.top()->getNombre());
+                //                this->grafo->AnadirArco(colaJetblue.top()->getOrigen(), colaJetblue.top()->getDestino());
+
             }
             colaJetblue.pop();
         }
@@ -145,10 +145,10 @@ void MostrarItinerario::completaTabla() {
                 row3[columRecord.tmcDestino] = colaAvianca.top()->getDestino();
                 row3[columRecord.tmcCapacidad] = colaAvianca.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaAvianca.top()->getNombre();
-                
-//                this->grafo->AnadirNodo(colaAvianca.top()->getNombre());
-//                this->grafo->AnadirArco(colaAvianca.top()->getOrigen(), colaAvianca.top()->getDestino());
-                
+
+                //                this->grafo->AnadirNodo(colaAvianca.top()->getNombre());
+                //                this->grafo->AnadirArco(colaAvianca.top()->getOrigen(), colaAvianca.top()->getDestino());
+
             }
             colaAvianca.pop();
         }
@@ -162,9 +162,9 @@ void MostrarItinerario::completaTabla() {
                 row3[columRecord.tmcDestino] = colaCopa.top()->getDestino();
                 row3[columRecord.tmcCapacidad] = colaCopa.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaCopa.top()->getNombre();
-                
-//                this->grafo->AnadirNodo(colaCopa.top()->getNombre());
-//                this->grafo->AnadirArco(colaCopa.top()->getOrigen(), colaCopa.top()->getDestino());
+
+                //                this->grafo->AnadirNodo(colaCopa.top()->getNombre());
+                //                this->grafo->AnadirArco(colaCopa.top()->getOrigen(), colaCopa.top()->getDestino());
 
             }
             colaCopa.pop();
@@ -179,9 +179,9 @@ void MostrarItinerario::completaTabla() {
                 row3[columRecord.tmcDestino] = colaVolaris.top()->getDestino();
                 row3[columRecord.tmcCapacidad] = colaVolaris.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaVolaris.top()->getNombre();
-                
-//                this->grafo->AnadirNodo(colaVolaris.top()->getNombre());
-//                this->grafo->AnadirArco(colaVolaris.top()->getOrigen(), colaVolaris.top()->getDestino());
+
+                //                this->grafo->AnadirNodo(colaVolaris.top()->getNombre());
+                //                this->grafo->AnadirArco(colaVolaris.top()->getOrigen(), colaVolaris.top()->getDestino());
 
             }
             colaVolaris.pop();
@@ -220,8 +220,8 @@ void MostrarItinerario::onButtonClickedGuardarVuelo() {
                     );
             dialogo.run();
 
-        }
-        if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "China" && destino == "Costa Rica") {
+        } else
+            if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "China" && destino == "Costa Rica") {
             Gtk::MessageDialog dialogo(
                     *this,
                     "No  se puede seleccionar por temas de migración",
@@ -229,8 +229,8 @@ void MostrarItinerario::onButtonClickedGuardarVuelo() {
                     Gtk::MESSAGE_INFO
                     );
             dialogo.run();
-        }
-        if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Venenzonalo" && destino == "Colombia") {
+        } else
+            if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Venezolano" && destino == "Colombia") {
             Gtk::MessageDialog dialogo(
                     *this,
                     "No  se puede seleccionar por temas de migración",
@@ -238,8 +238,8 @@ void MostrarItinerario::onButtonClickedGuardarVuelo() {
                     Gtk::MESSAGE_INFO
                     );
             dialogo.run();
-        }
-        if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Mexicano" && destino == "USA") {
+        } else
+            if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Mexicano" && destino == "USA") {
             Gtk::MessageDialog dialogo(
                     *this,
                     "No  se puede seleccionar por temas de migración",
@@ -247,8 +247,8 @@ void MostrarItinerario::onButtonClickedGuardarVuelo() {
                     Gtk::MESSAGE_INFO
                     );
             dialogo.run();
-        }
-        if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Musulman" && destino == "USA") {
+        } else
+            if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Musulman" && destino == "USA") {
             Gtk::MessageDialog dialogo(
                     *this,
                     "No  se puede seleccionar por temas de migración",
@@ -256,8 +256,8 @@ void MostrarItinerario::onButtonClickedGuardarVuelo() {
                     Gtk::MESSAGE_INFO
                     );
             dialogo.run();
-        }
-        if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Israeli" && destino == "USA") {
+        } else
+            if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Israeli" && destino == "USA") {
             Gtk::MessageDialog dialogo(
                     *this,
                     "No  se puede seleccionar por temas de migración",
@@ -265,8 +265,8 @@ void MostrarItinerario::onButtonClickedGuardarVuelo() {
                     Gtk::MESSAGE_INFO
                     );
             dialogo.run();
-        }
-        if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Iraqui" && destino == "USA") {
+        } else
+            if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Iraqui" && destino == "USA") {
             Gtk::MessageDialog dialogo(
                     *this,
                     "No  se puede seleccionar por temas de migración",
