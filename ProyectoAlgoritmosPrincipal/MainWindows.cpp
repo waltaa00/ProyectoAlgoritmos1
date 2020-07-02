@@ -152,6 +152,6 @@ void MainWindows::aboutWinClose() {
     this->muestraSalidas = 0;
     this->moduloAdministrativo = 0;
     this->eliminarVuelo = 0;
-    this->informes;
+    this->informes = 0;
 
 }

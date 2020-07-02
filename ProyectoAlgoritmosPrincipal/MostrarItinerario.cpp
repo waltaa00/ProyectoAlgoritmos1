@@ -17,6 +17,7 @@ MostrarItinerario::MostrarItinerario(string filtro) {
     this->set_size_request(850, 400);
     this->cA = new ColaAviones;
     this->uB = new UsuarioBusiness();
+    this->grafo = new GrafoViajes();
 
 
     initComponents();
@@ -110,6 +111,8 @@ void MostrarItinerario::completaTabla() {
                 row3[columRecord.tmcCapacidad] = colaEmirates.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaEmirates.top()->getNombre();
 
+//                this->grafo->AnadirNodo(colaEmirates.top()->getNombre());
+//                this->grafo->AnadirArco(colaEmirates.top()->getOrigen(), colaEmirates.top()->getDestino());
 
             }
             colaEmirates.pop();
@@ -125,6 +128,10 @@ void MostrarItinerario::completaTabla() {
                 row3[columRecord.tmcDestino] = colaJetblue.top()->getDestino();
                 row3[columRecord.tmcCapacidad] = colaJetblue.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaJetblue.top()->getNombre();
+                
+//                this->grafo->AnadirNodo(colaJetblue.top()->getNombre());
+//                this->grafo->AnadirArco(colaJetblue.top()->getOrigen(), colaJetblue.top()->getDestino());
+                
             }
             colaJetblue.pop();
         }
@@ -138,6 +145,10 @@ void MostrarItinerario::completaTabla() {
                 row3[columRecord.tmcDestino] = colaAvianca.top()->getDestino();
                 row3[columRecord.tmcCapacidad] = colaAvianca.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaAvianca.top()->getNombre();
+                
+//                this->grafo->AnadirNodo(colaAvianca.top()->getNombre());
+//                this->grafo->AnadirArco(colaAvianca.top()->getOrigen(), colaAvianca.top()->getDestino());
+                
             }
             colaAvianca.pop();
         }
@@ -151,6 +162,9 @@ void MostrarItinerario::completaTabla() {
                 row3[columRecord.tmcDestino] = colaCopa.top()->getDestino();
                 row3[columRecord.tmcCapacidad] = colaCopa.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaCopa.top()->getNombre();
+                
+//                this->grafo->AnadirNodo(colaCopa.top()->getNombre());
+//                this->grafo->AnadirArco(colaCopa.top()->getOrigen(), colaCopa.top()->getDestino());
 
             }
             colaCopa.pop();
@@ -165,6 +179,9 @@ void MostrarItinerario::completaTabla() {
                 row3[columRecord.tmcDestino] = colaVolaris.top()->getDestino();
                 row3[columRecord.tmcCapacidad] = colaVolaris.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaVolaris.top()->getNombre();
+                
+//                this->grafo->AnadirNodo(colaVolaris.top()->getNombre());
+//                this->grafo->AnadirArco(colaVolaris.top()->getOrigen(), colaVolaris.top()->getDestino());
 
             }
             colaVolaris.pop();

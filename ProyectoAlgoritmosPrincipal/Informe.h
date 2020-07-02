@@ -25,6 +25,7 @@
 #include "UsuarioBusiness.h"
 #include <queue>
 #include "ColaAviones.h"
+#include "Avion.h"
 #include <stdio.h>      /* printf, fgets */
 #include <stdlib.h>  
 
@@ -56,6 +57,12 @@ private:
     priority_queue <Avion*> colaVolaris;
     priority_queue <Avion*> colaJetblue;
     ColaAviones* cA;
+    Avion* avion;
+    int tamanoEmirates;
+    int tamanoAvianca;
+    int tamanoCopa;
+    int tamanoJetblue;
+    int tamanoVolaris;
 
 };
 

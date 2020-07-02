@@ -65,7 +65,6 @@ void MuestraSalidas::completaTabla() {
     int tamanoJetblue = colaJetblue.size();
 
     for (int i = 0; i < tamanoEmirates; i++) {
-        cout << "hora salida" << colaEmirates.top()->getHoraSalida() << " hora real " << hora << endl;
         if (atoi(colaEmirates.top()->getHoraSalida().c_str()) > hora) {
             Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
             row3[columRecord.tmcHorasalida] = colaEmirates.top()->getHoraSalida();
@@ -88,7 +87,6 @@ void MuestraSalidas::completaTabla() {
         colaJetblue.pop();
     }
     for (int i = 0; i < tamanoAvianca; i++) {
-        cout << "hora salida" << colaAvianca.top()->getHoraSalida() << ", hora real " << hora << endl;
         if (atoi(colaAvianca.top()->getHoraSalida().c_str()) > hora) {
             Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
             row3[columRecord.tmcHorasalida] = colaAvianca.top()->getHoraSalida();
