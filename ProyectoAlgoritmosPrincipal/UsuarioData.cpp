@@ -14,6 +14,7 @@
 //#include <glib-2.0/glib/gmacros.h>
 
 #include "UsuarioData.h"
+using namespace std;
 
 UsuarioData::UsuarioData() {
 
@@ -51,35 +52,35 @@ vector<Usuario> UsuarioData::obtenerUsuarios() {
 
         Usuario u(contenidoLinea[0], contenidoLinea[1], contenidoLinea[2],
                 contenidoLinea[3], contenidoLinea[4], contenidoLinea[5]);
-//        bool rep = false;
-//        for (int i = 0; i < vectorUsuarios.size(); i++) {
-//            if (vectorUsuarios.at(i).getPasaporte() == u.getPasaporte()) {
-//                rep = true;
-//                break;
-//            }
-//        }
-//        //if (!rep) {
+        bool rep = false;
+        for (int i = 0; i < vectorUsuarios.size(); i++) {
+            if (vectorUsuarios.at(i).getPasaporte() == u.getPasaporte()) {
+                rep = true;
+                break;
+            }
+        }
+        if (!rep) {
             vectorUsuarios.push_back(u);
-        //}
+        }
     }
-    
-      cout << vectorUsuarios.size() << endl;
+
+    cout << vectorUsuarios.size() << endl;
     archivo.close(); // cerramos el archivo
-    cout<<"archivo cerrado"<<endl;
-  
+    cout << "archivo cerrado" << endl;
+
 
     return vectorUsuarios;
 }
 
-string UsuarioData::leerUsuarios(){
-    
-    cout<<"Leyendo el archivo"<<endl;
+string UsuarioData::leerUsuarios() {
+
+    cout << "Leyendo el archivo" << endl;
     ifstream archivo;
     string texto;
     string informe;
-    
+
     archivo.open("usuarios.txt", ios::out | ios::in); // abriendo el archivo en modo lectura
-    
+
     while (!archivo.eof()) { // mientras no sea el final del archivo
         getline(archivo, texto);
         informe += texto;
@@ -88,34 +89,35 @@ string UsuarioData::leerUsuarios(){
     }
     //cout<<informe<<endl;
     return informe;
-    
+
     archivo.close();
-    
+
 }
 
 bool UsuarioData::buscarUsuario(string nombre, string contrasenia) {
-    cout<<this->obtenerUsuarios().size()<<endl;
-    for (int i = 0; i < this->obtenerUsuarios().size(); i++) {
-        if (this->vectorUsuarios.at(i).getNombre() == nombre 
-            && this->vectorUsuarios.at(i).getContrasenia() == contrasenia) {
-                return true;
-            }
-        return false;
+    //cout<<this->obtenerUsuarios().size()<<endl;
+    this->obtenerUsuarios();
+    for (int i = 0; i < this->vectorUsuarios.size(); i++) {
+        if (this->vectorUsuarios.at(i).getNombre() == nombre
+                && this->vectorUsuarios.at(i).getContrasenia() == contrasenia) {
+            return true;
+        }
     }
-    
+    return false;
 
 }
 
 string UsuarioData::buscarNacionalidad(string nombre, string contrasenia) {
-   
-    for (int i = 0; i < this->obtenerUsuarios().size(); i++) {
-        if (this->vectorUsuarios.at(i).getNombre() == nombre 
-            && this->vectorUsuarios.at(i).getContrasenia() == contrasenia) {
-                return this->vectorUsuarios.at(i).getNacionalidad();
-            }
-        
+    this->obtenerUsuarios();
+    for (int i = 0; i < this->vectorUsuarios.size(); i++) {
+        if (this->vectorUsuarios.at(i).getNombre() == nombre
+                && this->vectorUsuarios.at(i).getContrasenia() == contrasenia) {
+            cout << this->vectorUsuarios.at(i).getNacionalidad() << endl;
+            return this->vectorUsuarios.at(i).getNacionalidad();
+        }
+
     }
     return "Nacionalidad no encontrada";
-    
+
 
 }

@@ -95,7 +95,8 @@ private:
     Gtk::Entry etOrigen,etDestino;
     Gtk::Label lblOrigen,lblDestino;
     Gtk::Button btnFiltrar, btnGuardar;
-    
+    OrigenDestinoBusiness* origenDestino;
+    vector<string> usuarioInfo;
 };
 
 #endif /* MOSTRARITINERARIO_H */

@@ -22,8 +22,10 @@ public:
     OrigenDestinoBusiness();
     
     void guardarOrigenDestino(string origen,string destino);
+    void guardarUsuario(string nombre,string contrasena);
     
     vector<string> recuperarOrigenDestino();
+    vector<string> recuperarUsuario();
     
     OrigenDestinoDataSingleton* getSingleton() const;
 

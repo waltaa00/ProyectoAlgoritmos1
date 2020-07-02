@@ -26,6 +26,14 @@ vector<string> OrigenDestinoBusiness::recuperarOrigenDestino() {
     return this->singleton->recuperarOrigenDestino();
 }
 
+void OrigenDestinoBusiness::guardarUsuario(string nombre, string contrasena) {
+    this->singleton->guardarUsuario(nombre,contrasena);
+}
+
+vector<string> OrigenDestinoBusiness::recuperarUsuario() {
+     return this->singleton->recuperarUsuario();
+}
+
 OrigenDestinoBusiness::OrigenDestinoBusiness() {
     this->singleton = OrigenDestinoDataSingleton::GetInstance();
 }

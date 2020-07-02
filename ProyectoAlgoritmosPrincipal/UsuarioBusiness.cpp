@@ -29,13 +29,9 @@ vector<Usuario> UsuarioBusiness::obtenerUsuario() {
 
 bool UsuarioBusiness::buscarUsuario(string nombre, string contrasenia){
     return this->usuarioData.buscarUsuario(nombre, contrasenia);
-
-
 }
 
 string UsuarioBusiness::buscarNacionalidad(string nombre, string contrasenia){
     return this->usuarioData.buscarNacionalidad(nombre, contrasenia);
-
-
 }
 

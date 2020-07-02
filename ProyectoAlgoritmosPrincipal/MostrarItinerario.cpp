@@ -25,7 +25,8 @@ MostrarItinerario::MostrarItinerario(string filtro) {
 }
 
 void MostrarItinerario::initComponents() {
-
+    this->origenDestino = new OrigenDestinoBusiness();
+    this->usuarioInfo = this->origenDestino->recuperarUsuario();
     this->btnFiltrar.signal_clicked().connect(sigc::mem_fun(*this,
             &MostrarItinerario::onButtonClickedFiltrarTabla));
     this->btnFiltrar.set_label("Filtrar");
@@ -98,22 +99,14 @@ void MostrarItinerario::completaTabla() {
     int tamanoCopa = colaCopa.size();
     int tamanoVolaris = colaVolaris.size();
     int tamanoJetblue = colaJetblue.size();
-
-
-
     if (this->filtro == "Emirates") {
         for (int i = 0; i < tamanoEmirates; i++) {
-            cout << "hora salida" << colaEmirates.top()->getHoraSalida() << " hora real " << hora << endl;
             if (atoi(colaEmirates.top()->getHoraSalida().c_str()) > hora) {
                 Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
                 row3[columRecord.tmcHorasalida] = colaEmirates.top()->getHoraSalida();
                 row3[columRecord.tmcHorallegada] = colaEmirates.top()->getHoraLlegada();
                 row3[columRecord.tmcOrigen] = colaEmirates.top()->getOrigen();
                 row3[columRecord.tmcDestino] = colaEmirates.top()->getDestino();
-
-                //        this->paisesVuelo = colaEmirates.top()->getOrigen()+" - "+colaEmirates.top()->getDestino();
-                //        cout<<this->paisesVuelo<<endl;
-
                 row3[columRecord.tmcCapacidad] = colaEmirates.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaEmirates.top()->getNombre();
 
@@ -121,8 +114,6 @@ void MostrarItinerario::completaTabla() {
             }
             colaEmirates.pop();
         }
-        //    this->paisesVuelo = colaEmirates.top()->getOrigen()+" - "+colaEmirates.top()->getDestino();
-        //        cout<<"info paises"<<this->paisesVuelo<<endl;
 
     } else if (this->filtro == "Jet Blue") {
         for (int i = 0; i < tamanoJetblue; i++) {
@@ -134,35 +125,20 @@ void MostrarItinerario::completaTabla() {
                 row3[columRecord.tmcDestino] = colaJetblue.top()->getDestino();
                 row3[columRecord.tmcCapacidad] = colaJetblue.top()->getCantidad();
                 row3[columRecord.tmcAvion] = colaJetblue.top()->getNombre();
-
-                //        grafo.AnadirNodo(colaJetblue.top()->getOrigen());
-                //        grafo.AnadirNodo(colaJetblue.top()->getDestino());
-
-
             }
             colaJetblue.pop();
         }
     } else if (this->filtro == "Avianca") {
         for (int i = 0; i < tamanoAvianca; i++) {
-            cout << "hora salida" << colaAvianca.top()->getHoraSalida() << ", hora real " << hora << endl;
-            //if (atoi(colaAvianca.top()->getHoraSalida().c_str()) > hora) {
-            Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
-            row3[columRecord.tmcHorasalida] = colaAvianca.top()->getHoraSalida();
-            row3[columRecord.tmcHorallegada] = colaAvianca.top()->getHoraLlegada();
-            row3[columRecord.tmcOrigen] = colaAvianca.top()->getOrigen();
-            row3[columRecord.tmcDestino] = colaAvianca.top()->getDestino();
-            row3[columRecord.tmcCapacidad] = colaAvianca.top()->getCantidad();
-            row3[columRecord.tmcAvion] = colaAvianca.top()->getNombre();
-
-
-            //this->paisesVuelo = colaAvianca.top()->getOrigen()+" - "+colaAvianca.top()->getDestino();
-
-            //        grafo.AnadirNodo(colaAvianca.top()->getOrigen());
-            //        cout<<"\nAhora con destino"<<endl;
-            //        grafo.AnadirNodo(colaAvianca.top()->getDestino());
-
-
-            //}
+            if (atoi(colaAvianca.top()->getHoraSalida().c_str()) > hora) {
+                Gtk::TreeModel::Row row3 = *(m_refTreeModel->append());
+                row3[columRecord.tmcHorasalida] = colaAvianca.top()->getHoraSalida();
+                row3[columRecord.tmcHorallegada] = colaAvianca.top()->getHoraLlegada();
+                row3[columRecord.tmcOrigen] = colaAvianca.top()->getOrigen();
+                row3[columRecord.tmcDestino] = colaAvianca.top()->getDestino();
+                row3[columRecord.tmcCapacidad] = colaAvianca.top()->getCantidad();
+                row3[columRecord.tmcAvion] = colaAvianca.top()->getNombre();
+            }
             colaAvianca.pop();
         }
     } else if (this->filtro == "Copa Airlines") {
@@ -206,12 +182,8 @@ void MostrarItinerario::onButtonClickedFiltrarTabla() {
 }
 
 void MostrarItinerario::onButtonClickedGuardarVuelo() {
-//    InicioSesion *iS;
-//    iS = new InicioSesion();
-    
-    
-    
-
+    //    InicioSesion *iS;
+    //    iS = new InicioSesion();
     this->refTreeSelection = m_TreeView.get_selection();
     this->iter = this->refTreeSelection->get_selected();
     if (iter) //If anything is selected
@@ -222,7 +194,7 @@ void MostrarItinerario::onButtonClickedGuardarVuelo() {
 
         Glib::ustring strText2 = row3[columRecord.tmcDestino];
         destino = strText2;
-        if (uB->buscarNacionalidad("Diego", "222") == "Costarricense" && destino == "Nicaragua") {
+        if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Costarricense" && destino == "Nicaragua") {
             Gtk::MessageDialog dialogo(
                     *this,
                     "No  se puede seleccionar por temas de migración",
@@ -231,6 +203,60 @@ void MostrarItinerario::onButtonClickedGuardarVuelo() {
                     );
             dialogo.run();
 
+        }
+        if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "China" && destino == "Costa Rica") {
+            Gtk::MessageDialog dialogo(
+                    *this,
+                    "No  se puede seleccionar por temas de migración",
+                    false,
+                    Gtk::MESSAGE_INFO
+                    );
+            dialogo.run();
+        }
+        if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Venenzonalo" && destino == "Colombia") {
+            Gtk::MessageDialog dialogo(
+                    *this,
+                    "No  se puede seleccionar por temas de migración",
+                    false,
+                    Gtk::MESSAGE_INFO
+                    );
+            dialogo.run();
+        }
+        if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Mexicano" && destino == "USA") {
+            Gtk::MessageDialog dialogo(
+                    *this,
+                    "No  se puede seleccionar por temas de migración",
+                    false,
+                    Gtk::MESSAGE_INFO
+                    );
+            dialogo.run();
+        }
+        if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Musulman" && destino == "USA") {
+            Gtk::MessageDialog dialogo(
+                    *this,
+                    "No  se puede seleccionar por temas de migración",
+                    false,
+                    Gtk::MESSAGE_INFO
+                    );
+            dialogo.run();
+        }
+        if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Israeli" && destino == "USA") {
+            Gtk::MessageDialog dialogo(
+                    *this,
+                    "No  se puede seleccionar por temas de migración",
+                    false,
+                    Gtk::MESSAGE_INFO
+                    );
+            dialogo.run();
+        }
+        if (uB->buscarNacionalidad(this->usuarioInfo.at(0), this->usuarioInfo.at(1)) == "Iraqui" && destino == "USA") {
+            Gtk::MessageDialog dialogo(
+                    *this,
+                    "No  se puede seleccionar por temas de migración",
+                    false,
+                    Gtk::MESSAGE_INFO
+                    );
+            dialogo.run();
         } else {
 
             OrigenDestinoBusiness origenDestino;

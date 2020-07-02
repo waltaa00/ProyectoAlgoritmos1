@@ -21,12 +21,13 @@ public:
     static OrigenDestinoDataSingleton* GetInstance();
 
     void guardarOrigenDestino(string origen,string destino);
-    
+    void guardarUsuario(string nombre,string contrasena);
     vector<string> recuperarOrigenDestino();
+    vector<string> recuperarUsuario();
 private:
     static OrigenDestinoDataSingleton* instance;
     vector<string> origenDestino;
-
+    vector<string> usuario;
     OrigenDestinoDataSingleton();
 
 };
